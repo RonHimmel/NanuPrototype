@@ -102,8 +102,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jButtonLisabonB = new javax.swing.JButton();
         jButtonAthensB = new javax.swing.JButton();
         ForgotPasswordScreen = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -905,10 +908,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         MainPanel.add(GameScreen, "card2");
 
-        ForgotPasswordScreen.setBackground(new java.awt.Color(254, 219, 255));
-
-        jLabel11.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        jLabel11.setText("OH NO :( we didnt implement that yet");
+        ForgotPasswordScreen.setBackground(new java.awt.Color(144, 178, 185));
 
         jButton2.setText("back to the login screen");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -917,28 +917,42 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel11.setText("Username");
+
+        jLabel20.setText("New Password");
+
         javax.swing.GroupLayout ForgotPasswordScreenLayout = new javax.swing.GroupLayout(ForgotPasswordScreen);
         ForgotPasswordScreen.setLayout(ForgotPasswordScreenLayout);
         ForgotPasswordScreenLayout.setHorizontalGroup(
             ForgotPasswordScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ForgotPasswordScreenLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ForgotPasswordScreenLayout.createSequentialGroup()
+                .addContainerGap(543, Short.MAX_VALUE)
                 .addGroup(ForgotPasswordScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ForgotPasswordScreenLayout.createSequentialGroup()
-                        .addGap(322, 322, 322)
-                        .addComponent(jLabel11))
-                    .addGroup(ForgotPasswordScreenLayout.createSequentialGroup()
-                        .addGap(461, 461, 461)
-                        .addComponent(jButton2)))
-                .addContainerGap(673, Short.MAX_VALUE))
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel11)
+                    .addGroup(ForgotPasswordScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ForgotPasswordScreenLayout.createSequentialGroup()
+                            .addComponent(jButton2)
+                            .addGap(584, 584, 584))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ForgotPasswordScreenLayout.createSequentialGroup()
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(461, 461, 461)))
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         ForgotPasswordScreenLayout.setVerticalGroup(
             ForgotPasswordScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ForgotPasswordScreenLayout.createSequentialGroup()
-                .addGap(148, 148, 148)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ForgotPasswordScreenLayout.createSequentialGroup()
+                .addGap(237, 237, 237)
                 .addComponent(jLabel11)
-                .addGap(205, 205, 205)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE)
                 .addComponent(jButton2)
-                .addContainerGap(612, Short.MAX_VALUE))
+                .addGap(406, 406, 406))
         );
 
         MainPanel.add(ForgotPasswordScreen, "card4");
@@ -1408,6 +1422,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1429,6 +1444,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jUsernameField;
     // End of variables declaration//GEN-END:variables
 }
