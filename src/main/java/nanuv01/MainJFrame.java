@@ -135,6 +135,7 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         jUsernameField.setBackground(new java.awt.Color(254, 219, 255));
+        jUsernameField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(254, 188, 255), 10, true));
 
         jPasswordField.setBackground(new java.awt.Color(254, 219, 255));
 
@@ -227,7 +228,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel15)
-                .addContainerGap(428, Short.MAX_VALUE))
+                .addContainerGap(396, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(225, 247, 231));
@@ -873,7 +874,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(GameScreenLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(GameScreenLayout.createSequentialGroup()
                         .addGap(183, 183, 183)
