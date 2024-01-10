@@ -1141,7 +1141,7 @@ public class MainJFrame extends javax.swing.JFrame {
             button.setBackground(Color.yellow);
             button.setText("");
         }else if(color==4){
-            button.setBackground(Color.pink);
+            button.setBackground(new Color(255,0,255));
             button.setText("");
         }
     }
@@ -1348,6 +1348,7 @@ public class MainJFrame extends javax.swing.JFrame {
     void CityBPressed(JButton button, int city){                    //function gets the value of the city and NOT the B city but the city
         if(state>=5 && diceRoll==city&&button.isEnabled()&&okay){   //if game state is dice and color is citycolor and the city is available and its okay to chose
             button.setEnabled(false);                               //the button is disabled because you chose the right city
+            button.setBackground(Color.white);
             state++;                                                //game state ++                     
             pickcolor=true;                                         //now you can choose the next city for that color
         }
