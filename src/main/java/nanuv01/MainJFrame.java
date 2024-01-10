@@ -57,14 +57,6 @@ public class MainJFrame extends javax.swing.JFrame {
         checkbox1 = new java.awt.Checkbox();
         jButton1 = new javax.swing.JButton();
         GameScreen = new javax.swing.JPanel();
-        jPanelGreen = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanelBlue = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jPanelYellow = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jPanelPink = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jButtonNewyork = new javax.swing.JButton();
         jButtonOslo = new javax.swing.JButton();
@@ -102,6 +94,18 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanelRedBorder = new javax.swing.JPanel();
         jPanelRed = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jPanelGreenBorder = new javax.swing.JPanel();
+        jPanelGreen = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanelBlueBorder = new javax.swing.JPanel();
+        jPanelBlue = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanelYellowBorder = new javax.swing.JPanel();
+        jPanelYellow = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jPanelPinkBorder = new javax.swing.JPanel();
+        jPanelPink = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         ForgotPasswordScreen = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
@@ -344,98 +348,6 @@ public class MainJFrame extends javax.swing.JFrame {
         MainPanel.add(LoginScreen, "card3");
 
         GameScreen.setBackground(new java.awt.Color(102, 255, 255));
-
-        jPanelGreen.setBackground(java.awt.Color.gray);
-        jPanelGreen.setBorder(new javax.swing.border.MatteBorder(null));
-
-        jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        jLabel2.setText("Gate 2");
-
-        javax.swing.GroupLayout jPanelGreenLayout = new javax.swing.GroupLayout(jPanelGreen);
-        jPanelGreen.setLayout(jPanelGreenLayout);
-        jPanelGreenLayout.setHorizontalGroup(
-            jPanelGreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelGreenLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel2)
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
-        jPanelGreenLayout.setVerticalGroup(
-            jPanelGreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelGreenLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel2)
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
-
-        jPanelBlue.setBackground(java.awt.Color.gray);
-        jPanelBlue.setBorder(new javax.swing.border.MatteBorder(null));
-
-        jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        jLabel3.setText("Gate 3");
-
-        javax.swing.GroupLayout jPanelBlueLayout = new javax.swing.GroupLayout(jPanelBlue);
-        jPanelBlue.setLayout(jPanelBlueLayout);
-        jPanelBlueLayout.setHorizontalGroup(
-            jPanelBlueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBlueLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel3)
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-        jPanelBlueLayout.setVerticalGroup(
-            jPanelBlueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBlueLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel3)
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
-
-        jPanelYellow.setBackground(java.awt.Color.gray);
-        jPanelYellow.setBorder(new javax.swing.border.MatteBorder(null));
-
-        jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        jLabel4.setText("Gate 4");
-
-        javax.swing.GroupLayout jPanelYellowLayout = new javax.swing.GroupLayout(jPanelYellow);
-        jPanelYellow.setLayout(jPanelYellowLayout);
-        jPanelYellowLayout.setHorizontalGroup(
-            jPanelYellowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelYellowLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(14, 14, 14))
-        );
-        jPanelYellowLayout.setVerticalGroup(
-            jPanelYellowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelYellowLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jLabel4)
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
-
-        jPanelPink.setBackground(java.awt.Color.gray);
-        jPanelPink.setBorder(new javax.swing.border.MatteBorder(null));
-
-        jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        jLabel5.setText("Gate 5");
-
-        javax.swing.GroupLayout jPanelPinkLayout = new javax.swing.GroupLayout(jPanelPink);
-        jPanelPink.setLayout(jPanelPinkLayout);
-        jPanelPinkLayout.setHorizontalGroup(
-            jPanelPinkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPinkLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel5)
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
-        jPanelPinkLayout.setVerticalGroup(
-            jPanelPinkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPinkLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jLabel5)
-                .addContainerGap(44, Short.MAX_VALUE))
-        );
 
         jPanel7.setBackground(new java.awt.Color(227, 243, 255));
         jPanel7.setBorder(new javax.swing.border.MatteBorder(null));
@@ -865,6 +777,170 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
+        jPanelGreenBorder.setBackground(new java.awt.Color(153, 255, 153));
+
+        jPanelGreen.setBackground(new java.awt.Color(153, 255, 153));
+
+        jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
+        jLabel2.setText("Gate 2");
+
+        javax.swing.GroupLayout jPanelGreenLayout = new javax.swing.GroupLayout(jPanelGreen);
+        jPanelGreen.setLayout(jPanelGreenLayout);
+        jPanelGreenLayout.setHorizontalGroup(
+            jPanelGreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelGreenLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel2)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        jPanelGreenLayout.setVerticalGroup(
+            jPanelGreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelGreenLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel2)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanelGreenBorderLayout = new javax.swing.GroupLayout(jPanelGreenBorder);
+        jPanelGreenBorder.setLayout(jPanelGreenBorderLayout);
+        jPanelGreenBorderLayout.setHorizontalGroup(
+            jPanelGreenBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGreenBorderLayout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addComponent(jPanelGreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
+        );
+        jPanelGreenBorderLayout.setVerticalGroup(
+            jPanelGreenBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelGreenBorderLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jPanelGreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        jPanelBlueBorder.setBackground(new java.awt.Color(153, 153, 255));
+
+        jPanelBlue.setBackground(new java.awt.Color(153, 153, 255));
+
+        jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
+        jLabel3.setText("Gate 3");
+
+        javax.swing.GroupLayout jPanelBlueLayout = new javax.swing.GroupLayout(jPanelBlue);
+        jPanelBlue.setLayout(jPanelBlueLayout);
+        jPanelBlueLayout.setHorizontalGroup(
+            jPanelBlueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBlueLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel3)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+        jPanelBlueLayout.setVerticalGroup(
+            jPanelBlueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBlueLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel3)
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanelBlueBorderLayout = new javax.swing.GroupLayout(jPanelBlueBorder);
+        jPanelBlueBorder.setLayout(jPanelBlueBorderLayout);
+        jPanelBlueBorderLayout.setHorizontalGroup(
+            jPanelBlueBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBlueBorderLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jPanelBlue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+        jPanelBlueBorderLayout.setVerticalGroup(
+            jPanelBlueBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBlueBorderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelBlue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+
+        jPanelYellowBorder.setBackground(new java.awt.Color(255, 255, 153));
+
+        jPanelYellow.setBackground(new java.awt.Color(255, 255, 153));
+
+        jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
+        jLabel4.setText("Gate 4");
+
+        javax.swing.GroupLayout jPanelYellowLayout = new javax.swing.GroupLayout(jPanelYellow);
+        jPanelYellow.setLayout(jPanelYellowLayout);
+        jPanelYellowLayout.setHorizontalGroup(
+            jPanelYellowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelYellowLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(14, 14, 14))
+        );
+        jPanelYellowLayout.setVerticalGroup(
+            jPanelYellowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelYellowLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel4)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanelYellowBorderLayout = new javax.swing.GroupLayout(jPanelYellowBorder);
+        jPanelYellowBorder.setLayout(jPanelYellowBorderLayout);
+        jPanelYellowBorderLayout.setHorizontalGroup(
+            jPanelYellowBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelYellowBorderLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jPanelYellow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        jPanelYellowBorderLayout.setVerticalGroup(
+            jPanelYellowBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelYellowBorderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelYellow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelPinkBorder.setBackground(new java.awt.Color(255, 153, 255));
+
+        jPanelPink.setBackground(new java.awt.Color(255, 153, 255));
+
+        jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
+        jLabel5.setText("Gate 5");
+
+        javax.swing.GroupLayout jPanelPinkLayout = new javax.swing.GroupLayout(jPanelPink);
+        jPanelPink.setLayout(jPanelPinkLayout);
+        jPanelPinkLayout.setHorizontalGroup(
+            jPanelPinkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPinkLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelPinkLayout.setVerticalGroup(
+            jPanelPinkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPinkLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel5)
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanelPinkBorderLayout = new javax.swing.GroupLayout(jPanelPinkBorder);
+        jPanelPinkBorder.setLayout(jPanelPinkBorderLayout);
+        jPanelPinkBorderLayout.setHorizontalGroup(
+            jPanelPinkBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPinkBorderLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jPanelPink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+        jPanelPinkBorderLayout.setVerticalGroup(
+            jPanelPinkBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPinkBorderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelPink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout GameScreenLayout = new javax.swing.GroupLayout(GameScreen);
         GameScreen.setLayout(GameScreenLayout);
         GameScreenLayout.setHorizontalGroup(
@@ -874,20 +950,20 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(GameScreenLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(GameScreenLayout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addComponent(jPanelRedBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(99, 99, 99)
-                        .addComponent(jPanelGreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(jPanelBlue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
-                        .addComponent(jPanelYellow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanelPink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(60, 60, 60))
+                        .addComponent(jPanelRedBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56)
+                        .addComponent(jPanelGreenBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(jPanelBlueBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jPanelYellowBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(jPanelPinkBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(GameScreenLayout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(65, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GameScreenLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -897,31 +973,32 @@ public class MainJFrame extends javax.swing.JFrame {
             GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GameScreenLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(GameScreenLayout.createSequentialGroup()
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46))
                     .addGroup(GameScreenLayout.createSequentialGroup()
                         .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(GameScreenLayout.createSequentialGroup()
+                                .addGap(25, 25, 25)
                                 .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(GameScreenLayout.createSequentialGroup()
-                                        .addGap(13, 13, 13)
-                                        .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jPanelPink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(GameScreenLayout.createSequentialGroup()
-                                                .addComponent(jPanelYellow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18))))
-                                    .addComponent(jPanelGreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(58, 58, 58))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GameScreenLayout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jPanelRedBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanelBlue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(39, 39, 39)))
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                                    .addGroup(GameScreenLayout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jPanelPinkBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jPanelBlueBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GameScreenLayout.createSequentialGroup()
+                                .addGap(0, 67, Short.MAX_VALUE)
+                                .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jPanelYellowBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanelGreenBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(50, 50, 50)))
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)))
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         MainPanel.add(GameScreen, "card2");
@@ -1012,7 +1089,7 @@ public class MainJFrame extends javax.swing.JFrame {
             button.setBackground(Color.yellow);
             button.setText("");
         }else if(color==4){
-            button.setBackground(Color.pink);
+            button.setBackground(new Color(255,0,255));
             button.setText("");
         }
     }
@@ -1020,34 +1097,34 @@ public class MainJFrame extends javax.swing.JFrame {
     void SetPanel(int state){
         if(state==0){
             jPanelRedBorder.setBackground(Color.RED);
-            jPanelGreen.setBackground(Color.GRAY);
-            jPanelBlue.setBackground(Color.GRAY);
-            jPanelYellow.setBackground(Color.GRAY);
-            jPanelPink.setBackground(Color.GRAY);
+            jPanelGreenBorder.setBackground(new Color(153,255,153));
+            jPanelBlueBorder.setBackground(new Color(153,153,255));
+            jPanelYellowBorder.setBackground(new Color(255,255,153));
+            jPanelPinkBorder.setBackground(new Color(255,153,255));
         }else if(state==1){
             jPanelRedBorder.setBackground(new Color(255,153,153));
-            jPanelGreen.setBackground(Color.green);
-            jPanelBlue.setBackground(Color.GRAY);
-            jPanelYellow.setBackground(Color.GRAY);
-            jPanelPink.setBackground(Color.GRAY);
+            jPanelGreenBorder.setBackground(Color.GREEN);
+            jPanelBlueBorder.setBackground(new Color(153,153,255));
+            jPanelYellowBorder.setBackground(new Color(255,255,153));
+            jPanelPinkBorder.setBackground(new Color(255,153,255));
         }else if(state==2){
             jPanelRedBorder.setBackground(new Color(255,153,153));
-            jPanelGreen.setBackground(Color.GRAY);
-            jPanelBlue.setBackground(Color.blue);
-            jPanelYellow.setBackground(Color.GRAY);
-            jPanelPink.setBackground(Color.GRAY);
+            jPanelGreenBorder.setBackground(new Color(153,255,153));
+            jPanelBlueBorder.setBackground(Color.blue);
+            jPanelYellowBorder.setBackground(new Color(255,255,153));
+            jPanelPinkBorder.setBackground(new Color(255,153,255));
         }else if(state==3){
             jPanelRedBorder.setBackground(new Color(255,153,153));
-            jPanelGreen.setBackground(Color.GRAY);
-            jPanelBlue.setBackground(Color.GRAY);
-            jPanelYellow.setBackground(Color.yellow);
-            jPanelPink.setBackground(Color.GRAY);
+            jPanelGreenBorder.setBackground(new Color(153,255,153));
+            jPanelBlueBorder.setBackground(new Color(153,153,255));
+            jPanelYellowBorder.setBackground(Color.yellow);
+            jPanelPinkBorder.setBackground(new Color(255,153,255));
         }else if(state==4){
             jPanelRedBorder.setBackground(new Color(255,153,153));
-            jPanelGreen.setBackground(Color.GRAY);
-            jPanelBlue.setBackground(Color.GRAY);
-            jPanelYellow.setBackground(Color.GRAY);
-            jPanelPink.setBackground(Color.pink);
+            jPanelGreenBorder.setBackground(new Color(153,255,153));
+            jPanelBlueBorder.setBackground(new Color(153,153,255));
+            jPanelYellowBorder.setBackground(new Color(255,255,153));
+            jPanelPinkBorder.setBackground(new Color(255,0,255));
         }
     }
     
@@ -1071,7 +1148,9 @@ public class MainJFrame extends javax.swing.JFrame {
     
     private void RioPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RioPressed
         // TODO add your handling code here:
-        rio = CityPressed(jButtonRio, rio);
+        if(pickcolor||state<5){         //this protects from color inputs if you already picked another city
+            rio = CityPressed(jButtonRio, rio);
+        }
     }//GEN-LAST:event_RioPressed
 
     
@@ -1103,12 +1182,16 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void MumbaiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MumbaiPressed
         // TODO add your handling code here:
-        mumbai = CityPressed(jButtonMumbai, mumbai);
+        if(pickcolor||state<5){
+            mumbai = CityPressed(jButtonMumbai, mumbai);
+        }
     }//GEN-LAST:event_MumbaiPressed
 
     private void FrankfurtPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FrankfurtPressed
         // TODO add your handling code here:
-        frankfurt = CityPressed(jButtonFrankfurt, frankfurt);
+        if(pickcolor||state<5){
+            frankfurt = CityPressed(jButtonFrankfurt, frankfurt);
+        }
     }//GEN-LAST:event_FrankfurtPressed
 
     private void StartPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartPressed
@@ -1135,57 +1218,79 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void NewyorkPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewyorkPressed
         // TODO add your handling code here:
-        newyork = CityPressed(jButtonNewyork, newyork);
+        if(pickcolor||state<5){
+            newyork = CityPressed(jButtonNewyork, newyork);
+        }
     }//GEN-LAST:event_NewyorkPressed
 
     private void OsloPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OsloPressed
         // TODO add your handling code here:
-        oslo = CityPressed(jButtonOslo, oslo);
+        if(pickcolor||state<5){
+            oslo = CityPressed(jButtonOslo, oslo);
+        }
     }//GEN-LAST:event_OsloPressed
 
     private void HanoiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HanoiPressed
         // TODO add your handling code here:
-        hanoi = CityPressed(jButtonHanoi, hanoi);
+        if(pickcolor||state<5){
+            hanoi = CityPressed(jButtonHanoi, hanoi);
+        }
     }//GEN-LAST:event_HanoiPressed
 
     private void BaliPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaliPressed
         // TODO add your handling code here:
-        bali = CityPressed(jButtonBali, bali);
+        if(pickcolor||state<5){
+            bali = CityPressed(jButtonBali, bali);
+        }
     }//GEN-LAST:event_BaliPressed
 
     private void NairobiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NairobiPressed
         // TODO add your handling code here:
-        nairobi = CityPressed(jButtonNairobi, nairobi);
+        if(pickcolor||state<5){
+            nairobi = CityPressed(jButtonNairobi, nairobi);
+        }
     }//GEN-LAST:event_NairobiPressed
 
     private void LisabonPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LisabonPressed
         // TODO add your handling code here:
-        lisabon = CityPressed(jButtonLisabon, lisabon);
+        if(pickcolor||state<5){
+            lisabon = CityPressed(jButtonLisabon, lisabon);
+        }
     }//GEN-LAST:event_LisabonPressed
  
     private void CairoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CairoPressed
         // TODO add your handling code here:
-        cairo = CityPressed(jButtonCairo, cairo);
+        if(pickcolor||state<5){
+            cairo = CityPressed(jButtonCairo, cairo);
+        }
     }//GEN-LAST:event_CairoPressed
 
     private void MilanPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MilanPressed
         // TODO add your handling code here:
-        milan = CityPressed(jButtonMilan, milan);
+        if(pickcolor||state<5){
+            milan = CityPressed(jButtonMilan, milan);
+        }
     }//GEN-LAST:event_MilanPressed
 
     private void AthensPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AthensPressed
         // TODO add your handling code here:
-        athens = CityPressed(jButtonAthens, athens);
+        if(pickcolor||state<5){
+            athens = CityPressed(jButtonAthens, athens);
+        }
     }//GEN-LAST:event_AthensPressed
 
     private void TokyoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TokyoPressed
         // TODO add your handling code here:
-        tokyo = CityPressed(jButtonTokyo,tokyo);
+        if(pickcolor||state<5){
+            tokyo = CityPressed(jButtonTokyo,tokyo);
+        }
     }//GEN-LAST:event_TokyoPressed
 
     private void ParisPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParisPressed
         // TODO add your handling code here:
-        paris = CityPressed(jButtonParis, paris);
+        if(pickcolor||state<5){
+            paris = CityPressed(jButtonParis, paris);
+        }
     }//GEN-LAST:event_ParisPressed
 
     void CityBPressed(JButton button, int city){                    //function gets the value of the city and NOT the B city but the city
@@ -1326,14 +1431,12 @@ public class MainJFrame extends javax.swing.JFrame {
         milan=0;
         tokyo=0;
         paris=0;
-        jPanelYellow.setBackground(Color.GRAY);
-        jPanelGreen.setBackground(Color.GRAY);
-        jPanelBlue.setBackground(Color.GRAY);
-        jPanelRed.setBackground(Color.GRAY);
-        jPanelPink.setBackground(Color.GRAY);
+        jPanelRedBorder.setBackground(new Color(255,153,153));
+        jPanelGreenBorder.setBackground(new Color(153,255,153));
+        jPanelBlueBorder.setBackground(new Color(153,153,255));
+        jPanelYellowBorder.setBackground(new Color(255,255,153));
+        jPanelPinkBorder.setBackground(new Color(255,153,255));
         jButtonDice.setEnabled(true);
-        jUsernameField.setText("");
-        jPasswordField.setText("");
     }//GEN-LAST:event_ExitPressed
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
@@ -1454,11 +1557,15 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanelBlue;
+    private javax.swing.JPanel jPanelBlueBorder;
     private javax.swing.JPanel jPanelGreen;
+    private javax.swing.JPanel jPanelGreenBorder;
     private javax.swing.JPanel jPanelPink;
+    private javax.swing.JPanel jPanelPinkBorder;
     private javax.swing.JPanel jPanelRed;
     private javax.swing.JPanel jPanelRedBorder;
     private javax.swing.JPanel jPanelYellow;
+    private javax.swing.JPanel jPanelYellowBorder;
     private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
