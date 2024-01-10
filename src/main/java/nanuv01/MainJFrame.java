@@ -1249,7 +1249,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private void StartPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartPressed
         // TODO add your handling code here:
         jButtonStart.setEnabled(false);
-        jButtonStart.setVisible(false);
         jPanelRedBorder.setBackground(Color.red);
         state=0;
         mumbai=10;
