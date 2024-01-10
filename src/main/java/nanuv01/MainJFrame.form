@@ -703,7 +703,6 @@
                                       <Component id="jButtonFrankfurt" pref="400" max="32767" attributes="0"/>
                                       <Component id="jButtonCairo" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="15" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -715,7 +714,6 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButtonRio" max="32767" attributes="0"/>
                                       <Component id="jButtonMilan" max="32767" attributes="0"/>
                                       <Component id="jButtonTokyo" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jButtonParis" alignment="0" max="32767" attributes="0"/>
@@ -723,9 +721,11 @@
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           <Component id="jButtonAthens" min="-2" pref="399" max="-2" attributes="0"/>
                                       </Group>
+                                      <Component id="jButtonRio" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

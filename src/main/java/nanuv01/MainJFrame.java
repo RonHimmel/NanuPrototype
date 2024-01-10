@@ -524,8 +524,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButtonFrankfurt, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
-                            .addComponent(jButtonCairo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(15, Short.MAX_VALUE))
+                            .addComponent(jButtonCairo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jButtonNairobi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -535,13 +534,14 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addComponent(jButtonMumbai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonRio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonMilan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonTokyo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonParis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButtonAthens, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addComponent(jButtonAthens, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonRio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(15, 15, 15))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1200,7 +1200,9 @@ public class MainJFrame extends javax.swing.JFrame {
     
     private void RioPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RioPressed
         // TODO add your handling code here:
-        rio = CityPressed(jButtonRio, rio);
+        if(pickcolor||state<5){
+            rio = CityPressed(jButtonRio, rio);
+        }
     }//GEN-LAST:event_RioPressed
 
     
@@ -1232,12 +1234,16 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void MumbaiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MumbaiPressed
         // TODO add your handling code here:
-        mumbai = CityPressed(jButtonMumbai, mumbai);
+        if(pickcolor||state<5){
+            mumbai = CityPressed(jButtonMumbai, mumbai);
+        }
     }//GEN-LAST:event_MumbaiPressed
 
     private void FrankfurtPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FrankfurtPressed
         // TODO add your handling code here:
-        frankfurt = CityPressed(jButtonFrankfurt, frankfurt);
+        if(pickcolor||state<5){
+            frankfurt = CityPressed(jButtonFrankfurt, frankfurt);
+        }
     }//GEN-LAST:event_FrankfurtPressed
 
     private void StartPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartPressed
@@ -1264,57 +1270,79 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void NewyorkPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewyorkPressed
         // TODO add your handling code here:
-        newyork = CityPressed(jButtonNewyork, newyork);
+        if(pickcolor||state<5){
+            newyork = CityPressed(jButtonNewyork, newyork);
+        }
     }//GEN-LAST:event_NewyorkPressed
 
     private void OsloPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OsloPressed
         // TODO add your handling code here:
-        oslo = CityPressed(jButtonOslo, oslo);
+        if(pickcolor||state<5){
+            oslo = CityPressed(jButtonOslo, oslo);
+        }
     }//GEN-LAST:event_OsloPressed
 
     private void HanoiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HanoiPressed
         // TODO add your handling code here:
-        hanoi = CityPressed(jButtonHanoi, hanoi);
+        if(pickcolor||state<5){
+            hanoi = CityPressed(jButtonHanoi, hanoi);
+        }
     }//GEN-LAST:event_HanoiPressed
 
     private void BaliPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaliPressed
         // TODO add your handling code here:
-        bali = CityPressed(jButtonBali, bali);
+        if(pickcolor||state<5){
+            bali = CityPressed(jButtonBali, bali);
+        }
     }//GEN-LAST:event_BaliPressed
 
     private void NairobiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NairobiPressed
         // TODO add your handling code here:
-        nairobi = CityPressed(jButtonNairobi, nairobi);
+        if(pickcolor||state<5){
+            nairobi = CityPressed(jButtonNairobi, nairobi);
+        }
     }//GEN-LAST:event_NairobiPressed
 
     private void LisabonPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LisabonPressed
         // TODO add your handling code here:
-        lisabon = CityPressed(jButtonLisabon, lisabon);
+        if(pickcolor||state<5){
+            lisabon = CityPressed(jButtonLisabon, lisabon);
+        }
     }//GEN-LAST:event_LisabonPressed
  
     private void CairoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CairoPressed
         // TODO add your handling code here:
-        cairo = CityPressed(jButtonCairo, cairo);
+        if(pickcolor||state<5){
+            cairo = CityPressed(jButtonCairo, cairo);
+        }
     }//GEN-LAST:event_CairoPressed
 
     private void MilanPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MilanPressed
         // TODO add your handling code here:
-        milan = CityPressed(jButtonMilan, milan);
+        if(pickcolor||state<5){
+            milan = CityPressed(jButtonMilan, milan);
+        }
     }//GEN-LAST:event_MilanPressed
 
     private void AthensPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AthensPressed
         // TODO add your handling code here:
-        athens = CityPressed(jButtonAthens, athens);
+        if(pickcolor||state<5){
+            athens = CityPressed(jButtonAthens, athens);
+        }
     }//GEN-LAST:event_AthensPressed
 
     private void TokyoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TokyoPressed
         // TODO add your handling code here:
-        tokyo = CityPressed(jButtonTokyo,tokyo);
+        if(pickcolor||state<5){
+            tokyo = CityPressed(jButtonTokyo,tokyo);
+        }
     }//GEN-LAST:event_TokyoPressed
 
     private void ParisPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParisPressed
         // TODO add your handling code here:
-        paris = CityPressed(jButtonParis, paris);
+        if(pickcolor||state<5){
+            paris = CityPressed(jButtonParis, paris);
+        }
     }//GEN-LAST:event_ParisPressed
 
     void CityBPressed(JButton button, int city){                    //function gets the value of the city and NOT the B city but the city
