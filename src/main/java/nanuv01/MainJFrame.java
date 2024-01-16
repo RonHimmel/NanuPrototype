@@ -93,6 +93,12 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabelPointsFour = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jButtonDice = new javax.swing.JButton();
         jButtonFrankfurtB = new javax.swing.JButton();
@@ -608,6 +614,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabelPlayerOne.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+
         jLabelPointsOne.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         jLabelPointsOne.setText("0");
 
@@ -710,6 +718,25 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel30.setForeground(new java.awt.Color(255, 204, 204));
         jLabel30.setText("Points");
 
+        jLabel21.setForeground(new java.awt.Color(255, 204, 204));
+        jLabel21.setText("Points");
+
+        jLabel22.setForeground(new java.awt.Color(255, 204, 204));
+        jLabel22.setText("Player 2");
+
+        jLabel23.setForeground(new java.awt.Color(255, 204, 204));
+        jLabel23.setText("Points");
+
+        jLabel24.setForeground(new java.awt.Color(255, 204, 204));
+        jLabel24.setText("Player 3");
+
+        jLabel25.setForeground(new java.awt.Color(255, 204, 204));
+        jLabel25.setText("Points");
+
+        jLabel26.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel26.setForeground(new java.awt.Color(255, 204, 204));
+        jLabel26.setText("Player 4");
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -733,6 +760,18 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(jLabel25)
+                                .addGap(40, 40, 40)
+                                .addComponent(jLabel26))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(jLabel23)
+                                .addGap(38, 38, 38)
+                                .addComponent(jLabel24))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(jLabel21)
+                                .addGap(39, 39, 39)
+                                .addComponent(jLabel22))
                             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -750,11 +789,23 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addComponent(jLabel30))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addGap(25, 25, 25)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addGap(23, 23, 23)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel24))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
+                .addGap(30, 30, 30)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel26))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
                 .addComponent(jButtonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1191,7 +1242,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                         .addComponent(jPanelPinkBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(54, 54, 54)))
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(48, 48, 48)
+                .addGap(24, 24, 24)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1491,7 +1542,8 @@ public class MainJFrame extends javax.swing.JFrame {
         if(state>=5 && diceRoll==city&&button.isEnabled()&&okay){   //if game state is dice and color is citycolor and the city is available and its okay to chose
             button.setEnabled(false);                               //the button is disabled because you chose the right city
             button.setBackground(Color.white);
-            state++;                                                //game state ++                     
+            state++;                                                //game state ++  
+            jLabelPointsOne.setText(Integer.toString(Integer.parseInt(jLabelPointsOne.getText())+1));         //sets score +1          
             pickcolor=true;                                         //now you can choose the next city for that color
         }
         okay=false;                                                 //secures that you cant choose another Bcity
@@ -1576,6 +1628,7 @@ public class MainJFrame extends javax.swing.JFrame {
             MainPanel.add(GameScreen);
             MainPanel.repaint();
             MainPanel.revalidate();
+            jLabelPlayerOne.setText(jUsernameField.getText());
         }
     }//GEN-LAST:event_LoginPressed
 
@@ -1731,6 +1784,12 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
