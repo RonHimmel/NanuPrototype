@@ -181,7 +181,7 @@
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="tendoku"/>
+                    <Property name="text" type="java.lang.String" value="tengoku"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButtonLogin">

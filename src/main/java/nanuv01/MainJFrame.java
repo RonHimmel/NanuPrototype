@@ -150,7 +150,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Ubuntu", 1, 96)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(254, 219, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("tendoku");
+        jLabel6.setText("tengoku");
 
         jButtonLogin.setBackground(new java.awt.Color(1, 49, 41));
         jButtonLogin.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
