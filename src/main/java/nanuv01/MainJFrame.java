@@ -6,6 +6,8 @@ package nanuv01;
 
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.UIManager;
@@ -1722,6 +1724,12 @@ public class MainJFrame extends javax.swing.JFrame {
         */
         
         //</editor-fold>
+        
+        try(Connection conn = DatabaseConnector.getConnection()){
+            System.out.println("Connection established");
+        }catch(SQLException e){
+            System.out.println(e);
+        }
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
