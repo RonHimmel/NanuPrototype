@@ -7,11 +7,15 @@ package nanuv01;
 
 import java.awt.Color;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
@@ -336,6 +340,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(254, 219, 255));
         jButton1.setText("Sign Up");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(254, 188, 255), 3, true));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Bahnschrift", 1, 48)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(1, 87, 73));
@@ -1199,7 +1208,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                         .addComponent(jPanelPinkBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(7, 7, 7)))
-                .addContainerGap(2326, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         GameScreenLayout.setVerticalGroup(
             GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1606,13 +1615,32 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void LoginPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginPressed
         // TODO add your handling code here:
-        if("Username".equals(jUsernameField.getText())&&"Password".equals(jPasswordField.getText())){//you only get into the game with the username "Username" and password "Password"
-            MainPanel.removeAll();
-            MainPanel.add(GameScreen);
-            MainPanel.repaint();
-            MainPanel.revalidate();
-            jLabelPlayerOne.setText(jUsernameField.getText());
-        }
+        String username = jUsernameField.getText();
+        String password = jPasswordField.getText();
+        
+        try (Connection conn = DatabaseConnector.getConnection()){
+            String sqlquery = "SELECT password FROM users WHERE username = ?";
+            try(PreparedStatement pst = conn.prepareStatement(sqlquery)){
+                pst.setString(1, username);
+                
+                ResultSet rs = pst.executeQuery();
+                if(rs.next()){
+                    String storedHash = rs.getString("password");
+                    if(BCrypt.checkpw(password, storedHash)){
+                        MainPanel.removeAll();
+                        MainPanel.add(GameScreen);
+                        MainPanel.repaint();
+                        jLabelPlayerOne.setText(username); 
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null, "Login failed");
+                    jUsernameField.setText("");
+                    jPasswordField.setText("");
+                }
+            }
+        }catch(SQLException e) {
+            System.out.println(e);
+        }  
     }//GEN-LAST:event_LoginPressed
 
     void ResetCity(JButton button, String name){
@@ -1682,15 +1710,73 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        MainPanel.removeAll();
-        MainPanel.add(LoginScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+ String username = jTextField3.getText();
+    String newPassword = jTextField4.getText();
+
+    // Hash the new password
+    String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
+
+    try (Connection conn = DatabaseConnector.getConnection()) {
+        String sqlquery = "UPDATE users SET password = ? WHERE username = ?";
+        try (PreparedStatement pst = conn.prepareStatement(sqlquery)) {
+            pst.setString(1, hashedPassword);
+            pst.setString(2, username);
+
+            int affectedRows = pst.executeUpdate();
+
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Password reset successful");
+                // Navigate back to login screen or main screen
+                MainPanel.removeAll();
+                MainPanel.add(LoginScreen);
+                MainPanel.repaint();
+                MainPanel.revalidate();
+            } else {
+                JOptionPane.showMessageDialog(null, "Password reset failed. User not found.");
+            }
+        }
+    } catch (SQLException e) {
+        System.out.println(e);
+        // For better debugging, use e.printStackTrace();
+    }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String username = jTextField1.getText();
+       String email = jTextField2.getText();
+       String password = jPasswordField1.getText();
+       
+       String hashedPassword = BCrypt.hashpw(password,BCrypt.gensalt());
+       
+       String sqlquery = "INSERT INTO users (username, password, email, score) VALUES (?, ?, ?, 0)";
+       
+       try(Connection conn = DatabaseConnector.getConnection(); PreparedStatement pst = conn.prepareStatement(sqlquery)){
+       
+            pst.setString(1, username);
+            pst.setString(2, hashedPassword); 
+            pst.setString(3, email);
+
+           
+            int affectedRows = pst.executeUpdate();
+           
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Sign Up successful");
+                jTextField1.setText("");
+                jTextField2.setText("");
+                jPasswordField1.setText("");
+            } else {
+                JOptionPane.showMessageDialog(null, "Sign up failed");
+            }
+           
+       }catch(SQLException e){
+           System.out.println(e);
+       }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
