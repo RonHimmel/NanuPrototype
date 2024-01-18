@@ -1879,9 +1879,10 @@ public class MainJFrame extends javax.swing.JFrame {
                     String storedHash = rs.getString("password");
                     if(BCrypt.checkpw(password, storedHash)){
                         MainPanel.removeAll();
-                        MainPanel.add(GameScreen);
+                        MainPanel.add(CreateOrJoinGameScreen);
                         MainPanel.repaint();
-                        jLabelPlayerOne.setText(username); 
+                        MainPanel.revalidate();
+                        jLabelPlayerOne.setText(username);
                     }
                 }else{
                     JOptionPane.showMessageDialog(null, "Login failed");
@@ -2145,6 +2146,7 @@ public class MainJFrame extends javax.swing.JFrame {
         MainPanel.removeAll();
         MainPanel.add(GameScreen);
         MainPanel.repaint();
+        MainPanel.revalidate();
     }//GEN-LAST:event_jButtonGamelobbyStartActionPerformed
 
     /**
