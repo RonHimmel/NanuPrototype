@@ -13,8 +13,6 @@ import java.sql.SQLException;
 import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
@@ -1658,6 +1656,7 @@ public class MainJFrame extends javax.swing.JFrame {
     int state=-1;
     boolean okay=false;
     boolean pickcolor = false;
+    int prevcolor = -1;
     
     void SetColor(int color, JButton button){
         if(color==0){
@@ -1709,6 +1708,12 @@ public class MainJFrame extends javax.swing.JFrame {
             jPanelBlueBorder.setBackground(new Color(153,153,255));
             jPanelYellowBorder.setBackground(new Color(255,255,153));
             jPanelPinkBorder.setBackground(new Color(255,0,255));
+        }else if(state==5){
+            jPanelRedBorder.setBackground(new Color(255,153,153));
+            jPanelGreenBorder.setBackground(new Color(153,255,153));
+            jPanelBlueBorder.setBackground(new Color(153,153,255));
+            jPanelYellowBorder.setBackground(new Color(255,255,153));
+            jPanelPinkBorder.setBackground(new Color(255,153,255));
         }
     }
     
@@ -1722,17 +1727,24 @@ public class MainJFrame extends javax.swing.JFrame {
             SetColor(diceRoll,button);      //the color is set
             pickcolor=false;                //now picking another city to this color is disabled
             if(state<14){                   //if the state is lower than 14 the dice is enabled because more than 5 cities are left so you can roll the next color
-                jButtonDice.setEnabled(true);   
+                jButtonDice.setEnabled(true);
+                jButtonDice.setBackground(Color.white);
             }
-            return diceRoll;    //the set color is returned to the city
+            prevcolor = diceRoll;           //the previous set color is saved so it cannot be picked by the joker
+            return diceRoll;                //the set color is returned to the city
+        }else if(diceRoll==5&&city!=10&&city!=prevcolor){
+            diceRoll=city;
+            SetPanel(city);
+            okay=true;
+            return city;
         };
-        return 0;//does not occur
+        return 10;//does not occur
     }
     
     
     private void RioPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RioPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             rio = CityPressed(jButtonRio, rio);
         }
     }//GEN-LAST:event_RioPressed
@@ -1741,14 +1753,14 @@ public class MainJFrame extends javax.swing.JFrame {
     
     private void MumbaiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MumbaiPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             mumbai = CityPressed(jButtonMumbai, mumbai);
         }
     }//GEN-LAST:event_MumbaiPressed
 
     private void FrankfurtPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FrankfurtPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             frankfurt = CityPressed(jButtonFrankfurt, frankfurt);
         }
     }//GEN-LAST:event_FrankfurtPressed
@@ -1776,77 +1788,77 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void NewyorkPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewyorkPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             newyork = CityPressed(jButtonNewyork, newyork);
         }
     }//GEN-LAST:event_NewyorkPressed
 
     private void OsloPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OsloPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             oslo = CityPressed(jButtonOslo, oslo);
         }
     }//GEN-LAST:event_OsloPressed
 
     private void HanoiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HanoiPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             hanoi = CityPressed(jButtonHanoi, hanoi);
         }
     }//GEN-LAST:event_HanoiPressed
 
     private void BaliPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaliPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             bali = CityPressed(jButtonBali, bali);
         }
     }//GEN-LAST:event_BaliPressed
 
     private void NairobiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NairobiPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             nairobi = CityPressed(jButtonNairobi, nairobi);
         }
     }//GEN-LAST:event_NairobiPressed
 
     private void LisabonPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LisabonPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             lisabon = CityPressed(jButtonLisabon, lisabon);
         }
     }//GEN-LAST:event_LisabonPressed
  
     private void CairoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CairoPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             cairo = CityPressed(jButtonCairo, cairo);
         }
     }//GEN-LAST:event_CairoPressed
 
     private void MilanPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MilanPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             milan = CityPressed(jButtonMilan, milan);
         }
     }//GEN-LAST:event_MilanPressed
 
     private void AthensPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AthensPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             athens = CityPressed(jButtonAthens, athens);
         }
     }//GEN-LAST:event_AthensPressed
 
     private void TokyoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TokyoPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             tokyo = CityPressed(jButtonTokyo,tokyo);
         }
     }//GEN-LAST:event_TokyoPressed
 
     private void ParisPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParisPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5){
+        if(pickcolor||state<5||diceRoll==5){
             paris = CityPressed(jButtonParis, paris);
         }
     }//GEN-LAST:event_ParisPressed
@@ -1860,8 +1872,9 @@ public class MainJFrame extends javax.swing.JFrame {
             pickcolor=true;                                         //now you can choose the next city for that color
         }
         okay=false;                                                 //secures that you cant choose another Bcity
-        if(state<14&&!pickcolor){                                   //if the game has not ended and you can not chose the next city the dice is enabled again
+        if(state<14&&!pickcolor&&diceRoll!=5){                                   //if the game has not ended and you can not chose the next city the dice is enabled again
             jButtonDice.setEnabled(true);
+            jButtonDice.setBackground(Color.white);
         }
     }
     private void LoginPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginPressed
@@ -2103,23 +2116,31 @@ public class MainJFrame extends javax.swing.JFrame {
     private void DiceRoll(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiceRoll
         // TODO add your handling code here:
         if(state>=5){
-            okay=true;      //after rolling the dice the B buttons can be picked (okay is true if they can be picked and else false)
             Random random = new Random();
-            diceRoll = random.nextInt(5);
+            diceRoll = random.nextInt(6);
             if(diceRoll==0){
+                okay=true;      //after rolling the dice the B buttons can be picked (okay is true if they can be picked and else false)
                 SetPanel(0);
                 jButtonDice.setEnabled(false);
             }else if(diceRoll==1){
+                okay=true;
                 SetPanel(1);
                 jButtonDice.setEnabled(false);
             }else if(diceRoll==2){
+                okay=true;
                 SetPanel(2);
                 jButtonDice.setEnabled(false);
             }else if(diceRoll==3){
                 SetPanel(3);
+                okay=true;
                 jButtonDice.setEnabled(false);
             }else if(diceRoll==4){
                 SetPanel(4);
+                okay=true;
+                jButtonDice.setEnabled(false);
+            }else if(diceRoll==5){
+                SetPanel(5);
+                jButtonDice.setBackground(Color.black);
                 jButtonDice.setEnabled(false);
             }
         }
@@ -2153,15 +2174,7 @@ public class MainJFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        /* try {
-            UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
-        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException ee) {
-            System.out.println(ee);
-        }
-        */
-        
-        //</editor-fold>
+             //</editor-fold>
         
         try(Connection conn = DatabaseConnector.getConnection()){
             System.out.println("Connection established");
