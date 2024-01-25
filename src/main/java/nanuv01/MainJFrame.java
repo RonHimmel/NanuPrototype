@@ -1515,16 +1515,16 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanelYellowBorderLayout.setHorizontalGroup(
             jPanelYellowBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelYellowBorderLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addComponent(jLabel4)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanelYellowBorderLayout.setVerticalGroup(
             jPanelYellowBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelYellowBorderLayout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addComponent(jLabel4)
-                .addContainerGap())
+                .addGap(26, 26, 26))
         );
 
         jPanelPinkBorder.setBackground(new java.awt.Color(255, 153, 255));
@@ -1658,8 +1658,8 @@ public class MainJFrame extends javax.swing.JFrame {
     boolean pickcolor = false;
     int prevcolor = -1;
     
-    void SetColor(int color, JButton button){
-        if(color==0){
+    void SetColor(int color, JButton button){ //function is called if you want to change the color of the top city buttons
+        if(color==0){                           //0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink
             button.setBackground(Color.red);
             button.setText("");     // i had to remove the city name because it was even visible with the identical color
         }else if(color==1){
@@ -1677,7 +1677,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }
     
-    void SetPanel(int state){
+    void SetPanel(int state){           // top gate panels get their border enlightened with this function
         if(state==0){
             jPanelRedBorder.setBackground(Color.RED);
             jPanelGreenBorder.setBackground(new Color(153,255,153));
@@ -1708,7 +1708,7 @@ public class MainJFrame extends javax.swing.JFrame {
             jPanelBlueBorder.setBackground(new Color(153,153,255));
             jPanelYellowBorder.setBackground(new Color(255,255,153));
             jPanelPinkBorder.setBackground(new Color(255,0,255));
-        }else if(state==5){
+        }else if(state==5){                                             //joker
             jPanelRedBorder.setBackground(new Color(255,153,153));
             jPanelGreenBorder.setBackground(new Color(153,255,153));
             jPanelBlueBorder.setBackground(new Color(153,153,255));
@@ -1744,7 +1744,7 @@ public class MainJFrame extends javax.swing.JFrame {
     
     private void RioPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RioPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(pickcolor||state<5||diceRoll==5){      //pickcolor means top buttons are clickable       
             rio = CityPressed(jButtonRio, rio);
         }
     }//GEN-LAST:event_RioPressed
