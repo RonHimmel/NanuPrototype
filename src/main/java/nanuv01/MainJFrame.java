@@ -1653,6 +1653,7 @@ public class MainJFrame extends javax.swing.JFrame {
     boolean okay=false;
     boolean pickcolor = false;
     int prevcolor = -1;
+    int playercount = 1;                //used to keep track which players turn 
     
     void SetColor(int color, JButton button){ //function is called if you want to change the color of the top city buttons
         if(color==0){                           //0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink
@@ -1716,6 +1717,7 @@ public class MainJFrame extends javax.swing.JFrame {
     int CityPressed(JButton button,int city){
         if(state<5&&city==10){  //if the game is in the beginning state(choosing which city is which color) AND the city was not chosen already
             SetColor(state,button); //sets the button this color
+            prevcolor = state;
             state++;                //color value++
             SetPanel(state);        //panel with the next color is on
             return state-1; //the city gets the value of the previous color returned
@@ -1726,6 +1728,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 jButtonDice.setEnabled(true);
                 jButtonDice.setBackground(Color.white);
             }
+            setActivePlayer(playercount);   //after picking its the next players turn
             prevcolor = diceRoll;           //the previous set color is saved so it cannot be picked by the joker
             return diceRoll;                //the set color is returned to the city
         }else if(diceRoll==5&&city!=10&&city!=prevcolor){
@@ -1765,6 +1768,7 @@ public class MainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         jButtonStart.setEnabled(false);
         jPanelRedBorder.setBackground(Color.red);
+        jLabelPointsOne.setForeground(Color.red);
         state=0;
         mumbai=10;
         frankfurt=10;
@@ -1859,18 +1863,74 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ParisPressed
 
+    void setPoints(int number){
+        if(number==1){
+            jLabelPointsOne.setText(Integer.toString(Integer.parseInt(jLabelPointsOne.getText())+1)); //sets score +1  
+        }else if(number ==2){
+            jLabelPointsTwo.setText(Integer.toString(Integer.parseInt(jLabelPointsTwo.getText())+1));
+        }else if(number ==3){
+            jLabelPointsThree.setText(Integer.toString(Integer.parseInt(jLabelPointsThree.getText())+1));
+        }else if(number ==4){
+            jLabelPointsFour.setText(Integer.toString(Integer.parseInt(jLabelPointsFour.getText())+1));
+        }
+    }
+    
+    void setActivePlayer(int number){
+        if(userLoggedInCount==4){
+            if(number==1){
+                jLabelPointsOne.setForeground(Color.black);
+                jLabelPointsTwo.setForeground(Color.red);
+            }else if(number ==2){
+                jLabelPointsTwo.setForeground(Color.black);
+                jLabelPointsThree.setForeground(Color.red);
+            }else if(number ==3){
+                jLabelPointsThree.setForeground(Color.black);
+                jLabelPointsFour.setForeground(Color.red);
+            }else if(number ==4){
+                jLabelPointsFour.setForeground(Color.black);
+                jLabelPointsOne.setForeground(Color.red);
+            }
+        }else if(userLoggedInCount==3){
+            if(number==1){
+                jLabelPointsOne.setForeground(Color.black);
+                jLabelPointsTwo.setForeground(Color.red);
+            }else if(number ==2){
+                jLabelPointsTwo.setForeground(Color.black);
+                jLabelPointsThree.setForeground(Color.red);
+            }else if(number ==3){
+                jLabelPointsThree.setForeground(Color.black);
+                jLabelPointsOne.setForeground(Color.red);
+            }
+        }else if(userLoggedInCount==2){
+            if(number==1){
+                jLabelPointsOne.setForeground(Color.black);
+                jLabelPointsTwo.setForeground(Color.red);
+            }else if(number ==2){
+                jLabelPointsTwo.setForeground(Color.black);
+                jLabelPointsOne.setForeground(Color.red);
+            }
+        }
+        if(number<userLoggedInCount){
+            playercount++;
+        }else{
+            playercount=1;
+        }
+        
+    }
+    
     void CityBPressed(JButton button, int city){                    //function gets the value of the city and NOT the B city but the city
         if(state>=5 && diceRoll==city&&button.isEnabled()&&okay){   //if game state is dice and color is citycolor and the city is available and its okay to chose
             button.setEnabled(false);                               //the button is disabled because you chose the right city
             button.setBackground(Color.white);
-            state++;                                                //game state ++  
-            jLabelPointsOne.setText(Integer.toString(Integer.parseInt(jLabelPointsOne.getText())+1));         //sets score +1          
+            state++;                                                //game state ++ 
+            setPoints(playercount);
             pickcolor=true;                                         //now you can choose the next city for that color
         }
         okay=false;                                                 //secures that you cant choose another Bcity
         if(state<14&&!pickcolor&&diceRoll!=5){                                   //if the game has not ended and you can not chose the next city the dice is enabled again
             jButtonDice.setEnabled(true);
             jButtonDice.setBackground(Color.white);
+            setActivePlayer(playercount);
         }
     }
     private void LoginPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginPressed
