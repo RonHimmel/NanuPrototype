@@ -64,17 +64,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
-        CreateOrJoinGameScreen = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel23 = new javax.swing.JLabel();
-        jButtonJoinGame = new javax.swing.JButton();
-        jPanel13 = new javax.swing.JPanel();
-        jButtonCreateGame = new javax.swing.JButton();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
         ForgotPasswordScreen = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
@@ -91,8 +80,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
         jPanel15 = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
         jButtonGamelobbyStart = new javax.swing.JButton();
         GameScreen = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -248,16 +235,19 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(115, 115, 115)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
+                                .addGap(6, 6, 6))
                             .addComponent(jLabel10)
-                            .addComponent(jUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jUsernameField, javax.swing.GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
                             .addComponent(jLabel9)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelForgotPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jLabelForgotPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(40, 40, 40))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -270,7 +260,6 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(225, 225, 225)
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -384,11 +373,12 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel18)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2)
                             .addComponent(jLabel17)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1)
                             .addComponent(jLabel16)
-                            .addComponent(jLabel13)))
+                            .addComponent(jLabel13))
+                        .addGap(87, 87, 87))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addComponent(checkbox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -398,7 +388,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(56, 56, 56)
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(2362, Short.MAX_VALUE))
+                .addGap(2362, 2362, 2362))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -433,9 +423,9 @@ public class MainJFrame extends javax.swing.JFrame {
             LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LoginScreenLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         LoginScreenLayout.setVerticalGroup(
@@ -448,134 +438,6 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         MainPanel.add(LoginScreen, "card3");
-
-        jPanel12.setBackground(new java.awt.Color(144, 178, 185));
-
-        jLabel21.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(5, 98, 82));
-        jLabel21.setText("Want to join an already");
-
-        jLabel22.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(5, 98, 82));
-        jLabel22.setText("created room?");
-
-        jTextField5.setBackground(new java.awt.Color(255, 221, 224));
-
-        jLabel23.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(5, 98, 82));
-        jLabel23.setText("Enter the room code:");
-
-        jButtonJoinGame.setBackground(new java.awt.Color(5, 98, 82));
-        jButtonJoinGame.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        jButtonJoinGame.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonJoinGame.setText("Join Game");
-        jButtonJoinGame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonJoinGameActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap(142, Short.MAX_VALUE)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButtonJoinGame, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(131, 131, 131))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(140, 140, 140))))
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(111, 111, 111)
-                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
-                .addComponent(jButtonJoinGame, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(407, Short.MAX_VALUE))
-        );
-
-        jPanel13.setBackground(new java.awt.Color(225, 247, 231));
-
-        jButtonCreateGame.setBackground(new java.awt.Color(254, 188, 255));
-        jButtonCreateGame.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        jButtonCreateGame.setText("Create Game");
-        jButtonCreateGame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCreateGameActionPerformed(evt);
-            }
-        });
-
-        jLabel24.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(5, 98, 82));
-        jLabel24.setText("Create a room and invite ");
-
-        jLabel25.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(5, 98, 82));
-        jLabel25.setText("your friends to join the game");
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(jButtonCreateGame, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(153, Short.MAX_VALUE))
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addGap(266, 266, 266)
-                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(123, 123, 123)
-                .addComponent(jButtonCreateGame, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout CreateOrJoinGameScreenLayout = new javax.swing.GroupLayout(CreateOrJoinGameScreen);
-        CreateOrJoinGameScreen.setLayout(CreateOrJoinGameScreenLayout);
-        CreateOrJoinGameScreenLayout.setHorizontalGroup(
-            CreateOrJoinGameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CreateOrJoinGameScreenLayout.createSequentialGroup()
-                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        CreateOrJoinGameScreenLayout.setVerticalGroup(
-            CreateOrJoinGameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(CreateOrJoinGameScreenLayout.createSequentialGroup()
-                .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        MainPanel.add(CreateOrJoinGameScreen, "card5");
 
         ForgotPasswordScreen.setBackground(new java.awt.Color(144, 178, 185));
 
@@ -595,7 +457,7 @@ public class MainJFrame extends javax.swing.JFrame {
         ForgotPasswordScreenLayout.setHorizontalGroup(
             ForgotPasswordScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ForgotPasswordScreenLayout.createSequentialGroup()
-                .addContainerGap(2868, Short.MAX_VALUE)
+                .addContainerGap(2739, Short.MAX_VALUE)
                 .addGroup(ForgotPasswordScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel20)
                     .addComponent(jLabel11)
@@ -686,12 +548,6 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPanel15.setBackground(new java.awt.Color(225, 247, 231));
 
-        jLabel28.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(5, 98, 82));
-        jLabel28.setText("Your room code:");
-
-        jTextField6.setBackground(new java.awt.Color(255, 221, 224));
-
         jButtonGamelobbyStart.setBackground(new java.awt.Color(5, 98, 82));
         jButtonGamelobbyStart.setFont(new java.awt.Font("Ubuntu", 0, 36)); // NOI18N
         jButtonGamelobbyStart.setForeground(new java.awt.Color(255, 255, 255));
@@ -707,27 +563,16 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(159, 159, 159)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(177, 177, 177)
-                        .addComponent(jButtonGamelobbyStart, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(374, Short.MAX_VALUE))
+                .addGap(177, 177, 177)
+                .addComponent(jButtonGamelobbyStart, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(2679, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
-                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83)
+                .addGap(377, 377, 377)
                 .addComponent(jButtonGamelobbyStart, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(559, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout GamelobbyScreenLayout = new javax.swing.GroupLayout(GamelobbyScreen);
@@ -1595,7 +1440,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jPanelPinkBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(8, 8, 8)))))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(2248, Short.MAX_VALUE))
         );
         GameScreenLayout.setVerticalGroup(
             GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1625,7 +1470,7 @@ public class MainJFrame extends javax.swing.JFrame {
         EndScreen.setLayout(EndScreenLayout);
         EndScreenLayout.setHorizontalGroup(
             EndScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1440, Short.MAX_VALUE)
+            .addGap(0, 3636, Short.MAX_VALUE)
         );
         EndScreenLayout.setVerticalGroup(
             EndScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1639,8 +1484,8 @@ public class MainJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1440, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1892,7 +1737,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     String storedHash = rs.getString("password");
                     if(BCrypt.checkpw(password, storedHash)){
                         MainPanel.removeAll();
-                        MainPanel.add(CreateOrJoinGameScreen);
+                        MainPanel.add(GamelobbyScreen);
                         MainPanel.repaint();
                         MainPanel.revalidate();
                         jLabelPlayerOne.setText(username);
@@ -2146,22 +1991,6 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_DiceRoll
 
-    private void jButtonJoinGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJoinGameActionPerformed
-        // TODO add your handling code here:
-        MainPanel.removeAll();
-        MainPanel.add(GamelobbyScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
-    }//GEN-LAST:event_jButtonJoinGameActionPerformed
-
-    private void jButtonCreateGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateGameActionPerformed
-        // TODO add your handling code here:
-        MainPanel.removeAll();
-        MainPanel.add(GamelobbyScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
-    }//GEN-LAST:event_jButtonCreateGameActionPerformed
-
     private void jButtonGamelobbyStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGamelobbyStartActionPerformed
         // TODO add your handling code here:
         MainPanel.removeAll();
@@ -2191,7 +2020,6 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel CreateOrJoinGameScreen;
     private javax.swing.JPanel EndScreen;
     private javax.swing.JPanel ForgotPasswordScreen;
     private javax.swing.JPanel GameScreen;
@@ -2207,7 +2035,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonBaliB;
     private javax.swing.JButton jButtonCairo;
     private javax.swing.JButton jButtonCairoB;
-    private javax.swing.JButton jButtonCreateGame;
     private javax.swing.JButton jButtonDice;
     private javax.swing.JButton jButtonExit;
     private javax.swing.JButton jButtonFrankfurt;
@@ -2215,7 +2042,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonGamelobbyStart;
     private javax.swing.JButton jButtonHanoi;
     private javax.swing.JButton jButtonHanoiB;
-    private javax.swing.JButton jButtonJoinGame;
     private javax.swing.JButton jButtonLisabon;
     private javax.swing.JButton jButtonLisabonB;
     private javax.swing.JButton jButtonLogin;
@@ -2249,14 +2075,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
@@ -2278,8 +2098,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
@@ -2306,8 +2124,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
