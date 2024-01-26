@@ -1932,6 +1932,9 @@ public class MainJFrame extends javax.swing.JFrame {
             jButtonDice.setBackground(Color.white);
             setActivePlayer(playercount);
         }
+        if(state==14){                                              //here the database has to get the points and pull them
+            setPoints(playercount);
+        }
     }
     private void LoginPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginPressed
         // TODO add your handling code here:
