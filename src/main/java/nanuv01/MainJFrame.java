@@ -1727,8 +1727,10 @@ public class MainJFrame extends javax.swing.JFrame {
             if(state<14){                   //if the state is lower than 14 the dice is enabled because more than 5 cities are left so you can roll the next color
                 jButtonDice.setEnabled(true);
                 jButtonDice.setBackground(Color.white);
+                setActivePlayer(playercount);   //after picking its the next players turn
+            }else if(state==14){                //here is the end of the game, so the database has to get the points and pull them
+                
             }
-            setActivePlayer(playercount);   //after picking its the next players turn
             prevcolor = diceRoll;           //the previous set color is saved so it cannot be picked by the joker
             return diceRoll;                //the set color is returned to the city
         }else if(diceRoll==5&&city!=10&&city!=prevcolor){
@@ -1932,7 +1934,7 @@ public class MainJFrame extends javax.swing.JFrame {
             jButtonDice.setBackground(Color.white);
             setActivePlayer(playercount);
         }
-        if(state==14){                                              //here the database has to get the points and pull them
+        if(state==14){                                              
             setPoints(playercount);
         }
     }
