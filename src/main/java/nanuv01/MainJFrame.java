@@ -26,6 +26,8 @@ public class MainJFrame extends javax.swing.JFrame {
     
     private Authentication auth = new Authentication();
     private User user = new User();
+    private FormValidation formValidator = new FormValidation();
+    
     private ArrayList<String> userArray = new ArrayList<>();
     private int userLoggedInCount = 0;
     /**
@@ -2062,9 +2064,7 @@ public class MainJFrame extends javax.swing.JFrame {
           jTextField1.setText("");
           jTextField2.setText("");
           jPasswordField1.setText("");   
-        }else{
-          JOptionPane.showMessageDialog(null, "Sign up failed");
-        }    
+        }  
     }//GEN-LAST:event_registerBtnActionPerformed
 
     private void AthensBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AthensBPressed

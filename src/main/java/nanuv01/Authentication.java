@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
@@ -16,22 +17,34 @@ import org.mindrot.jbcrypt.BCrypt;
  */
 public class Authentication {
     
+    private FormValidation formValidator = new FormValidation();
+    private boolean checkUsername; 
+    private boolean checkEmail;
+    private boolean checkPassword;
+    
     public boolean loginUser(String username, String password){
         String sqlquery = "SELECT password FROM users WHERE username = ?";
-        try(Connection conn = DatabaseConnector.getConnection()){
-            PreparedStatement pst = conn.prepareStatement(sqlquery);
+        
+        checkPassword = formValidator.checkPasswordCorrectness(password);
+        
+        if(checkPassword){
+            try(Connection conn = DatabaseConnector.getConnection()){
+                PreparedStatement pst = conn.prepareStatement(sqlquery);
          
-            pst.setString(1, username);
-            ResultSet rs = pst.executeQuery();
+                pst.setString(1, username);
+                ResultSet rs = pst.executeQuery();
             
-            if(rs.next()){
-                String storedHash = rs.getString("password");
-                if(BCrypt.checkpw(password, storedHash)){
-                    return true;
+                if(rs.next()){
+                    String storedHash = rs.getString("password");
+                    if(BCrypt.checkpw(password, storedHash)){
+                        return true;
+                    }
                 }
+            }catch(SQLException e){
+                e.printStackTrace();
             }
-        }catch(SQLException e){
-            e.printStackTrace();
+        } else {
+            JOptionPane.showMessageDialog(null, "Password should have at least 6 characters and should consist of a Number and Text.\n");
         }
         
         return false;
@@ -41,23 +54,45 @@ public class Authentication {
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());        
         String sqlquery = "INSERT INTO users (username, password, email, score) VALUES (?, ?, ?, 0)";
         
-        try(Connection conn = DatabaseConnector.getConnection()){
-            PreparedStatement pst = conn.prepareStatement(sqlquery);
+        checkUsername = formValidator.checkUsernameExistence(username);
+        checkEmail = formValidator.checkEmailCorrectness(email);
+        checkPassword = formValidator.checkPasswordCorrectness(password);
+       
+        if(!checkUsername && checkEmail && checkPassword){
+            try(Connection conn = DatabaseConnector.getConnection()){
+                PreparedStatement pst = conn.prepareStatement(sqlquery);
             
-            pst.setString(1, username);
-            pst.setString(2, hashedPassword);
-            pst.setString(3, email);
+                pst.setString(1, username);
+                pst.setString(2, hashedPassword);
+                pst.setString(3, email);
             
-            int affectedRows = pst.executeUpdate();
+                int affectedRows = pst.executeUpdate();
             
-            if(affectedRows > 0){
-                return true;
-            }else {
-                return false;
+                if(affectedRows > 0){
+                    return true;
+                }else {
+                    return false;
+                }
+            
+            }catch(SQLException e){
+                e.printStackTrace();
+            }
+        }else {
+            StringBuilder message = new StringBuilder();
+            
+            if (checkUsername) {
+                message.append("Username exists.\n");
             }
             
-        }catch(SQLException e){
-            e.printStackTrace();
+            if (!checkEmail) {
+                message.append("The Email is not valid.\n");
+            }
+            
+            if (!checkPassword) {
+                message.append("Password should have at least 6 characters and should consist of a Number and Text.\n");
+            }
+
+            JOptionPane.showMessageDialog(null, message.toString());
         }
         
         return false;
