@@ -25,6 +25,7 @@ import org.mindrot.jbcrypt.BCrypt;
 public class MainJFrame extends javax.swing.JFrame {
     
     private Authentication auth = new Authentication();
+    private User user = new User();
     private ArrayList<String> userArray = new ArrayList<>();
     private int userLoggedInCount = 0;
     /**
@@ -1729,7 +1730,22 @@ public class MainJFrame extends javax.swing.JFrame {
                 jButtonDice.setBackground(Color.white);
                 setActivePlayer(playercount);   //after picking its the next players turn
             }else if(state==14){                //here is the end of the game, so the database has to get the points and pull them
+                //TODO: PUSH SCORE TO User DB
+                JLabel[] score = {jLabelPointsOne, jLabelPointsTwo, jLabelPointsThree, jLabelPointsFour};
+                boolean updatedUserScore;
                 
+                for(int i = 0; i < userArray.size(); i++){
+                    
+                    updatedUserScore = user.updateScore(
+                            Integer.valueOf(score[i].getText()),
+                            userArray.get(i));
+                    
+                   if(!updatedUserScore){
+                       JOptionPane.showMessageDialog(null, "Couldn't Update Score");
+                   }
+                }
+                
+                System.out.println("Game is over !");
             }
             prevcolor = diceRoll;           //the previous set color is saved so it cannot be picked by the joker
             return diceRoll;                //the set color is returned to the city
