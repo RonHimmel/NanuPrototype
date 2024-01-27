@@ -27,7 +27,7 @@ public class Authentication {
         
         checkPassword = formValidator.checkPasswordCorrectness(password);
         
-        if(checkPassword){
+        //if(checkPassword){
             try(Connection conn = DatabaseConnector.getConnection()){
                 PreparedStatement pst = conn.prepareStatement(sqlquery);
          
@@ -43,9 +43,9 @@ public class Authentication {
             }catch(SQLException e){
                 e.printStackTrace();
             }
-        } else {
+       /* } else {
             JOptionPane.showMessageDialog(null, "Password should have at least 6 characters and should consist of a Number and Text.\n");
-        }
+        }*/
         
         return false;
     }
