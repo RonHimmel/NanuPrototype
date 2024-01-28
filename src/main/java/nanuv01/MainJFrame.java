@@ -155,6 +155,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanelBlue = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jPanelYellowBorder = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jPanelPinkBorder = new javax.swing.JPanel();
         jPanelPink = new javax.swing.JPanel();
@@ -1115,11 +1116,11 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addComponent(jButtonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(117, 117, 117))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                         .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addComponent(jButtonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1404,7 +1405,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanelRedBorderLayout.setHorizontalGroup(
             jPanelRedBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRedBorderLayout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanelRed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
@@ -1449,14 +1450,14 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanelGreenBorderLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jPanelGreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanelGreenBorderLayout.setVerticalGroup(
             jPanelGreenBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelGreenBorderLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelGreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanelBlueBorder.setBackground(new java.awt.Color(153, 153, 255));
@@ -1492,7 +1493,7 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanelBlueBorderLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jPanelBlue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanelBlueBorderLayout.setVerticalGroup(
             jPanelBlueBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1506,24 +1507,43 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanelYellowBorder.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanelYellowBorder.setPreferredSize(new java.awt.Dimension(130, 60));
 
+        jPanel12.setBackground(new java.awt.Color(255, 255, 153));
+
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         jLabel4.setText("Gate 4");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addContainerGap(19, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(15, 15, 15))
+        );
 
         javax.swing.GroupLayout jPanelYellowBorderLayout = new javax.swing.GroupLayout(jPanelYellowBorder);
         jPanelYellowBorder.setLayout(jPanelYellowBorderLayout);
         jPanelYellowBorderLayout.setHorizontalGroup(
             jPanelYellowBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelYellowBorderLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel4)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addGap(17, 17, 17)
+                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanelYellowBorderLayout.setVerticalGroup(
             jPanelYellowBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelYellowBorderLayout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(26, 26, 26))
+            .addGroup(jPanelYellowBorderLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jPanelPinkBorder.setBackground(new java.awt.Color(255, 153, 255));
@@ -1543,12 +1563,12 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanelPinkLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanelPinkLayout.setVerticalGroup(
             jPanelPinkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPinkLayout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18))
         );
@@ -1589,30 +1609,33 @@ public class MainJFrame extends javax.swing.JFrame {
                                 .addComponent(jPanelGreenBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(48, 48, 48)
                                 .addComponent(jPanelBlueBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(jPanelYellowBorder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(52, 52, 52)
+                                .addComponent(jPanelYellowBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jPanelPinkBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(8, 8, 8)))))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(2243, Short.MAX_VALUE))
         );
         GameScreenLayout.setVerticalGroup(
             GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GameScreenLayout.createSequentialGroup()
                 .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(GameScreenLayout.createSequentialGroup()
-                        .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanelGreenBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanelYellowBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(GameScreenLayout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jPanelRedBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanelBlueBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jPanelPinkBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GameScreenLayout.createSequentialGroup()
+                        .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jPanelGreenBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(GameScreenLayout.createSequentialGroup()
+                                    .addGap(8, 8, 8)
+                                    .addGroup(GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jPanelRedBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jPanelBlueBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jPanelPinkBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, GameScreenLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jPanelYellowBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(19, 19, 19)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(85, Short.MAX_VALUE))
@@ -1723,9 +1746,13 @@ public class MainJFrame extends javax.swing.JFrame {
             prevcolor = state;
             state++;                //color value++
             SetPanel(state);        //panel with the next color is on
+            if(state==5){
+                jButtonStart.setText("Dice!"); //after all cities covered the command is to dice
+            }
             return state-1; //the city gets the value of the previous color returned
         }else if(state>=5&&pickcolor&&city==10){       //if the game is in the dice state and we found a city under that color we can chose the next city
             SetColor(diceRoll,button);      //the color is set
+            jButtonStart.setText("Perfect! Dice!");  //new city is covered now dice again
             pickcolor=false;                //now picking another city to this color is disabled
             if(state<14){                   //if the state is lower than 14 the dice is enabled because more than 5 cities are left so you can roll the next color
                 jButtonDice.setEnabled(true);
@@ -1733,6 +1760,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 setActivePlayer(playercount);   //after picking its the next players turn
             }else if(state==14){                //here is the end of the game, so the database has to get the points and pull them
                 //TODO: PUSH SCORE TO User DB
+                jButtonStart.setText("Game finished, Score is saved!");  //game over
                 JLabel[] score = {jLabelPointsOne, jLabelPointsTwo, jLabelPointsThree, jLabelPointsFour};
                 boolean updatedUserScore;
                 
@@ -1747,7 +1775,7 @@ public class MainJFrame extends javax.swing.JFrame {
                    }
                 }
                 
-                System.out.println("Game is over !");
+                System.out.println("Game is over!");
             }
             prevcolor = diceRoll;           //the previous set color is saved so it cannot be picked by the joker
             return diceRoll;                //the set color is returned to the city
@@ -1755,6 +1783,7 @@ public class MainJFrame extends javax.swing.JFrame {
             diceRoll=city;
             SetPanel(city);
             okay=true;
+            jButtonStart.setText("Pick city under this color!");
             return city;
         };
         return 10;//does not occur
@@ -1789,6 +1818,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jButtonStart.setEnabled(false);
         jPanelRedBorder.setBackground(Color.red);
         jLabelPointsOne.setForeground(Color.red);
+        jButtonStart.setText("Cover 5 cities!");
         state=0;
         mumbai=10;
         frankfurt=10;
@@ -1945,15 +1975,14 @@ public class MainJFrame extends javax.swing.JFrame {
             state++;                                                //game state ++ 
             setPoints(playercount);
             pickcolor=true;                                         //now you can choose the next city for that color
+            jButtonStart.setText("Right! Cover a new city!");
         }
         okay=false;                                                 //secures that you cant choose another Bcity
         if(state<14&&!pickcolor&&diceRoll!=5){                                   //if the game has not ended and you can not chose the next city the dice is enabled again
             jButtonDice.setEnabled(true);
             jButtonDice.setBackground(Color.white);
             setActivePlayer(playercount);
-        }
-        if(state==14){                                              
-            setPoints(playercount);
+            jButtonStart.setText("Wrong! Dice!");
         }
     }
     private void LoginPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginPressed
@@ -1982,11 +2011,18 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_LoginPressed
 
-    void ResetCity(JButton button, String name){
-        button.setBackground(Color.LIGHT_GRAY);
+    void ResetCityWhite(JButton button, String name){  //some cities are blue and others white
+        button.setBackground(new Color(242,245,244));
         button.setEnabled(true);
         button.setText(name);       //city name is written
     }
+    
+    void ResetCityBlue(JButton button, String name){
+        button.setBackground(new Color(208,234,242));
+        button.setEnabled(true);
+        button.setText(name);       //city name is written
+    }
+    
     private void ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitPressed
         // TODO add your handling code here:
         MainPanel.removeAll();
@@ -1996,24 +2032,25 @@ public class MainJFrame extends javax.swing.JFrame {
         //set the game into the beginning state
         jButtonStart.setEnabled(true);
         jButtonStart.setVisible(true);
+        jButtonStart.setText("Start"); //sets the start button as start again
         diceRoll=-1;
         state=-1;
         okay=false;
         pickcolor = false;
-        ResetCity(jButtonMumbai, "Mumbai");
-        ResetCity(jButtonFrankfurt, "Frankfurt");
-        ResetCity(jButtonHanoi, "Hanoi");
-        ResetCity(jButtonNewyork, "New York");
-        ResetCity(jButtonRio, "Rio");
-        ResetCity(jButtonOslo, "Oslo");
-        ResetCity(jButtonBali, "Bali");
-        ResetCity(jButtonNairobi, "Nairobi");
-        ResetCity(jButtonLisabon, "Lisabon");
-        ResetCity(jButtonCairo, "Cairo");
-        ResetCity(jButtonAthens, "Athens");
-        ResetCity(jButtonMilan, "Milan");
-        ResetCity(jButtonTokyo, "Tokyo");
-        ResetCity(jButtonParis, "Paris");
+        ResetCityBlue(jButtonMumbai, "Mumbai");
+        ResetCityBlue(jButtonFrankfurt, "Frankfurt");
+        ResetCityWhite(jButtonHanoi, "Hanoi");
+        ResetCityBlue(jButtonNewyork, "New York");
+        ResetCityBlue(jButtonRio, "Rio");
+        ResetCityWhite(jButtonOslo, "Oslo");
+        ResetCityBlue(jButtonBali, "Bali");
+        ResetCityWhite(jButtonNairobi, "Nairobi");
+        ResetCityBlue(jButtonLisabon, "Lisabon");
+        ResetCityWhite(jButtonCairo, "Cairo");
+        ResetCityBlue(jButtonAthens, "Athens");
+        ResetCityWhite(jButtonMilan, "Milan");
+        ResetCityWhite(jButtonTokyo, "Tokyo");
+        ResetCityBlue(jButtonParis, "Paris");
         //setting city !=10 that would be ready state
         mumbai=0;
         frankfurt=0;
@@ -2035,6 +2072,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanelYellowBorder.setBackground(new Color(255,255,153));
         jPanelPinkBorder.setBackground(new Color(255,153,255));
         jButtonDice.setEnabled(true);
+        jButtonDice.setBackground(new Color(254,219,255));
         jUsernameField.setText("");
         jPasswordField.setText("");
     }//GEN-LAST:event_ExitPressed
@@ -2146,27 +2184,34 @@ public class MainJFrame extends javax.swing.JFrame {
                 okay=true;      //after rolling the dice the B buttons can be picked (okay is true if they can be picked and else false)
                 SetPanel(0);
                 jButtonDice.setEnabled(false);
+                jButtonStart.setText("Pick city under this color!");
             }else if(diceRoll==1){
                 okay=true;
                 SetPanel(1);
                 jButtonDice.setEnabled(false);
+                jButtonStart.setText("Pick city under this color!");
             }else if(diceRoll==2){
                 okay=true;
                 SetPanel(2);
                 jButtonDice.setEnabled(false);
+                jButtonStart.setText("Pick city under this color!");
             }else if(diceRoll==3){
                 SetPanel(3);
                 okay=true;
                 jButtonDice.setEnabled(false);
+                jButtonStart.setText("Pick city under this color!");
             }else if(diceRoll==4){
                 SetPanel(4);
                 okay=true;
                 jButtonDice.setEnabled(false);
+                jButtonStart.setText("Pick city under this color!");
             }else if(diceRoll==5){
                 SetPanel(5);
                 jButtonDice.setBackground(Color.black);
                 jButtonDice.setEnabled(false);
+                jButtonStart.setText("Pick covered city as color!");
             }
+            
         }
     }//GEN-LAST:event_DiceRoll
 
@@ -2410,6 +2455,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
