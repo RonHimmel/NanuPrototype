@@ -1033,7 +1033,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel8.setForeground(new java.awt.Color(1, 87, 73));
 
         jButtonStart.setBackground(new java.awt.Color(254, 219, 255));
-        jButtonStart.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButtonStart.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButtonStart.setForeground(new java.awt.Color(1, 87, 73));
         jButtonStart.setText("Start");
         jButtonStart.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
@@ -2942,7 +2942,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 SetPanel(5);
                 jButtonDice.setBackground(Color.black);
                 jButtonDice.setEnabled(false);
-                jButtonStart.setText("Joker! Pick one covered city to guess!");
+                jButtonStart.setText("Joker! Pick covered city to guess!");
             }
             
         }
@@ -3079,15 +3079,17 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void startLobbyBtnLoginPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startLobbyBtnLoginPressed
         // TODO add your handling code here:
-        MainPanel.removeAll();
-        MainPanel.add(GamelobbyScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        if(userLoggedInCount>0){
+            MainPanel.removeAll();
+            MainPanel.add(GamelobbyScreen);
+            MainPanel.repaint();
+            MainPanel.revalidate();
         
-        JTextField[] userTextFields = {jTextField7, jTextField8, jTextField9, jTextField10};
-        for(int i = 0; i < userArray.size() && i < userTextFields.length; i++){
-            userTextFields[i].setText(userArray.get(i));
-        } 
+            JTextField[] userTextFields = {jTextField7, jTextField8, jTextField9, jTextField10};
+            for(int i = 0; i < userArray.size() && i < userTextFields.length; i++){
+                userTextFields[i].setText(userArray.get(i));
+            } 
+        }
     }//GEN-LAST:event_startLobbyBtnLoginPressed
 
     private void jUsernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUsernameFieldActionPerformed
