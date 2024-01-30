@@ -27,7 +27,7 @@ public class Authentication {
         
         checkPassword = formValidator.checkPasswordCorrectness(password);
         
-        //if(checkPassword){
+        if(checkPassword){
             try(Connection conn = DatabaseConnector.getConnection()){
                 PreparedStatement pst = conn.prepareStatement(sqlquery);
          
@@ -43,9 +43,9 @@ public class Authentication {
             }catch(SQLException e){
                 e.printStackTrace();
             }
-       /* } else {
+        } else {
             JOptionPane.showMessageDialog(null, "Password should have at least 6 characters and should consist of a Number and Text.\n");
-        }*/
+        }
         
         return false;
     }
@@ -100,15 +100,17 @@ public class Authentication {
     
     
     public boolean resetPassword(String username, String newPassword){
-        
         String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
-        
         String sqlquery = "UPDATE users SET password = ? WHERE username = ?";
+        
+        checkPassword = formValidator.checkPasswordCorrectness(newPassword);
+ 
+        if(checkPassword){
         try(Connection conn = DatabaseConnector.getConnection()){
           PreparedStatement pst = conn.prepareStatement(sqlquery);
             
-          pst.setString(1, username);
-          pst.setString(2, hashedPassword); 
+          pst.setString(1, hashedPassword);
+          pst.setString(2, username); 
           
           int affectedRows = pst.executeUpdate();
           
@@ -121,6 +123,9 @@ public class Authentication {
             
         }catch (SQLException e){
             e.printStackTrace();
+        }
+        }else {
+            JOptionPane.showMessageDialog(null, "Password should have at least 6 characters and should consist of a Number and Text.\n");
         }
         
         return false;

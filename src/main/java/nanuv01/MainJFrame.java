@@ -690,7 +690,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(ForgotPasswordScreenLayout.createSequentialGroup()
                         .addGap(331, 331, 331)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(1965, 2862, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ForgotPasswordScreenLayout.setVerticalGroup(
             ForgotPasswordScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -707,7 +707,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
                 .addComponent(jLabel40)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -758,7 +758,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -777,7 +777,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(441, Short.MAX_VALUE))
+                .addContainerGap(438, Short.MAX_VALUE))
         );
 
         jPanel15.setBackground(new java.awt.Color(225, 247, 231));
@@ -799,14 +799,14 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGap(177, 177, 177)
                 .addComponent(jButtonGamelobbyStart, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(2673, Short.MAX_VALUE))
+                .addContainerGap(2632, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGap(377, 377, 377)
                 .addComponent(jButtonGamelobbyStart, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(590, Short.MAX_VALUE))
+                .addContainerGap(587, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout GamelobbyScreenLayout = new javax.swing.GroupLayout(GamelobbyScreen);
@@ -1484,7 +1484,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanelRedBorderLayout.setHorizontalGroup(
             jPanelRedBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRedBorderLayout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanelRed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
@@ -1529,14 +1529,14 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanelGreenBorderLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jPanelGreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
         jPanelGreenBorderLayout.setVerticalGroup(
             jPanelGreenBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelGreenBorderLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelGreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         jPanelBlueBorder.setBackground(new java.awt.Color(153, 153, 255));
@@ -1572,7 +1572,7 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanelBlueBorderLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jPanelBlue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         jPanelBlueBorderLayout.setVerticalGroup(
             jPanelBlueBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1615,14 +1615,14 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanelYellowBorderLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         jPanelYellowBorderLayout.setVerticalGroup(
             jPanelYellowBorderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelYellowBorderLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jPanelPinkBorder.setBackground(new java.awt.Color(255, 153, 255));
@@ -1642,12 +1642,12 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanelPinkLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
         jPanelPinkLayout.setVerticalGroup(
             jPanelPinkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPinkLayout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18))
         );
@@ -1717,7 +1717,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(19, 19, 19)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         MainPanel.add(GameScreen, "card2");
@@ -1904,7 +1904,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(EndScreenLayout.createSequentialGroup()
                         .addGap(1116, 1116, 1116)
                         .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(2181, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         EndScreenLayout.setVerticalGroup(
             EndScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1992,7 +1992,7 @@ public class MainJFrame extends javax.swing.JFrame {
         TutorialScreenLayout.setVerticalGroup(
             TutorialScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TutorialScreenLayout.createSequentialGroup()
-                .addGap(0, 100, Short.MAX_VALUE)
+                .addGap(0, 97, Short.MAX_VALUE)
                 .addGroup(TutorialScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2379,7 +2379,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
                 .addComponent(jLabel60)
                 .addGap(71, 71, 71))
         );
@@ -2413,7 +2413,7 @@ public class MainJFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1052, Short.MAX_VALUE))
+                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, Short.MAX_VALUE))
         );
 
         pack();
@@ -2975,22 +2975,26 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        /*String username = jTextField3.getText();
-        String newPassword = jTextField4.getText();
-
-       
-        boolean isReset = auth.resetPassword(username, newPassword);
+        //jPasswordField2
+        String username = jTextField3.getText();
         
-        if(isReset){
-            JOptionPane.showMessageDialog(null, "Password reset successful");
-            // Navigate back to login screen or main screen
-            MainPanel.removeAll();
-            MainPanel.add(LoginScreen);
-            MainPanel.repaint();
-            MainPanel.revalidate();
-        }else {
-            JOptionPane.showMessageDialog(null, "Password reset failed. User not found.");
-        }*/
+        if(jPasswordField2.getText() == null ? jPasswordField3.getText() == null : jPasswordField2.getText().equals(jPasswordField3.getText())){
+            String newPassword = jPasswordField2.getText();
+            boolean isReset = auth.resetPassword(username, newPassword);
+        
+            if(isReset){
+                JOptionPane.showMessageDialog(null, "Password reset successful");
+                // Navigate back to login screen or main screen
+                MainPanel.removeAll();
+                MainPanel.add(LoginScreen);
+                MainPanel.repaint();
+                MainPanel.revalidate();
+            }else {
+                JOptionPane.showMessageDialog(null, "Password reset failed. User not found.");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Password don't match!");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField3FocusGained
