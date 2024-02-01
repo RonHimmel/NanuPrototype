@@ -2,7 +2,9 @@ package nanuv01;
 
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /*
@@ -39,6 +41,29 @@ public class User {
         }
         
         return false;
+    }
+    
+    // Get Age from User
+    public Date getAgeFromUser(String username){
+        String sqlquery = "SELECT birthday FROM users WHERE username=?";
+        Date userDate = null;
+        
+        try(Connection conn = DatabaseConnector.getConnection()){
+            PreparedStatement pst = conn.prepareStatement(sqlquery);
+            pst.setString(1, username);
+            
+            
+            ResultSet rs = pst.executeQuery();
+            
+            if(rs.next()){
+                userDate = rs.getDate("birthday");
+            }
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        
+        return userDate;
     }
     
 }

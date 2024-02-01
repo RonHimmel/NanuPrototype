@@ -6,11 +6,17 @@ package nanuv01;
 
 
 import java.awt.Color;
+import java.awt.List;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.AbstractMap;
+import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -2693,9 +2699,26 @@ public class MainJFrame extends javax.swing.JFrame {
         
         if(isLoggedIn){
             if(!userArray.contains(username)){
-                userArray.add(username);
+                 Date userDate = user.getAgeFromUser(username);
+            
+                var tempUserList = new ArrayList<SimpleEntry<String, Date>>();
+            
+                for (String existingUser : userArray) {
+                    Date existingUserDate = user.getAgeFromUser(existingUser);
+                    tempUserList.add(new AbstractMap.SimpleEntry<>(existingUser, existingUserDate));
+                }
+            
+                tempUserList.add(new AbstractMap.SimpleEntry<>(username, userDate));
+            
+                tempUserList.sort(Comparator.comparing(SimpleEntry::getValue));
+            
+                userArray.clear();
+            
+                for (var entry : tempUserList) {
+                    userArray.add(entry.getKey());
+                }
+            
                 userLoggedInCount++;
-                
                 if(userLoggedInCount <= 4){
                     userCountLabel.setText(""+userLoggedInCount);
                 }else {
@@ -3010,6 +3033,7 @@ public class MainJFrame extends javax.swing.JFrame {
             MainPanel.repaint();
             MainPanel.revalidate();
         
+            
             JTextField[] userTextFields = {jTextField7, jTextField8, jTextField9, jTextField10};
             for(int i = 0; i < userArray.size() && i < userTextFields.length; i++){
                 userTextFields[i].setText(userArray.get(i));
