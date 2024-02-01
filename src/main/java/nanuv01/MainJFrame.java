@@ -2363,11 +2363,11 @@ public class MainJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     int frankfurt, mumbai, paris, nairobi, bali, lisabon, newyork, tokyo, oslo, milan, cairo, athens, hanoi, rio;
-    int diceRoll=-1;
-    int state=-1;
-    boolean okay=false;
-    boolean pickcolor = false;
-    int prevcolor = -1;
+    int diceColor=-1;                   //stores the color that has been rolled 0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink, 5 is joker
+    int countCoveredCities=-1;          //counts how many cities have been covered. When all have been covered once
+    boolean cityBPressable=false;          //protects that there is only input from the bottom cities if allowed
+    boolean cityPressable = false;         //protects that there is only input from the top cities if allowed
+    int prevcolor = -1;                     //saves the previous color so if joker is active you cant pick the previous color
     int playercount = 1;                //used to keep track which players turn 
     
     void SetColor(int color, JButton button){ //function is called if you want to change the color of the top city buttons
@@ -2440,24 +2440,24 @@ public class MainJFrame extends javax.swing.JFrame {
     }
     
     int CityPressed(JButton button,int city){
-        if(state<5&&city==10){  //if the game is in the beginning state(choosing which city is which color) AND the city was not chosen already
-            SetColor(state,button); //sets the button this color
-            prevcolor = state;
-            state++;                //color value++
-            SetPanel(state);        //panel with the next color is on
-            if(state==5){
+        if(countCoveredCities<5&&city==10){  //if the game is in the beginning state(choosing which city is which color) AND the city was not chosen already
+            SetColor(countCoveredCities,button); //sets the button this color
+            prevcolor = countCoveredCities;
+            countCoveredCities++;                //color value++
+            SetPanel(countCoveredCities);        //panel with the next color is on
+            if(countCoveredCities==5){
                 jButtonStart.setText("Dice!"); //after all cities covered the command is to dice
             }
-            return state-1; //the city gets the value of the previous color returned
-        }else if(state>=5&&pickcolor&&city==10){       //if the game is in the dice state and we found a city under that color we can chose the next city
-            SetColor(diceRoll,button);      //the color is set
+            return countCoveredCities-1; //the city gets the value of the previous color returned
+        }else if(countCoveredCities>=5&&cityPressable&&city==10){       //if the game is in the dice state and we found a city under that color we can chose the next city
+            SetColor(diceColor,button);      //the color is set
             jButtonStart.setText("Perfect! Dice!");  //new city is covered now dice again
-            pickcolor=false;                //now picking another city to this color is disabled
-            if(state<14){                   //if the state is lower than 14 the dice is enabled because more than 5 cities are left so you can roll the next color
+            cityPressable=false;                //now picking another city to this color is disabled
+            if(countCoveredCities<14){                   //if the state is lower than 14 the dice is enabled because more than 5 cities are left so you can roll the next color
                 jButtonDice.setEnabled(true);
                 jButtonDice.setBackground(Color.white);
                 setActivePlayer(playercount);   //after picking its the next players turn
-            }else if(state==14){                //here is the end of the game, so the database has to get the points and pull them
+            }else if(countCoveredCities==14){                //here is the end of the game, so the database has to get the points and pull them
                 //TODO: PUSH SCORE TO User DB
                 jButtonStart.setText("Game finished, Score is saved!");  //game over
                 JLabel[] score = {jLabelPointsOne, jLabelPointsTwo, jLabelPointsThree, jLabelPointsFour};
@@ -2476,12 +2476,12 @@ public class MainJFrame extends javax.swing.JFrame {
                 
                 System.out.println("Game is over!");
             }
-            prevcolor = diceRoll;           //the previous set color is saved so it cannot be picked by the joker
-            return diceRoll;                //the set color is returned to the city
-        }else if(diceRoll==5&&city!=10&&city!=prevcolor){
-            diceRoll=city;
+            prevcolor = diceColor;           //the previous set color is saved so it cannot be picked by the joker
+            return diceColor;                //the set color is returned to the city
+        }else if(diceColor==5&&city!=10&&city!=prevcolor){
+            diceColor=city;
             SetPanel(city);
-            okay=true;
+            cityBPressable=true;
             jButtonStart.setText("Pick city under this color!");
             return city;
         };
@@ -2491,7 +2491,7 @@ public class MainJFrame extends javax.swing.JFrame {
     
     private void RioPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RioPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){      //pickcolor means top buttons are clickable       
+        if(cityPressable||countCoveredCities<5||diceColor==5){      //pickcolor means top buttons are clickable       
             rio = CityPressed(jButtonRio, rio);
         }
     }//GEN-LAST:event_RioPressed
@@ -2500,14 +2500,14 @@ public class MainJFrame extends javax.swing.JFrame {
     
     private void MumbaiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MumbaiPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             mumbai = CityPressed(jButtonMumbai, mumbai);
         }
     }//GEN-LAST:event_MumbaiPressed
 
     private void FrankfurtPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FrankfurtPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             frankfurt = CityPressed(jButtonFrankfurt, frankfurt);
         }
     }//GEN-LAST:event_FrankfurtPressed
@@ -2518,7 +2518,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanelRedBorder.setBorder(BorderFactory.createLineBorder(Color.RED,10));
         jLabelPointsOne.setForeground(Color.red);
         jButtonStart.setText("Cover 5 cities!");
-        state=0;
+        countCoveredCities=0;
         mumbai=10;
         frankfurt=10;
         hanoi = 10;
@@ -2537,77 +2537,77 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void NewyorkPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewyorkPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             newyork = CityPressed(jButtonNewyork, newyork);
         }
     }//GEN-LAST:event_NewyorkPressed
 
     private void OsloPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OsloPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             oslo = CityPressed(jButtonOslo, oslo);
         }
     }//GEN-LAST:event_OsloPressed
 
     private void HanoiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HanoiPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             hanoi = CityPressed(jButtonHanoi, hanoi);
         }
     }//GEN-LAST:event_HanoiPressed
 
     private void BaliPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaliPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             bali = CityPressed(jButtonBali, bali);
         }
     }//GEN-LAST:event_BaliPressed
 
     private void NairobiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NairobiPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             nairobi = CityPressed(jButtonNairobi, nairobi);
         }
     }//GEN-LAST:event_NairobiPressed
 
     private void LisabonPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LisabonPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             lisabon = CityPressed(jButtonLisabon, lisabon);
         }
     }//GEN-LAST:event_LisabonPressed
  
     private void CairoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CairoPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             cairo = CityPressed(jButtonCairo, cairo);
         }
     }//GEN-LAST:event_CairoPressed
 
     private void MilanPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MilanPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             milan = CityPressed(jButtonMilan, milan);
         }
     }//GEN-LAST:event_MilanPressed
 
     private void AthensPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AthensPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             athens = CityPressed(jButtonAthens, athens);
         }
     }//GEN-LAST:event_AthensPressed
 
     private void TokyoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TokyoPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             tokyo = CityPressed(jButtonTokyo,tokyo);
         }
     }//GEN-LAST:event_TokyoPressed
 
     private void ParisPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParisPressed
         // TODO add your handling code here:
-        if(pickcolor||state<5||diceRoll==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5){
             paris = CityPressed(jButtonParis, paris);
         }
     }//GEN-LAST:event_ParisPressed
@@ -2668,16 +2668,16 @@ public class MainJFrame extends javax.swing.JFrame {
     }
     
     void CityBPressed(JButton button, int city){                    //function gets the value of the city and NOT the B city but the city
-        if(state>=5 && diceRoll==city&&button.isEnabled()&&okay){   //if game state is dice and color is citycolor and the city is available and its okay to chose
+        if(countCoveredCities>=5 && diceColor==city&&button.isEnabled()&&cityBPressable){   //if game state is dice and color is citycolor and the city is available and its okay to chose
             button.setEnabled(false);                               //the button is disabled because you chose the right city
             button.setBackground(Color.white);
-            state++;                                                //game state ++ 
+            countCoveredCities++;                                                //game state ++ 
             setPoints(playercount);
-            pickcolor=true;                                         //now you can choose the next city for that color
+            cityPressable=true;                                         //now you can choose the next city for that color
             jButtonStart.setText("Right! Cover a new city!");
         }
-        okay=false;                                                 //secures that you cant choose another Bcity
-        if(state<14&&!pickcolor&&diceRoll!=5){                                   //if the game has not ended and you can not chose the next city the dice is enabled again
+        cityBPressable=false;                                                 //secures that you cant choose another Bcity
+        if(countCoveredCities<14&&!cityPressable&&diceColor!=5){                                   //if the game has not ended and you can not chose the next city the dice is enabled again
             jButtonDice.setEnabled(true);
             jButtonDice.setBackground(Color.white);
             setActivePlayer(playercount);
@@ -2732,10 +2732,10 @@ public class MainJFrame extends javax.swing.JFrame {
         jButtonStart.setEnabled(true);
         jButtonStart.setVisible(true);
         jButtonStart.setText("Start"); //sets the start button as start again
-        diceRoll=-1;
-        state=-1;
-        okay=false;
-        pickcolor = false;
+        diceColor=-1;
+        countCoveredCities=-1;
+        cityBPressable=false;
+        cityPressable = false;
         ResetCityBlue(jButtonMumbai, "Mumbai");
         ResetCityBlue(jButtonFrankfurt, "Frankfurt");
         ResetCityWhite(jButtonHanoi, "Hanoi");
@@ -2876,35 +2876,35 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void DiceRoll(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiceRoll
         // TODO add your handling code here:
-        if(state>=5){
+        if(countCoveredCities>=5){
             Random random = new Random();
-            diceRoll = random.nextInt(6);
-            if(diceRoll==0){
-                okay=true;      //after rolling the dice the B buttons can be picked (okay is true if they can be picked and else false)
+            diceColor = random.nextInt(6);
+            if(diceColor==0){
+                cityBPressable=true;      //after rolling the dice the B buttons can be picked (okay is true if they can be picked and else false)
                 SetPanel(0);
                 jButtonDice.setEnabled(false);
                 jButtonStart.setText("Pick city under this color!");
-            }else if(diceRoll==1){
-                okay=true;
+            }else if(diceColor==1){
+                cityBPressable=true;
                 SetPanel(1);
                 jButtonDice.setEnabled(false);
                 jButtonStart.setText("Pick city under this color!");
-            }else if(diceRoll==2){
-                okay=true;
+            }else if(diceColor==2){
+                cityBPressable=true;
                 SetPanel(2);
                 jButtonDice.setEnabled(false);
                 jButtonStart.setText("Pick city under this color!");
-            }else if(diceRoll==3){
+            }else if(diceColor==3){
                 SetPanel(3);
-                okay=true;
+                cityBPressable=true;
                 jButtonDice.setEnabled(false);
                 jButtonStart.setText("Pick city under this color!");
-            }else if(diceRoll==4){
+            }else if(diceColor==4){
                 SetPanel(4);
-                okay=true;
+                cityBPressable=true;
                 jButtonDice.setEnabled(false);
                 jButtonStart.setText("Pick city under this color!");
-            }else if(diceRoll==5){
+            }else if(diceColor==5){
                 SetPanel(5);
                 jButtonDice.setBackground(Color.black);
                 jButtonDice.setEnabled(false);
