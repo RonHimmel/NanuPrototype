@@ -12,6 +12,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.AbstractMap;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
@@ -76,7 +77,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         registerBtn = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jBirthdayField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
@@ -453,10 +454,15 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(1, 60, 58));
         jLabel13.setText("Sign Up");
 
-        jTextField4.setBackground(new java.awt.Color(254, 219, 255));
-        jTextField4.setFont(new java.awt.Font("Bahnschrift", 1, 20)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(92, 120, 126));
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
+        jBirthdayField.setBackground(new java.awt.Color(254, 219, 255));
+        jBirthdayField.setFont(new java.awt.Font("Bahnschrift", 1, 20)); // NOI18N
+        jBirthdayField.setForeground(new java.awt.Color(92, 120, 126));
+        jBirthdayField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
+        jBirthdayField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBirthdayFieldActionPerformed(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(1, 87, 73));
@@ -496,7 +502,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 576, Short.MAX_VALUE)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(jBirthdayField, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addGap(2449, 2449, 2449))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -526,7 +532,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addComponent(jLabel43)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBirthdayField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(jLabel44)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -552,7 +558,7 @@ public class MainJFrame extends javax.swing.JFrame {
             LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginScreenLayout.createSequentialGroup()
                 .addGroup(LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1059, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1046, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -2363,7 +2369,7 @@ public class MainJFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1052, Short.MAX_VALUE))
+                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, Short.MAX_VALUE))
         );
 
         pack();
@@ -2816,8 +2822,9 @@ public class MainJFrame extends javax.swing.JFrame {
         String username = jTextField1.getText();
         String email = jTextField2.getText();
         String password = jPasswordField1.getText();
-       
-        boolean isRegistered = auth.registerUser(username, email, password);
+        Date birthday = Date.valueOf(jBirthdayField.getText());
+        
+        boolean isRegistered = auth.registerUser(username, email, password, birthday);
         
         if(isRegistered){
           JOptionPane.showMessageDialog(null, "Sign Up successful");
@@ -3073,6 +3080,10 @@ public class MainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonGamelobbyStart1ActionPerformed
 
+    private void jBirthdayFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBirthdayFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBirthdayFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3102,6 +3113,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel LoginScreen;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JPanel TutorialScreen;
+    private javax.swing.JTextField jBirthdayField;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -3255,7 +3267,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;

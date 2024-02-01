@@ -5,6 +5,7 @@
 package nanuv01;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
@@ -50,9 +51,9 @@ public class Authentication {
         return false;
     }
     
-    public boolean registerUser(String username, String email, String password){
+    public boolean registerUser(String username, String email, String password, Date birthday){
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());        
-        String sqlquery = "INSERT INTO users (username, password, email, score) VALUES (?, ?, ?, 0)";
+        String sqlquery = "INSERT INTO users (username, password, email, birthday, score) VALUES (?, ?, ?, ?, 0)";
         
         checkUsername = formValidator.checkUsernameExistence(username);
         checkEmail = formValidator.checkEmailCorrectness(email);
@@ -65,6 +66,7 @@ public class Authentication {
                 pst.setString(1, username);
                 pst.setString(2, hashedPassword);
                 pst.setString(3, email);
+                pst.setDate(4, birthday);
             
                 int affectedRows = pst.executeUpdate();
             

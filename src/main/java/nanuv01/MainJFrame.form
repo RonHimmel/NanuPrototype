@@ -413,7 +413,7 @@
                                               </Group>
                                               <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
                                               <Component id="jTextField2" alignment="0" pref="576" max="32767" attributes="0"/>
-                                              <Component id="jTextField4" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jBirthdayField" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="2449" pref="2449" max="-2" attributes="0"/>
                                       </Group>
@@ -453,7 +453,7 @@
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jTextField4" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="jBirthdayField" min="-2" pref="70" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -596,7 +596,7 @@
                     <Property name="text" type="java.lang.String" value="Sign Up"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField4">
+                <Component class="javax.swing.JTextField" name="jBirthdayField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -615,6 +615,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBirthdayFieldActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel9">
                   <Properties>
