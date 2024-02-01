@@ -3527,7 +3527,11 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonExit2ExitPressed
 
     private void jButtonExit3ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExit3ExitPressed
-        // TODO add your handling code here:
+            MainPanel.removeAll();
+            MainPanel.add(TutorialScreen);
+            MainPanel.repaint();
+            MainPanel.revalidate();
+        
     }//GEN-LAST:event_jButtonExit3ExitPressed
 
     /**
