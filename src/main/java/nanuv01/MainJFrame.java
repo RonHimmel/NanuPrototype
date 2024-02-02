@@ -539,18 +539,16 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel9)
-                                            .addComponent(jLabel43))
-                                        .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 576, Short.MAX_VALUE)
                                     .addComponent(jBirthdayField, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel13)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel43, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
                                 .addGap(2449, 2449, 2449))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2433,10 +2431,20 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(252, 121, 255));
         jLabel17.setText("Next >");
+        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelNextTut0MC(evt);
+            }
+        });
 
         jLabel18.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(252, 121, 255));
         jLabel18.setText("< Exit");
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelExitTutMC(evt);
+            }
+        });
 
         javax.swing.GroupLayout TutorialScreenLayout = new javax.swing.GroupLayout(TutorialScreen);
         TutorialScreen.setLayout(TutorialScreenLayout);
@@ -2544,10 +2552,20 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel62.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
         jLabel62.setForeground(new java.awt.Color(252, 121, 255));
         jLabel62.setText("Next >");
+        jLabel62.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelNextTut1MC(evt);
+            }
+        });
 
         jLabel63.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
         jLabel63.setForeground(new java.awt.Color(252, 121, 255));
         jLabel63.setText("< Back");
+        jLabel63.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelBackTut1MC(evt);
+            }
+        });
 
         javax.swing.GroupLayout TutorialScreen1Layout = new javax.swing.GroupLayout(TutorialScreen1);
         TutorialScreen1.setLayout(TutorialScreen1Layout);
@@ -2649,7 +2667,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(137, 137, 137)
                 .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addContainerGap(213, Short.MAX_VALUE))
             .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel21Layout.createSequentialGroup()
                     .addGap(189, 189, 189)
@@ -2660,10 +2678,20 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel70.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
         jLabel70.setForeground(new java.awt.Color(252, 121, 255));
         jLabel70.setText("Next >");
+        jLabel70.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelNextTut2MC(evt);
+            }
+        });
 
         jLabel71.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
         jLabel71.setForeground(new java.awt.Color(252, 121, 255));
         jLabel71.setText("< Back");
+        jLabel71.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelBackTut2MC(evt);
+            }
+        });
 
         javax.swing.GroupLayout TutorialScreen2Layout = new javax.swing.GroupLayout(TutorialScreen2);
         TutorialScreen2.setLayout(TutorialScreen2Layout);
@@ -2751,6 +2779,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel79.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
         jLabel79.setForeground(new java.awt.Color(252, 121, 255));
         jLabel79.setText("< Back");
+        jLabel79.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelBackTut3(evt);
+            }
+        });
 
         javax.swing.GroupLayout TutorialScreen3Layout = new javax.swing.GroupLayout(TutorialScreen3);
         TutorialScreen3.setLayout(TutorialScreen3Layout);
@@ -3520,19 +3553,83 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void jButtonExit1ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExit1ExitPressed
         // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(TutorialScreen);
+        MainPanel.repaint();
+        MainPanel.revalidate();
     }//GEN-LAST:event_jButtonExit1ExitPressed
 
     private void jButtonExit2ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExit2ExitPressed
         // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(TutorialScreen);
+        MainPanel.repaint();
+        MainPanel.revalidate();
     }//GEN-LAST:event_jButtonExit2ExitPressed
 
     private void jButtonExit3ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExit3ExitPressed
-            MainPanel.removeAll();
-            MainPanel.add(TutorialScreen);
-            MainPanel.repaint();
-            MainPanel.revalidate();
+        MainPanel.removeAll();
+        MainPanel.add(TutorialScreen);
+        MainPanel.repaint();
+        MainPanel.revalidate();
         
     }//GEN-LAST:event_jButtonExit3ExitPressed
+
+    private void jLabelBackTut3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTut3
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(TutorialScreen2);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_jLabelBackTut3
+
+    private void jLabelNextTut2MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextTut2MC
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(TutorialScreen3);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_jLabelNextTut2MC
+
+    private void jLabelBackTut2MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTut2MC
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(TutorialScreen1);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_jLabelBackTut2MC
+
+    private void jLabelBackTut1MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTut1MC
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(TutorialScreen);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_jLabelBackTut1MC
+
+    private void jLabelExitTutMC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelExitTutMC
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(LoginScreen);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_jLabelExitTutMC
+
+    private void jLabelNextTut0MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextTut0MC
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(TutorialScreen1);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_jLabelNextTut0MC
+
+    private void jLabelNextTut1MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextTut1MC
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(TutorialScreen2);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_jLabelNextTut1MC
 
     /**
      * @param args the command line arguments

@@ -402,18 +402,18 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Component id="jPasswordField1" alignment="0" max="32767" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel12" alignment="0" min="-2" pref="561" max="-2" attributes="0"/>
-                                                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel43" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                              </Group>
                                               <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
                                               <Component id="jTextField2" alignment="0" pref="576" max="32767" attributes="0"/>
                                               <Component id="jBirthdayField" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="jLabel12" alignment="0" min="-2" pref="561" max="-2" attributes="0"/>
+                                                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel43" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="2449" max="-2" attributes="0"/>
                                       </Group>
@@ -4138,6 +4138,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Next &gt;"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelNextTut0MC"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel18">
               <Properties>
@@ -4149,6 +4152,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="&lt; Exit"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelExitTutMC"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -4346,6 +4352,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Next &gt;"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelNextTut1MC"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel63">
               <Properties>
@@ -4357,6 +4366,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="&lt; Back"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBackTut1MC"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -4490,7 +4502,7 @@
                           <Component id="jLabel69" min="-2" pref="83" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
                           <Component id="jLabel82" min="-2" pref="83" max="-2" attributes="0"/>
-                          <EmptySpace pref="211" max="32767" attributes="0"/>
+                          <EmptySpace pref="213" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -4562,6 +4574,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Next &gt;"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelNextTut2MC"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel71">
               <Properties>
@@ -4573,6 +4588,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="&lt; Back"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBackTut2MC"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -4729,6 +4747,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="&lt; Back"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelBackTut3"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
