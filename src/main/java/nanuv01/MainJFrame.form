@@ -122,6 +122,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="loginBtn" min="-2" pref="179" max="-2" attributes="0"/>
                                               <Component id="jLabelForgotPassword" min="-2" pref="126" max="-2" attributes="0"/>
+                                              <Component id="leaderButtonPressed" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -152,7 +153,9 @@
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="loginBtn" min="-2" pref="70" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="leaderButtonPressed" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -302,6 +305,30 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Username"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="leaderButtonPressed">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="29" green="31" red="1" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Verdana" size="24" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="db" red="fe" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Leaderboard"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                        <LineBorder roundedCorners="true" thickness="3">
+                          <Color PropertyName="color" blue="ff" green="bc" red="fe" type="rgb"/>
+                        </LineBorder>
+                      </Border>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="leaderButtonPressedLoginPressed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -3192,19 +3219,19 @@
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jPanel26" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel56" alignment="0" min="-2" pref="273" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardUsername1" alignment="0" min="-2" pref="273" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel57" alignment="0" min="-2" pref="273" max="-2" attributes="0"/>
+                                      <Component id="jLeaderboardUsername2" alignment="0" min="-2" pref="273" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                           <Component id="jPanel27" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel55" min="-2" pref="245" max="-2" attributes="0"/>
+                                              <Component id="jLeaderboardUsername3" min="-2" pref="245" max="-2" attributes="0"/>
                                               <Group type="102" attributes="0">
                                                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                                                   <Component id="jPanel28" min="-2" max="-2" attributes="0"/>
@@ -3239,18 +3266,18 @@
                           <EmptySpace min="5" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel56" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="jLeaderboardUsername1" min="-2" pref="60" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel26" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel61" min="-2" pref="436" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabel57" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="jLeaderboardUsername2" min="-2" pref="60" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Component id="jLabel55" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <Component id="jLeaderboardUsername3" min="-2" pref="60" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="jPanel28" min="-2" max="-2" attributes="0"/>
                                       </Group>
@@ -3274,6 +3301,9 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="&lt;"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel52MouseClicked"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel53">
                   <Properties>
@@ -3299,7 +3329,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                              <Component id="jLabel58" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="90" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -3308,14 +3338,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
-                              <Component id="jLabel58" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="468" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel58">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardScore1">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="44" style="1"/>
@@ -3340,7 +3370,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                              <Component id="jLabel59" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="86" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -3349,14 +3379,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace pref="172" max="32767" attributes="0"/>
-                              <Component id="jLabel59" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel59">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardScore2">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="44" style="1"/>
@@ -3381,7 +3411,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                              <Component id="jLabel54" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="76" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -3390,14 +3420,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace pref="76" max="32767" attributes="0"/>
-                              <Component id="jLabel54" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel54">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardScore3">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="44" style="1"/>
@@ -3410,7 +3440,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JLabel" name="jLabel55">
+                <Component class="javax.swing.JLabel" name="jLeaderboardUsername3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="44" style="1"/>
@@ -3424,7 +3454,7 @@
                     <Property name="text" type="java.lang.String" value="Username"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel56">
+                <Component class="javax.swing.JLabel" name="jLeaderboardUsername1">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="44" style="1"/>
@@ -3438,7 +3468,7 @@
                     <Property name="text" type="java.lang.String" value="Username"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel57">
+                <Component class="javax.swing.JLabel" name="jLeaderboardUsername2">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="44" style="1"/>
@@ -3555,9 +3585,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                              <Component id="jLabelPlayerThree1" min="-2" pref="282" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardUsername4" min="-2" pref="282" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabelPointsThree1" pref="90" max="32767" attributes="0"/>
+                              <Component id="jLeaderboardScore4" pref="90" max="32767" attributes="0"/>
                           </Group>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -3570,8 +3600,8 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jLabelPointsThree1" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
-                              <Component id="jLabelPlayerThree1" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore4" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardUsername4" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Component id="jLabelPointsThree2" alignment="0" pref="71" max="32767" attributes="0"/>
@@ -3580,7 +3610,7 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabelPlayerThree1">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardUsername4">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="30" style="1"/>
@@ -3592,7 +3622,7 @@
                         <Property name="text" type="java.lang.String" value="Username"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelPointsThree1">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardScore4">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Liberation Sans" size="30" style="1"/>
@@ -3653,9 +3683,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabelPointsThree16" min="-2" pref="55" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="jLabelPlayerThree8" min="-2" pref="282" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardUsername5" min="-2" pref="282" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabelPointsThree15" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore5" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3663,8 +3693,8 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelPointsThree15" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <Component id="jLabelPlayerThree8" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="jLeaderboardScore5" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="jLeaderboardUsername5" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                                   <Component id="jLabelPointsThree16" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
@@ -3673,7 +3703,7 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabelPointsThree15">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardScore5">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Liberation Sans" size="30" style="1"/>
@@ -3697,7 +3727,7 @@
                         <Property name="text" type="java.lang.String" value="5."/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelPlayerThree8">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardUsername5">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="30" style="1"/>
@@ -3733,9 +3763,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="77" max="32767" attributes="0"/>
-                              <Component id="jLabelPlayerThree10" min="-2" pref="282" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardUsername6" min="-2" pref="282" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabelPointsThree17" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore6" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -3748,8 +3778,8 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="jLabelPointsThree17" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
-                              <Component id="jLabelPlayerThree10" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore6" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardUsername6" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Component id="jLabelPointsThree18" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
@@ -3758,7 +3788,7 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabelPointsThree17">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardScore6">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Liberation Sans" size="30" style="1"/>
@@ -3782,7 +3812,7 @@
                         <Property name="text" type="java.lang.String" value="6."/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelPlayerThree10">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardUsername6">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="30" style="1"/>
@@ -3818,9 +3848,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="77" max="32767" attributes="0"/>
-                              <Component id="jLabelPlayerThree9" min="-2" pref="282" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardUsername7" min="-2" pref="282" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabelPointsThree19" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore7" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -3833,8 +3863,8 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="jLabelPointsThree19" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
-                              <Component id="jLabelPlayerThree9" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardScore7" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="jLeaderboardUsername7" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Component id="jLabelPointsThree20" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
@@ -3843,7 +3873,7 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabelPointsThree19">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardScore7">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Liberation Sans" size="30" style="1"/>
@@ -3867,7 +3897,7 @@
                         <Property name="text" type="java.lang.String" value="7."/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelPlayerThree9">
+                    <Component class="javax.swing.JLabel" name="jLeaderboardUsername7">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="30" style="1"/>

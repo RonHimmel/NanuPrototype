@@ -6,7 +6,7 @@ package nanuv01;
 
 
 import java.awt.Color;
-import java.awt.List;
+import java.util.List;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -18,6 +18,7 @@ import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Map;
 import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -35,6 +36,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private Authentication auth = new Authentication();
     private User user = new User();
     private FormValidation formValidator = new FormValidation();
+    private LeaderBoardRetrieving leaderBoard = new LeaderBoardRetrieving();
     
     private ArrayList<String> userArray = new ArrayList<>();
     private int userLoggedInCount = 0;
@@ -66,6 +68,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        leaderButtonPressed = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -191,34 +194,34 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jPanel26 = new javax.swing.JPanel();
-        jLabel58 = new javax.swing.JLabel();
+        jLeaderboardScore1 = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
-        jLabel59 = new javax.swing.JLabel();
+        jLeaderboardScore2 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
+        jLeaderboardScore3 = new javax.swing.JLabel();
+        jLeaderboardUsername3 = new javax.swing.JLabel();
+        jLeaderboardUsername1 = new javax.swing.JLabel();
+        jLeaderboardUsername2 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
         jPanel25 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
-        jLabelPlayerThree1 = new javax.swing.JLabel();
-        jLabelPointsThree1 = new javax.swing.JLabel();
+        jLeaderboardUsername4 = new javax.swing.JLabel();
+        jLeaderboardScore4 = new javax.swing.JLabel();
         jLabelPointsThree2 = new javax.swing.JLabel();
         jLabel60 = new javax.swing.JLabel();
         jPanel36 = new javax.swing.JPanel();
-        jLabelPointsThree15 = new javax.swing.JLabel();
+        jLeaderboardScore5 = new javax.swing.JLabel();
         jLabelPointsThree16 = new javax.swing.JLabel();
-        jLabelPlayerThree8 = new javax.swing.JLabel();
+        jLeaderboardUsername5 = new javax.swing.JLabel();
         jPanel37 = new javax.swing.JPanel();
-        jLabelPointsThree17 = new javax.swing.JLabel();
+        jLeaderboardScore6 = new javax.swing.JLabel();
         jLabelPointsThree18 = new javax.swing.JLabel();
-        jLabelPlayerThree10 = new javax.swing.JLabel();
+        jLeaderboardUsername6 = new javax.swing.JLabel();
         jPanel38 = new javax.swing.JPanel();
-        jLabelPointsThree19 = new javax.swing.JLabel();
+        jLeaderboardScore7 = new javax.swing.JLabel();
         jLabelPointsThree20 = new javax.swing.JLabel();
-        jLabelPlayerThree9 = new javax.swing.JLabel();
+        jLeaderboardUsername7 = new javax.swing.JLabel();
         TutorialScreen = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
@@ -337,6 +340,17 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(1, 87, 73));
         jLabel19.setText("Username");
 
+        leaderButtonPressed.setBackground(new java.awt.Color(1, 49, 41));
+        leaderButtonPressed.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        leaderButtonPressed.setForeground(new java.awt.Color(254, 219, 255));
+        leaderButtonPressed.setText("Leaderboard");
+        leaderButtonPressed.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(254, 188, 255), 3, true));
+        leaderButtonPressed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leaderButtonPressedLoginPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -361,7 +375,8 @@ public class MainJFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelForgotPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jLabelForgotPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(leaderButtonPressed, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 281, Short.MAX_VALUE)))
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -384,7 +399,9 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addComponent(jLabelForgotPassword))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(leaderButtonPressed, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75))
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -1943,6 +1960,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel52.setForeground(new java.awt.Color(254, 117, 228));
         jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel52.setText("<");
+        jLabel52.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel52MouseClicked(evt);
+            }
+        });
 
         jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 70)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(254, 117, 228));
@@ -1951,9 +1973,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPanel26.setBackground(new java.awt.Color(1, 49, 41));
 
-        jLabel58.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
-        jLabel58.setForeground(new java.awt.Color(254, 219, 255));
-        jLabel58.setText("1234");
+        jLeaderboardScore1.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
+        jLeaderboardScore1.setForeground(new java.awt.Color(254, 219, 255));
+        jLeaderboardScore1.setText("1234");
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
@@ -1961,22 +1983,22 @@ public class MainJFrame extends javax.swing.JFrame {
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel26Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
-                .addComponent(jLabel58)
+                .addComponent(jLeaderboardScore1)
                 .addContainerGap(90, Short.MAX_VALUE))
         );
         jPanel26Layout.setVerticalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel26Layout.createSequentialGroup()
                 .addGap(172, 172, 172)
-                .addComponent(jLabel58)
+                .addComponent(jLeaderboardScore1)
                 .addContainerGap(468, Short.MAX_VALUE))
         );
 
         jPanel27.setBackground(new java.awt.Color(1, 49, 41));
 
-        jLabel59.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
-        jLabel59.setForeground(new java.awt.Color(254, 219, 255));
-        jLabel59.setText("1234");
+        jLeaderboardScore2.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
+        jLeaderboardScore2.setForeground(new java.awt.Color(254, 219, 255));
+        jLeaderboardScore2.setText("1234");
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -1984,22 +2006,22 @@ public class MainJFrame extends javax.swing.JFrame {
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel27Layout.createSequentialGroup()
                 .addGap(83, 83, 83)
-                .addComponent(jLabel59)
+                .addComponent(jLeaderboardScore2)
                 .addContainerGap(86, Short.MAX_VALUE))
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
                 .addContainerGap(172, Short.MAX_VALUE)
-                .addComponent(jLabel59)
+                .addComponent(jLeaderboardScore2)
                 .addGap(146, 146, 146))
         );
 
         jPanel28.setBackground(new java.awt.Color(1, 49, 41));
 
-        jLabel54.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
-        jLabel54.setForeground(new java.awt.Color(254, 219, 255));
-        jLabel54.setText("1234");
+        jLeaderboardScore3.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
+        jLeaderboardScore3.setForeground(new java.awt.Color(254, 219, 255));
+        jLeaderboardScore3.setText("1234");
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -2007,31 +2029,31 @@ public class MainJFrame extends javax.swing.JFrame {
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel28Layout.createSequentialGroup()
                 .addGap(73, 73, 73)
-                .addComponent(jLabel54)
+                .addComponent(jLeaderboardScore3)
                 .addContainerGap(76, Short.MAX_VALUE))
         );
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
                 .addContainerGap(76, Short.MAX_VALUE)
-                .addComponent(jLabel54)
+                .addComponent(jLeaderboardScore3)
                 .addGap(51, 51, 51))
         );
 
-        jLabel55.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
-        jLabel55.setForeground(new java.awt.Color(164, 149, 149));
-        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/third-place_5551234.png"))); // NOI18N
-        jLabel55.setText("Username");
+        jLeaderboardUsername3.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
+        jLeaderboardUsername3.setForeground(new java.awt.Color(164, 149, 149));
+        jLeaderboardUsername3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/third-place_5551234.png"))); // NOI18N
+        jLeaderboardUsername3.setText("Username");
 
-        jLabel56.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
-        jLabel56.setForeground(new java.awt.Color(164, 149, 149));
-        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/first-prize_5551226.png"))); // NOI18N
-        jLabel56.setText("Username");
+        jLeaderboardUsername1.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
+        jLeaderboardUsername1.setForeground(new java.awt.Color(164, 149, 149));
+        jLeaderboardUsername1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/first-prize_5551226.png"))); // NOI18N
+        jLeaderboardUsername1.setText("Username");
 
-        jLabel57.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(164, 149, 149));
-        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/second-prize_5551230.png"))); // NOI18N
-        jLabel57.setText("Username");
+        jLeaderboardUsername2.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
+        jLeaderboardUsername2.setForeground(new java.awt.Color(164, 149, 149));
+        jLeaderboardUsername2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/second-prize_5551230.png"))); // NOI18N
+        jLeaderboardUsername2.setText("Username");
 
         jLabel61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pngwing.com.png"))); // NOI18N
         jLabel61.setText("jLabel61");
@@ -2049,18 +2071,18 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanel24Layout.createSequentialGroup()
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLeaderboardUsername1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel24Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLeaderboardUsername2, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel24Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
                                 .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLeaderboardUsername3, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel24Layout.createSequentialGroup()
                                         .addGap(6, 6, 6)
                                         .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -2083,17 +2105,17 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLeaderboardUsername1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel24Layout.createSequentialGroup()
                         .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLeaderboardUsername2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel24Layout.createSequentialGroup()
-                                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLeaderboardUsername3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -2111,15 +2133,15 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
         jPanel29.setPreferredSize(new java.awt.Dimension(315, 40));
 
-        jLabelPlayerThree1.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
-        jLabelPlayerThree1.setForeground(new java.awt.Color(108, 103, 103));
-        jLabelPlayerThree1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPlayerThree1.setText("Username");
+        jLeaderboardUsername4.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLeaderboardUsername4.setForeground(new java.awt.Color(108, 103, 103));
+        jLeaderboardUsername4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLeaderboardUsername4.setText("Username");
 
-        jLabelPointsThree1.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
-        jLabelPointsThree1.setForeground(new java.awt.Color(108, 103, 103));
-        jLabelPointsThree1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPointsThree1.setText("123");
+        jLeaderboardScore4.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
+        jLeaderboardScore4.setForeground(new java.awt.Color(108, 103, 103));
+        jLeaderboardScore4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLeaderboardScore4.setText("123");
 
         jLabelPointsThree2.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
         jLabelPointsThree2.setForeground(new java.awt.Color(108, 103, 103));
@@ -2132,9 +2154,9 @@ public class MainJFrame extends javax.swing.JFrame {
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
-                .addComponent(jLabelPlayerThree1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLeaderboardUsername4, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelPointsThree1, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
+                .addComponent(jLeaderboardScore4, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
             .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel29Layout.createSequentialGroup()
                     .addComponent(jLabelPointsThree2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2143,8 +2165,8 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabelPointsThree1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabelPlayerThree1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLeaderboardScore4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLeaderboardUsername4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabelPointsThree2, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE))
         );
@@ -2158,20 +2180,20 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
         jPanel36.setPreferredSize(new java.awt.Dimension(315, 40));
 
-        jLabelPointsThree15.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
-        jLabelPointsThree15.setForeground(new java.awt.Color(108, 103, 103));
-        jLabelPointsThree15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPointsThree15.setText("100");
+        jLeaderboardScore5.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
+        jLeaderboardScore5.setForeground(new java.awt.Color(108, 103, 103));
+        jLeaderboardScore5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLeaderboardScore5.setText("100");
 
         jLabelPointsThree16.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
         jLabelPointsThree16.setForeground(new java.awt.Color(108, 103, 103));
         jLabelPointsThree16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelPointsThree16.setText("5.");
 
-        jLabelPlayerThree8.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
-        jLabelPlayerThree8.setForeground(new java.awt.Color(108, 103, 103));
-        jLabelPlayerThree8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPlayerThree8.setText("Username");
+        jLeaderboardUsername5.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLeaderboardUsername5.setForeground(new java.awt.Color(108, 103, 103));
+        jLeaderboardUsername5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLeaderboardUsername5.setText("Username");
 
         javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
         jPanel36.setLayout(jPanel36Layout);
@@ -2180,16 +2202,16 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addComponent(jLabelPointsThree16, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
-                .addComponent(jLabelPlayerThree8, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLeaderboardUsername5, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelPointsThree15, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLeaderboardScore5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel36Layout.setVerticalGroup(
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelPointsThree15, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelPlayerThree8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLeaderboardScore5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLeaderboardUsername5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelPointsThree16, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11))
         );
@@ -2198,20 +2220,20 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
         jPanel37.setPreferredSize(new java.awt.Dimension(315, 40));
 
-        jLabelPointsThree17.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
-        jLabelPointsThree17.setForeground(new java.awt.Color(108, 103, 103));
-        jLabelPointsThree17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPointsThree17.setText("97");
+        jLeaderboardScore6.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
+        jLeaderboardScore6.setForeground(new java.awt.Color(108, 103, 103));
+        jLeaderboardScore6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLeaderboardScore6.setText("97");
 
         jLabelPointsThree18.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
         jLabelPointsThree18.setForeground(new java.awt.Color(108, 103, 103));
         jLabelPointsThree18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelPointsThree18.setText("6.");
 
-        jLabelPlayerThree10.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
-        jLabelPlayerThree10.setForeground(new java.awt.Color(108, 103, 103));
-        jLabelPlayerThree10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPlayerThree10.setText("Username");
+        jLeaderboardUsername6.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLeaderboardUsername6.setForeground(new java.awt.Color(108, 103, 103));
+        jLeaderboardUsername6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLeaderboardUsername6.setText("Username");
 
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
@@ -2219,9 +2241,9 @@ public class MainJFrame extends javax.swing.JFrame {
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel37Layout.createSequentialGroup()
                 .addGap(0, 77, Short.MAX_VALUE)
-                .addComponent(jLabelPlayerThree10, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLeaderboardUsername6, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelPointsThree17, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLeaderboardScore6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel37Layout.createSequentialGroup()
                     .addComponent(jLabelPointsThree18, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2230,8 +2252,8 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel37Layout.setVerticalGroup(
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabelPointsThree17, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabelPlayerThree10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLeaderboardScore6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLeaderboardUsername6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabelPointsThree18, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -2240,20 +2262,20 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
         jPanel38.setPreferredSize(new java.awt.Dimension(315, 40));
 
-        jLabelPointsThree19.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
-        jLabelPointsThree19.setForeground(new java.awt.Color(108, 103, 103));
-        jLabelPointsThree19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPointsThree19.setText("80");
+        jLeaderboardScore7.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
+        jLeaderboardScore7.setForeground(new java.awt.Color(108, 103, 103));
+        jLeaderboardScore7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLeaderboardScore7.setText("80");
 
         jLabelPointsThree20.setFont(new java.awt.Font("Liberation Sans", 1, 30)); // NOI18N
         jLabelPointsThree20.setForeground(new java.awt.Color(108, 103, 103));
         jLabelPointsThree20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelPointsThree20.setText("7.");
 
-        jLabelPlayerThree9.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
-        jLabelPlayerThree9.setForeground(new java.awt.Color(108, 103, 103));
-        jLabelPlayerThree9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPlayerThree9.setText("Username");
+        jLeaderboardUsername7.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLeaderboardUsername7.setForeground(new java.awt.Color(108, 103, 103));
+        jLeaderboardUsername7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLeaderboardUsername7.setText("Username");
 
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
@@ -2261,9 +2283,9 @@ public class MainJFrame extends javax.swing.JFrame {
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
                 .addGap(0, 77, Short.MAX_VALUE)
-                .addComponent(jLabelPlayerThree9, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLeaderboardUsername7, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelPointsThree19, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLeaderboardScore7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel38Layout.createSequentialGroup()
                     .addComponent(jLabelPointsThree20, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2272,8 +2294,8 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel38Layout.setVerticalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabelPointsThree19, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabelPlayerThree9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLeaderboardScore7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLeaderboardUsername7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabelPointsThree20, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -3591,6 +3613,51 @@ public class MainJFrame extends javax.swing.JFrame {
         MainPanel.revalidate();
     }//GEN-LAST:event_jLabelNextTut1MC
 
+    private void leaderButtonPressedLoginPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leaderButtonPressedLoginPressed
+        // TODO add your handling code here:
+        
+        List<Map<String, Object>> userScores = leaderBoard.retrieveUsersScore();
+        int i = 0;
+        JLabel[] labelUsername = {jLeaderboardUsername1, 
+                                  jLeaderboardUsername2,
+                                  jLeaderboardUsername3,
+                                  jLeaderboardUsername4,
+                                  jLeaderboardUsername5,
+                                  jLeaderboardUsername6,
+                                  jLeaderboardUsername7};
+        
+        JLabel[] labelScore = {jLeaderboardScore1, 
+                               jLeaderboardScore2,
+                               jLeaderboardScore3,
+                               jLeaderboardScore4,
+                               jLeaderboardScore5,
+                               jLeaderboardScore6,
+                               jLeaderboardScore7};
+        
+        for(Map<String, Object> userScore : userScores) {
+            if(i < 7){
+                labelUsername[i].setText((String) userScore.get("username"));
+                labelScore[i].setText(Integer.toString((int) userScore.get("score")));
+                i++;
+            }else{
+                break;
+            }
+        }
+        
+        MainPanel.removeAll();
+        MainPanel.add(LeaderBoard);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_leaderButtonPressedLoginPressed
+
+    private void jLabel52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel52MouseClicked
+        // TODO add your handling code here:
+        MainPanel.removeAll();
+        MainPanel.add(LoginScreen);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_jLabel52MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -3712,12 +3779,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
@@ -3746,23 +3807,29 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPlayerFour;
     private javax.swing.JLabel jLabelPlayerOne;
     private javax.swing.JLabel jLabelPlayerThree;
-    private javax.swing.JLabel jLabelPlayerThree1;
-    private javax.swing.JLabel jLabelPlayerThree10;
-    private javax.swing.JLabel jLabelPlayerThree8;
-    private javax.swing.JLabel jLabelPlayerThree9;
     private javax.swing.JLabel jLabelPlayerTwo;
     private javax.swing.JLabel jLabelPointsFour;
     private javax.swing.JLabel jLabelPointsOne;
     private javax.swing.JLabel jLabelPointsThree;
-    private javax.swing.JLabel jLabelPointsThree1;
-    private javax.swing.JLabel jLabelPointsThree15;
     private javax.swing.JLabel jLabelPointsThree16;
-    private javax.swing.JLabel jLabelPointsThree17;
     private javax.swing.JLabel jLabelPointsThree18;
-    private javax.swing.JLabel jLabelPointsThree19;
     private javax.swing.JLabel jLabelPointsThree2;
     private javax.swing.JLabel jLabelPointsThree20;
     private javax.swing.JLabel jLabelPointsTwo;
+    private javax.swing.JLabel jLeaderboardScore1;
+    private javax.swing.JLabel jLeaderboardScore2;
+    private javax.swing.JLabel jLeaderboardScore3;
+    private javax.swing.JLabel jLeaderboardScore4;
+    private javax.swing.JLabel jLeaderboardScore5;
+    private javax.swing.JLabel jLeaderboardScore6;
+    private javax.swing.JLabel jLeaderboardScore7;
+    private javax.swing.JLabel jLeaderboardUsername1;
+    private javax.swing.JLabel jLeaderboardUsername2;
+    private javax.swing.JLabel jLeaderboardUsername3;
+    private javax.swing.JLabel jLeaderboardUsername4;
+    private javax.swing.JLabel jLeaderboardUsername5;
+    private javax.swing.JLabel jLeaderboardUsername6;
+    private javax.swing.JLabel jLeaderboardUsername7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -3815,6 +3882,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;
+    private javax.swing.JButton leaderButtonPressed;
     private javax.swing.JButton loginBtn;
     private javax.swing.JButton registerBtn;
     // End of variables declaration//GEN-END:variables
