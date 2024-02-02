@@ -64,9 +64,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabelForgotPassword = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        userCountLabel = new javax.swing.JLabel();
-        startLobbyBtn = new javax.swing.JButton();
         jLabel42 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -107,8 +104,8 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel15 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jPasswordField4 = new javax.swing.JPasswordField();
+        jUsernameLobbyField = new javax.swing.JTextField();
+        jPasswordLobbyField = new javax.swing.JPasswordField();
         jButtonGamelobbyStart1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -334,30 +331,6 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel14.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(1, 87, 73));
-        jLabel14.setText("User Count:");
-
-        userCountLabel.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
-        userCountLabel.setForeground(new java.awt.Color(1, 87, 73));
-        userCountLabel.setText("0");
-        userCountLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                userCountLabelMouseClicked(evt);
-            }
-        });
-
-        startLobbyBtn.setBackground(new java.awt.Color(1, 49, 41));
-        startLobbyBtn.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        startLobbyBtn.setForeground(new java.awt.Color(254, 219, 255));
-        startLobbyBtn.setText("Start");
-        startLobbyBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(254, 188, 255), 3, true));
-        startLobbyBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                startLobbyBtnLoginPressed(evt);
-            }
-        });
-
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2024-01-30 152813.png"))); // NOI18N
 
         jLabel19.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
@@ -369,40 +342,27 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(89, 89, 89)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel42)
-                                        .addGap(0, 5, Short.MAX_VALUE))
-                                    .addComponent(jPasswordField)
-                                    .addComponent(jUsernameField))
-                                .addGap(66, 66, 66))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabelForgotPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel19)
-                                    .addComponent(jLabel10))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(jLabel42)
+                                .addGap(0, 10, Short.MAX_VALUE))
+                            .addComponent(jPasswordField)
+                            .addComponent(jUsernameField))
+                        .addGap(66, 66, 66))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(startLobbyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(290, 290, 290)
-                                    .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(120, 120, 120)
-                                    .addComponent(jLabel14)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(userCountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel10)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabelForgotPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 281, Short.MAX_VALUE)))
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -422,15 +382,9 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jLabelForgotPassword))
-                .addGap(59, 59, 59)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(userCountLabel))
-                .addGap(1, 1, 1)
-                .addComponent(startLobbyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(67, 67, 67))
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -540,7 +494,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 576, Short.MAX_VALUE)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jBirthdayField, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -604,7 +558,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 3150, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 3145, Short.MAX_VALUE)
                 .addContainerGap())
         );
         LoginScreenLayout.setVerticalGroup(
@@ -897,16 +851,16 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel27.setForeground(new java.awt.Color(1, 69, 58));
         jLabel27.setText("to this room");
 
-        jTextField11.setBackground(new java.awt.Color(254, 188, 255));
-        jTextField11.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-        jTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(5, 98, 82), 3));
+        jUsernameLobbyField.setBackground(new java.awt.Color(254, 188, 255));
+        jUsernameLobbyField.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jUsernameLobbyField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(5, 98, 82), 3));
 
-        jPasswordField4.setBackground(new java.awt.Color(254, 188, 255));
-        jPasswordField4.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
-        jPasswordField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(5, 98, 82), 3));
-        jPasswordField4.addActionListener(new java.awt.event.ActionListener() {
+        jPasswordLobbyField.setBackground(new java.awt.Color(254, 188, 255));
+        jPasswordLobbyField.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
+        jPasswordLobbyField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(5, 98, 82), 3));
+        jPasswordLobbyField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField4ActionPerformed(evt);
+                jPasswordLobbyFieldActionPerformed(evt);
             }
         });
 
@@ -941,8 +895,8 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addComponent(jLabel27)
                             .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jPasswordField4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE)
-                                .addComponent(jTextField11, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addComponent(jPasswordLobbyField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE)
+                                .addComponent(jUsernameLobbyField, javax.swing.GroupLayout.Alignment.LEADING))
                             .addComponent(jLabel6)
                             .addComponent(jLabel16)))
                     .addGroup(jPanel15Layout.createSequentialGroup()
@@ -960,14 +914,14 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(101, 101, 101)
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jUsernameLobbyField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPasswordLobbyField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(105, 105, 105)
                 .addComponent(jButtonGamelobbyStart1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap(301, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout GamelobbyScreenLayout = new javax.swing.GroupLayout(GamelobbyScreen);
@@ -1754,7 +1708,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                 .addComponent(jPanelYellowBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(50, 50, 50)
                                 .addComponent(jPanelPinkBorder, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(2472, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         GameScreenLayout.setVerticalGroup(
             GameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1773,7 +1727,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(19, 19, 19)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         MainPanel.add(GameScreen, "card2");
@@ -2467,7 +2421,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(jLabel18)
                         .addGap(942, 942, 942)
                         .addComponent(jLabel17)))
-                .addContainerGap(2469, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         TutorialScreenLayout.setVerticalGroup(
             TutorialScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2476,7 +2430,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGroup(TutorialScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
                     .addComponent(jLabel17))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(TutorialScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2597,7 +2551,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGroup(TutorialScreen1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel63)
                     .addComponent(jLabel62))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(TutorialScreen1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel46, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2714,7 +2668,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(jLabel71)
                         .addGap(942, 942, 942)
                         .addComponent(jLabel70)))
-                .addContainerGap(2457, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         TutorialScreen2Layout.setVerticalGroup(
             TutorialScreen2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2804,14 +2758,14 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(TutorialScreen3Layout.createSequentialGroup()
                         .addGap(225, 225, 225)
                         .addComponent(jLabel79)))
-                .addContainerGap(2469, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         TutorialScreen3Layout.setVerticalGroup(
             TutorialScreen3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TutorialScreen3Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel79)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(TutorialScreen3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel74, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel73, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2830,13 +2784,13 @@ public class MainJFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 3906, Short.MAX_VALUE))
+                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 3906, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1052, Short.MAX_VALUE))
+                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1052, Short.MAX_VALUE))
         );
 
         pack();
@@ -3172,33 +3126,17 @@ public class MainJFrame extends javax.swing.JFrame {
         
         if(isLoggedIn){
             if(!userArray.contains(username)){
-                 Date userDate = user.getAgeFromUser(username);
-            
-                var tempUserList = new ArrayList<SimpleEntry<String, Date>>();
-            
-                for (String existingUser : userArray) {
-                    Date existingUserDate = user.getAgeFromUser(existingUser);
-                    tempUserList.add(new AbstractMap.SimpleEntry<>(existingUser, existingUserDate));
-                }
-            
-                tempUserList.add(new AbstractMap.SimpleEntry<>(username, userDate));
-            
-                tempUserList.sort(Comparator.comparing(SimpleEntry::getValue));
-            
-                userArray.clear();
-            
-                for (var entry : tempUserList) {
-                    userArray.add(entry.getKey());
-                }
-            
+                userArray.add(username);
+                
                 userLoggedInCount++;
-                if(userLoggedInCount <= 4){
-                    userCountLabel.setText(""+userLoggedInCount);
-                }else {
-                    JOptionPane.showMessageDialog(null, "Maximum of 4 users already logged in");
-                    return;
-                }
             }
+            
+            MainPanel.removeAll();
+            MainPanel.add(GamelobbyScreen);
+            MainPanel.repaint();
+            MainPanel.revalidate();
+            
+            jTextField7.setText(username);
         }else{
              JOptionPane.showMessageDialog(null, "Login failed");
              jUsernameField.setText("");
@@ -3412,7 +3350,6 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_DiceRoll
 
     private void jButtonGamelobbyStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGamelobbyStartActionPerformed
-        // TODO add your handling code here:
         MainPanel.removeAll();
         MainPanel.add(GameScreen);
         MainPanel.repaint();
@@ -3421,12 +3358,11 @@ public class MainJFrame extends javax.swing.JFrame {
         JLabel[] userTextFields = {jLabelPlayerOne, jLabelPlayerTwo, jLabelPlayerThree, jLabelPlayerFour};
         for(int i = 0; i < userArray.size() && i < userTextFields.length; i++){
             userTextFields[i].setText(userArray.get(i));
-        } 
+        }
     }//GEN-LAST:event_jButtonGamelobbyStartActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        //jPasswordField2
         String username = jTextField3.getText();
         
         if(jPasswordField2.getText() == null ? jPasswordField3.getText() == null : jPasswordField2.getText().equals(jPasswordField3.getText())){
@@ -3495,26 +3431,6 @@ public class MainJFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jPasswordField3FocusLost
 
-    private void userCountLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userCountLabelMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userCountLabelMouseClicked
-
-    private void startLobbyBtnLoginPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startLobbyBtnLoginPressed
-        // TODO add your handling code here:
-        if(userLoggedInCount>0){
-            MainPanel.removeAll();
-            MainPanel.add(GamelobbyScreen);
-            MainPanel.repaint();
-            MainPanel.revalidate();
-        
-            
-            JTextField[] userTextFields = {jTextField7, jTextField8, jTextField9, jTextField10};
-            for(int i = 0; i < userArray.size() && i < userTextFields.length; i++){
-                userTextFields[i].setText(userArray.get(i));
-            } 
-        }
-    }//GEN-LAST:event_startLobbyBtnLoginPressed
-
     private void jUsernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUsernameFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jUsernameFieldActionPerformed
@@ -3539,12 +3455,56 @@ public class MainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField8ActionPerformed
 
-    private void jPasswordField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField4ActionPerformed
+    private void jPasswordLobbyFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordLobbyFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField4ActionPerformed
+    }//GEN-LAST:event_jPasswordLobbyFieldActionPerformed
 
     private void jButtonGamelobbyStart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGamelobbyStart1ActionPerformed
         // TODO add your handling code here:
+        String username = jUsernameLobbyField.getText();
+        String password = jPasswordLobbyField.getText();
+         
+        boolean isLoggedIn = auth.loginUser(username, password);
+        
+        if(isLoggedIn){
+            if(!userArray.contains(username)){
+                Date userDate = user.getAgeFromUser(username);
+            
+                var tempUserList = new ArrayList<SimpleEntry<String, Date>>();
+            
+                for (String existingUser : userArray) {
+                    Date existingUserDate = user.getAgeFromUser(existingUser);
+                    tempUserList.add(new AbstractMap.SimpleEntry<>(existingUser, existingUserDate));
+                }
+            
+                tempUserList.add(new AbstractMap.SimpleEntry<>(username, userDate));
+            
+                tempUserList.sort(Comparator.comparing(SimpleEntry::getValue));
+            
+                userArray.clear();
+            
+                for (var entry : tempUserList) {
+                    userArray.add(entry.getKey());
+                }
+            
+                userLoggedInCount++;
+                if(userLoggedInCount > 4){
+                   JOptionPane.showMessageDialog(null, "Maximum of 4 users already logged in");
+                   jUsernameLobbyField.setText("");
+                   jPasswordLobbyField.setText("");
+                   return;
+                }
+            }
+            
+            JTextField[] userTextFields = {jTextField7, jTextField8, jTextField9, jTextField10};
+            for(int i = 0; i < userArray.size() && i < userTextFields.length; i++){
+                userTextFields[i].setText(userArray.get(i));
+            } 
+        }else{
+             JOptionPane.showMessageDialog(null, "Login failed");
+             jUsernameField.setText("");
+             jPasswordField.setText("");
+        }
     }//GEN-LAST:event_jButtonGamelobbyStart1ActionPerformed
 
     private void jBirthdayFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBirthdayFieldActionPerformed
@@ -3709,7 +3669,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -3843,22 +3802,20 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JPasswordField jPasswordField3;
-    private javax.swing.JPasswordField jPasswordField4;
+    private javax.swing.JPasswordField jPasswordLobbyField;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jUsernameField;
+    private javax.swing.JTextField jUsernameLobbyField;
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;
     private javax.swing.JButton loginBtn;
     private javax.swing.JButton registerBtn;
-    private javax.swing.JButton startLobbyBtn;
-    private javax.swing.JLabel userCountLabel;
     // End of variables declaration//GEN-END:variables
 }
