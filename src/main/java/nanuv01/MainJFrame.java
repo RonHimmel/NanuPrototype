@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.AbstractMap;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Map;
@@ -172,19 +173,19 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         EndScreen = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
+        EndScreenPlayer1 = new javax.swing.JLabel();
+        EndScreenScore1 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
-        label1 = new java.awt.Label();
-        label2 = new java.awt.Label();
-        label3 = new java.awt.Label();
+        EndScreenPlayer2 = new java.awt.Label();
+        EndScreenPlayer4 = new java.awt.Label();
+        EndScreenPlayer3 = new java.awt.Label();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
+        EndScreenScore3 = new javax.swing.JLabel();
+        EndScreenScore4 = new javax.swing.JLabel();
+        EndScreenScore2 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         LeaderBoard = new javax.swing.JPanel();
@@ -1655,14 +1656,14 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 49, 41), 5));
         jPanel13.setForeground(new java.awt.Color(1, 49, 41));
 
-        jLabel15.setFont(new java.awt.Font("Verdana", 1, 55)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(1, 49, 41));
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Username");
+        EndScreenPlayer1.setFont(new java.awt.Font("Verdana", 1, 55)); // NOI18N
+        EndScreenPlayer1.setForeground(new java.awt.Color(1, 49, 41));
+        EndScreenPlayer1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EndScreenPlayer1.setText("Username");
 
-        jLabel24.setFont(new java.awt.Font("Verdana", 1, 55)); // NOI18N
-        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel24.setText("10");
+        EndScreenScore1.setFont(new java.awt.Font("Verdana", 1, 55)); // NOI18N
+        EndScreenScore1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EndScreenScore1.setText("10");
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/first-prize_5551226 (2).png"))); // NOI18N
 
@@ -1674,9 +1675,9 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(54, 54, 54)
                 .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(100, 100, 100)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EndScreenPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
-                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EndScreenScore1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58))
         );
         jPanel13Layout.setVerticalGroup(
@@ -1688,28 +1689,28 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(EndScreenPlayer1)
+                    .addComponent(EndScreenScore1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(73, 73, 73))
         );
 
         jPanel16.setBackground(new java.awt.Color(255, 221, 224));
         jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 49, 41), 5));
 
-        label1.setAlignment(java.awt.Label.CENTER);
-        label1.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
-        label1.setForeground(new java.awt.Color(249, 62, 252));
-        label1.setText("Username");
+        EndScreenPlayer2.setAlignment(java.awt.Label.CENTER);
+        EndScreenPlayer2.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
+        EndScreenPlayer2.setForeground(new java.awt.Color(249, 62, 252));
+        EndScreenPlayer2.setText("Username");
 
-        label2.setAlignment(java.awt.Label.CENTER);
-        label2.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
-        label2.setForeground(new java.awt.Color(249, 62, 252));
-        label2.setText("Username");
+        EndScreenPlayer4.setAlignment(java.awt.Label.CENTER);
+        EndScreenPlayer4.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
+        EndScreenPlayer4.setForeground(new java.awt.Color(249, 62, 252));
+        EndScreenPlayer4.setText("Username");
 
-        label3.setAlignment(java.awt.Label.CENTER);
-        label3.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
-        label3.setForeground(new java.awt.Color(249, 62, 252));
-        label3.setText("Username");
+        EndScreenPlayer3.setAlignment(java.awt.Label.CENTER);
+        EndScreenPlayer3.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
+        EndScreenPlayer3.setForeground(new java.awt.Color(249, 62, 252));
+        EndScreenPlayer3.setText("Username");
 
         jButton3.setBackground(new java.awt.Color(1, 49, 41));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ausloggen (3).png"))); // NOI18N
@@ -1728,9 +1729,9 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(label2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(label3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(EndScreenPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(EndScreenPlayer4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(EndScreenPlayer3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1741,11 +1742,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EndScreenPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EndScreenPlayer3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EndScreenPlayer4, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1753,43 +1754,43 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap(80, Short.MAX_VALUE))
         );
 
-        label1.getAccessibleContext().setAccessibleName("");
+        EndScreenPlayer2.getAccessibleContext().setAccessibleName("");
 
         jPanel17.setBackground(new java.awt.Color(255, 221, 224));
         jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 49, 41), 5));
 
-        jLabel25.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(249, 62, 252));
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setText("10");
+        EndScreenScore3.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
+        EndScreenScore3.setForeground(new java.awt.Color(249, 62, 252));
+        EndScreenScore3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EndScreenScore3.setText("10");
 
-        jLabel28.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(249, 62, 252));
-        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("10");
+        EndScreenScore4.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
+        EndScreenScore4.setForeground(new java.awt.Color(249, 62, 252));
+        EndScreenScore4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EndScreenScore4.setText("10");
 
-        jLabel32.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(249, 62, 252));
-        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel32.setText("10");
+        EndScreenScore2.setFont(new java.awt.Font("Verdana", 1, 40)); // NOI18N
+        EndScreenScore2.setForeground(new java.awt.Color(249, 62, 252));
+        EndScreenScore2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EndScreenScore2.setText("10");
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-            .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(EndScreenScore4, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+            .addComponent(EndScreenScore3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(EndScreenScore2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EndScreenScore2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EndScreenScore3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EndScreenScore4, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2237,7 +2238,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 242, Short.MAX_VALUE)
                 .addComponent(jLabel60)
                 .addGap(71, 71, 71))
         );
@@ -2751,7 +2752,6 @@ public class MainJFrame extends javax.swing.JFrame {
     
     void SetPanel(int state){           // top gate panels get their border enlightened with this function
         
-        
         if(state==0){
             jPanelRedBorder.setBorder(BorderFactory.createLineBorder(Color.RED,10));
             jPanelGreenBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
@@ -2799,6 +2799,54 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }
     
+    void setEndscreen(){
+        int[] score = {Integer.parseInt(jLabelPointsOne.getText()), Integer.parseInt(jLabelPointsTwo.getText()),
+            Integer.parseInt(jLabelPointsThree.getText()), Integer.parseInt(jLabelPointsFour.getText())};
+        int[] copyscore= {Integer.parseInt(jLabelPointsOne.getText()), Integer.parseInt(jLabelPointsTwo.getText()),
+            Integer.parseInt(jLabelPointsThree.getText()), Integer.parseInt(jLabelPointsFour.getText())};
+        Arrays.sort(score);
+        EndScreenScore1.setText(Integer.toString(score[3]));
+        EndScreenScore2.setText(Integer.toString(score[2]));
+        EndScreenScore3.setText(Integer.toString(score[1]));
+        EndScreenScore4.setText(Integer.toString(score[0]));
+        if(score[0]==copyscore[0]){
+            EndScreenPlayer4.setText(jLabelPlayerOne.getText());
+        }else if(score[1]==copyscore[0]){
+            EndScreenPlayer3.setText(jLabelPlayerOne.getText());
+        }else if(score[2]==copyscore[0]){
+            EndScreenPlayer2.setText(jLabelPlayerOne.getText());
+        }else if(score[3]==copyscore[0]){
+            EndScreenPlayer1.setText(jLabelPlayerOne.getText());
+        }
+        if(score[0]==copyscore[1]){
+            EndScreenPlayer4.setText(jLabelPlayerTwo.getText());
+        }else if(score[1]==copyscore[1]){
+            EndScreenPlayer3.setText(jLabelPlayerTwo.getText());
+        }else if(score[2]==copyscore[1]){
+            EndScreenPlayer2.setText(jLabelPlayerTwo.getText());
+        }else if(score[3]==copyscore[1]){
+            EndScreenPlayer1.setText(jLabelPlayerTwo.getText());
+        }
+        if(score[0]==copyscore[2]){
+            EndScreenPlayer4.setText(jLabelPlayerThree.getText());
+        }else if(score[1]==copyscore[2]){
+            EndScreenPlayer3.setText(jLabelPlayerThree.getText());
+        }else if(score[2]==copyscore[2]){
+            EndScreenPlayer2.setText(jLabelPlayerThree.getText());
+        }else if(score[3]==copyscore[2]){
+            EndScreenPlayer1.setText(jLabelPlayerThree.getText());
+        }
+        if(score[0]==copyscore[3]){
+            EndScreenPlayer4.setText(jLabelPlayerFour.getText());
+        }else if(score[1]==copyscore[3]){
+            EndScreenPlayer3.setText(jLabelPlayerFour.getText());
+        }else if(score[2]==copyscore[3]){
+            EndScreenPlayer2.setText(jLabelPlayerFour.getText());
+        }else if(score[3]==copyscore[3]){
+            EndScreenPlayer1.setText(jLabelPlayerFour.getText());
+        }
+    }
+    
     int CityPressed(JButton button,int city){
         if(countCoveredCities<5&&city==10){  //if the game is in the beginning state(choosing which city is which color) AND the city was not chosen already
             SetColor(countCoveredCities,button); //sets the button this color
@@ -2833,6 +2881,7 @@ public class MainJFrame extends javax.swing.JFrame {
                        JOptionPane.showMessageDialog(null, "Couldn't Update Score");
                    }
                 }
+                setEndscreen();
                 MainPanel.removeAll();
                 MainPanel.add(EndScreen);
                 MainPanel.repaint();
@@ -3512,6 +3561,14 @@ public class MainJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel EndScreen;
+    private javax.swing.JLabel EndScreenPlayer1;
+    private java.awt.Label EndScreenPlayer2;
+    private java.awt.Label EndScreenPlayer3;
+    private java.awt.Label EndScreenPlayer4;
+    private javax.swing.JLabel EndScreenScore1;
+    private javax.swing.JLabel EndScreenScore2;
+    private javax.swing.JLabel EndScreenScore3;
+    private javax.swing.JLabel EndScreenScore4;
     private javax.swing.JPanel ForgotPasswordScreen;
     private javax.swing.JPanel GameScreen;
     private javax.swing.JPanel GamelobbyScreen;
@@ -3566,7 +3623,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -3576,16 +3632,12 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
@@ -3709,9 +3761,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jUsernameField;
     private javax.swing.JTextField jUsernameLobbyField;
-    private java.awt.Label label1;
-    private java.awt.Label label2;
-    private java.awt.Label label3;
     private javax.swing.JButton leaderButtonPressed;
     private javax.swing.JButton loginBtn;
     private javax.swing.JButton registerBtn;

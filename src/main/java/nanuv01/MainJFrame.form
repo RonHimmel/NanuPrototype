@@ -2753,9 +2753,9 @@
                           <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                           <Component id="jLabel22" min="-2" pref="137" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="jLabel15" min="-2" pref="674" max="-2" attributes="0"/>
+                          <Component id="EndScreenPlayer1" min="-2" pref="674" max="-2" attributes="0"/>
                           <EmptySpace pref="181" max="32767" attributes="0"/>
-                          <Component id="jLabel24" min="-2" pref="85" max="-2" attributes="0"/>
+                          <Component id="EndScreenScore1" min="-2" pref="85" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -2770,8 +2770,8 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel24" alignment="3" min="-2" pref="82" max="-2" attributes="0"/>
+                              <Component id="EndScreenPlayer1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="EndScreenScore1" alignment="3" min="-2" pref="82" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
@@ -2779,7 +2779,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel15">
+                <Component class="javax.swing.JLabel" name="EndScreenPlayer1">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Verdana" size="55" style="1"/>
@@ -2791,7 +2791,7 @@
                     <Property name="text" type="java.lang.String" value="Username"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel24">
+                <Component class="javax.swing.JLabel" name="EndScreenScore1">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Verdana" size="55" style="1"/>
@@ -2826,9 +2826,9 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="label1" max="32767" attributes="0"/>
-                      <Component id="label2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="label3" alignment="1" max="32767" attributes="0"/>
+                      <Component id="EndScreenPlayer2" max="32767" attributes="0"/>
+                      <Component id="EndScreenPlayer4" alignment="0" max="32767" attributes="0"/>
+                      <Component id="EndScreenPlayer3" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                           <Component id="jButton3" min="-2" pref="253" max="-2" attributes="0"/>
@@ -2841,11 +2841,11 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="label1" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="EndScreenPlayer2" min="-2" pref="136" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="label3" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="EndScreenPlayer3" min="-2" pref="136" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="label2" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="EndScreenPlayer4" min="-2" pref="136" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jButton3" min="-2" pref="94" max="-2" attributes="0"/>
@@ -2857,7 +2857,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="java.awt.Label" name="label1">
+                <Component class="java.awt.Label" name="EndScreenPlayer2">
                   <Properties>
                     <Property name="alignment" type="int" value="1"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2872,7 +2872,7 @@
                     <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
                   </AccessibilityProperties>
                 </Component>
-                <Component class="java.awt.Label" name="label2">
+                <Component class="java.awt.Label" name="EndScreenPlayer4">
                   <Properties>
                     <Property name="alignment" type="int" value="1"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2884,7 +2884,7 @@
                     <Property name="text" type="java.lang.String" value="Username"/>
                   </Properties>
                 </Component>
-                <Component class="java.awt.Label" name="label3">
+                <Component class="java.awt.Label" name="EndScreenPlayer3">
                   <Properties>
                     <Property name="alignment" type="int" value="1"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2952,27 +2952,27 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel28" alignment="0" pref="128" max="32767" attributes="0"/>
-                      <Component id="jLabel25" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jLabel32" alignment="0" max="32767" attributes="0"/>
+                      <Component id="EndScreenScore4" alignment="0" pref="128" max="32767" attributes="0"/>
+                      <Component id="EndScreenScore3" alignment="1" max="32767" attributes="0"/>
+                      <Component id="EndScreenScore2" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel32" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="EndScreenScore2" min="-2" pref="136" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel25" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="EndScreenScore3" min="-2" pref="136" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="jLabel28" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="EndScreenScore4" min="-2" pref="136" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel25">
+                <Component class="javax.swing.JLabel" name="EndScreenScore3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Verdana" size="40" style="1"/>
@@ -2984,7 +2984,7 @@
                     <Property name="text" type="java.lang.String" value="10"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel28">
+                <Component class="javax.swing.JLabel" name="EndScreenScore4">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Verdana" size="40" style="1"/>
@@ -2996,7 +2996,7 @@
                     <Property name="text" type="java.lang.String" value="10"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel32">
+                <Component class="javax.swing.JLabel" name="EndScreenScore2">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Verdana" size="40" style="1"/>
@@ -3445,7 +3445,7 @@
                           <Component id="jPanel37" min="-2" pref="84" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="jPanel38" min="-2" pref="84" max="-2" attributes="0"/>
-                          <EmptySpace pref="289" max="32767" attributes="0"/>
+                          <EmptySpace pref="242" max="32767" attributes="0"/>
                           <Component id="jLabel60" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                       </Group>
