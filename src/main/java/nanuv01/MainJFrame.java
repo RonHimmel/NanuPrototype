@@ -82,7 +82,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        jButtonExit3 = new javax.swing.JButton();
         ForgotPasswordScreen = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
@@ -145,7 +144,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabelPointsFour = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        jButtonExit1 = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         jButtonDice = new javax.swing.JButton();
         jButtonFrankfurtB = new javax.swing.JButton();
@@ -288,21 +286,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jUsernameField.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
         jUsernameField.setForeground(new java.awt.Color(92, 120, 126));
         jUsernameField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
-        jUsernameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jUsernameFieldActionPerformed(evt);
-            }
-        });
 
         jPasswordField.setBackground(new java.awt.Color(254, 219, 255));
         jPasswordField.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
         jPasswordField.setForeground(new java.awt.Color(92, 120, 126));
         jPasswordField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
-        jPasswordField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordFieldActionPerformed(evt);
-            }
-        });
 
         jLabel7.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(1, 87, 73));
@@ -464,11 +452,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jBirthdayField.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
         jBirthdayField.setForeground(new java.awt.Color(92, 120, 126));
         jBirthdayField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
-        jBirthdayField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBirthdayFieldActionPerformed(evt);
-            }
-        });
 
         jLabel9.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(1, 87, 73));
@@ -485,17 +468,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel45.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(1, 87, 73));
         jLabel45.setText("Email");
-
-        jButtonExit3.setBackground(new java.awt.Color(225, 247, 231));
-        jButtonExit3.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jButtonExit3.setForeground(new java.awt.Color(144, 178, 185));
-        jButtonExit3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fragezeichen.png"))); // NOI18N
-        jButtonExit3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 87, 73), 2));
-        jButtonExit3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonExit3ExitPressed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -519,7 +491,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                             .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel43, javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING))
-                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                        .addGap(0, 10, Short.MAX_VALUE)))
                                 .addGap(2449, 2449, 2449))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -527,21 +499,14 @@ public class MainJFrame extends javax.swing.JFrame {
                                     .addComponent(jLabel45))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(307, 307, 307)
-                                .addComponent(registerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonExit3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(307, 307, 307)
+                        .addComponent(registerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButtonExit3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
+                .addGap(62, 62, 62)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jLabel13)
@@ -563,7 +528,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
                 .addComponent(registerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -582,7 +547,7 @@ public class MainJFrame extends javax.swing.JFrame {
             LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginScreenLayout.createSequentialGroup()
                 .addGroup(LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1079, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1046, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -608,14 +573,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jTextField3.setText("Username");
         jTextField3.setToolTipText("Username");
         jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
-        jTextField3.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextField3FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTextField3FocusLost(evt);
-            }
-        });
 
         jLabel11.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(1, 87, 73));
@@ -648,37 +605,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jPasswordField2.setForeground(new java.awt.Color(1, 66, 59));
         jPasswordField2.setToolTipText("");
         jPasswordField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
-        jPasswordField2.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jPasswordField2FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jPasswordField2FocusLost(evt);
-            }
-        });
-        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField2ActionPerformed(evt);
-            }
-        });
 
         jPasswordField3.setBackground(new java.awt.Color(254, 219, 255));
         jPasswordField3.setFont(new java.awt.Font("Verdana", 0, 26)); // NOI18N
         jPasswordField3.setForeground(new java.awt.Color(1, 66, 59));
         jPasswordField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
-        jPasswordField3.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jPasswordField3FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jPasswordField3FocusLost(evt);
-            }
-        });
-        jPasswordField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField3ActionPerformed(evt);
-            }
-        });
 
         jLabel39.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(1, 87, 73));
@@ -769,20 +700,10 @@ public class MainJFrame extends javax.swing.JFrame {
         jTextField8.setBackground(new java.awt.Color(254, 219, 255));
         jTextField8.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
         jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
 
         jTextField9.setBackground(new java.awt.Color(254, 219, 255));
         jTextField9.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
         jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
-            }
-        });
 
         jTextField10.setBackground(new java.awt.Color(254, 219, 255));
         jTextField10.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
@@ -875,11 +796,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jPasswordLobbyField.setBackground(new java.awt.Color(254, 188, 255));
         jPasswordLobbyField.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
         jPasswordLobbyField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(5, 98, 82), 3));
-        jPasswordLobbyField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordLobbyFieldActionPerformed(evt);
-            }
-        });
 
         jButtonGamelobbyStart1.setBackground(new java.awt.Color(144, 178, 185));
         jButtonGamelobbyStart1.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
@@ -1316,17 +1232,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel30.setForeground(new java.awt.Color(1, 60, 58));
         jLabel30.setText("Points");
 
-        jButtonExit1.setBackground(new java.awt.Color(225, 247, 231));
-        jButtonExit1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jButtonExit1.setForeground(new java.awt.Color(144, 178, 185));
-        jButtonExit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fragezeichen.png"))); // NOI18N
-        jButtonExit1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 87, 73), 2));
-        jButtonExit1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonExit1ExitPressed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -1352,17 +1257,12 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                         .addComponent(jButtonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addComponent(jButtonExit1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jButtonExit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonExit1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
@@ -1971,7 +1871,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 70)); // NOI18N
+        jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(254, 117, 228));
         jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel53.setText("Current Top 3");
@@ -2045,17 +1945,17 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(51, 51, 51))
         );
 
-        jLeaderboardUsername3.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
+        jLeaderboardUsername3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLeaderboardUsername3.setForeground(new java.awt.Color(164, 149, 149));
         jLeaderboardUsername3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/third-place_5551234.png"))); // NOI18N
         jLeaderboardUsername3.setText("Username");
 
-        jLeaderboardUsername1.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
+        jLeaderboardUsername1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLeaderboardUsername1.setForeground(new java.awt.Color(164, 149, 149));
         jLeaderboardUsername1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/first-prize_5551226.png"))); // NOI18N
         jLeaderboardUsername1.setText("Username");
 
-        jLeaderboardUsername2.setFont(new java.awt.Font("Segoe UI", 1, 44)); // NOI18N
+        jLeaderboardUsername2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLeaderboardUsername2.setForeground(new java.awt.Color(164, 149, 149));
         jLeaderboardUsername2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/second-prize_5551230.png"))); // NOI18N
         jLeaderboardUsername2.setText("Username");
@@ -2105,9 +2005,9 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addGap(60, 60, 60)
                         .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
+                        .addGap(21, 21, 21)
                         .addComponent(jLabel53)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel24Layout.createSequentialGroup()
                         .addComponent(jLeaderboardUsername1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2115,7 +2015,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel24Layout.createSequentialGroup()
                         .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLeaderboardUsername2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2129,7 +2029,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel25.setBackground(new java.awt.Color(225, 247, 231));
         jPanel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(142, 161, 144), 5));
 
-        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 70)); // NOI18N
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel51.setForeground(new java.awt.Color(108, 103, 103));
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel51.setText("Leaderboard");
@@ -2337,7 +2237,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
                 .addComponent(jLabel60)
                 .addGap(71, 71, 71))
         );
@@ -3414,22 +3314,6 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField3FocusGained
-        // TODO add your handling code here:
-        if(jTextField3.getText().equals("Username")) {
-            jTextField3.setText("");
-            jTextField3.setForeground(new Color(91,98,89));
-        }
-    }//GEN-LAST:event_jTextField3FocusGained
-
-    private void jTextField3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField3FocusLost
-        // TODO add your handling code here:
-           if(jTextField3.getText().equals("Username")) {
-            jTextField3.setText("Username");
-            jTextField3.setForeground(new Color(254,188,255));
-        }
-    }//GEN-LAST:event_jTextField3FocusLost
-
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
         if(jCheckBox1.isSelected()) {
@@ -3440,54 +3324,6 @@ public class MainJFrame extends javax.swing.JFrame {
             jPasswordField3.setEchoChar('\u2022');
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void jPasswordField2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordField2FocusGained
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jPasswordField2FocusGained
-
-    private void jPasswordField2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordField2FocusLost
-        // TODO add your handling code here:
-            
-    }//GEN-LAST:event_jPasswordField2FocusLost
-
-    private void jPasswordField3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordField3FocusGained
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jPasswordField3FocusGained
-
-    private void jPasswordField3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordField3FocusLost
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jPasswordField3FocusLost
-
-    private void jUsernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUsernameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jUsernameFieldActionPerformed
-
-    private void jPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordFieldActionPerformed
-
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
-
-    private void jPasswordField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField3ActionPerformed
-
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
-
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
-
-    private void jPasswordLobbyFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordLobbyFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordLobbyFieldActionPerformed
 
     private void jButtonGamelobbyStart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGamelobbyStart1ActionPerformed
         // TODO add your handling code here:
@@ -3537,18 +3373,6 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonGamelobbyStart1ActionPerformed
 
-    private void jBirthdayFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBirthdayFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBirthdayFieldActionPerformed
-
-    private void jButtonExit1ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExit1ExitPressed
-        // TODO add your handling code here:
-        MainPanel.removeAll();
-        MainPanel.add(TutorialScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
-    }//GEN-LAST:event_jButtonExit1ExitPressed
-
     private void jButtonExit2ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExit2ExitPressed
         // TODO add your handling code here:
         MainPanel.removeAll();
@@ -3556,14 +3380,6 @@ public class MainJFrame extends javax.swing.JFrame {
         MainPanel.repaint();
         MainPanel.revalidate();
     }//GEN-LAST:event_jButtonExit2ExitPressed
-
-    private void jButtonExit3ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExit3ExitPressed
-        MainPanel.removeAll();
-        MainPanel.add(TutorialScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
-        
-    }//GEN-LAST:event_jButtonExit3ExitPressed
 
     private void jLabelBackTut3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTut3
         // TODO add your handling code here:
@@ -3600,7 +3416,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private void jLabelExitTutMC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelExitTutMC
         // TODO add your handling code here:
         MainPanel.removeAll();
-        MainPanel.add(LoginScreen);
+        MainPanel.add(GameScreen);
         MainPanel.repaint();
         MainPanel.revalidate();
     }//GEN-LAST:event_jLabelExitTutMC
@@ -3718,9 +3534,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCairoB;
     private javax.swing.JButton jButtonDice;
     private javax.swing.JButton jButtonExit;
-    private javax.swing.JButton jButtonExit1;
     private javax.swing.JButton jButtonExit2;
-    private javax.swing.JButton jButtonExit3;
     private javax.swing.JButton jButtonFrankfurt;
     private javax.swing.JButton jButtonFrankfurtB;
     private javax.swing.JButton jButtonGamelobbyStart;
