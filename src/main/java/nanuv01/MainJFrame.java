@@ -6,6 +6,8 @@ package nanuv01;
 
 
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.sql.Connection;
 import java.sql.Date;
@@ -21,6 +23,13 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.Random;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -531,7 +540,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel24)
                             .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 2534, Short.MAX_VALUE))
+                        .addGap(0, 2549, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -594,7 +603,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 3147, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 3162, Short.MAX_VALUE)
                 .addContainerGap())
         );
         LoginScreenLayout.setVerticalGroup(
@@ -628,6 +637,14 @@ public class MainJFrame extends javax.swing.JFrame {
         jTextField3.setText("Username");
         jTextField3.setToolTipText("Username");
         jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
+        jTextField3.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextField3FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField3FocusLost(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(1, 87, 73));
@@ -657,13 +674,13 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPasswordField2.setBackground(new java.awt.Color(254, 219, 255));
         jPasswordField2.setFont(new java.awt.Font("Verdana", 0, 26)); // NOI18N
-        jPasswordField2.setForeground(new java.awt.Color(1, 66, 59));
+        jPasswordField2.setForeground(new java.awt.Color(91, 98, 89));
         jPasswordField2.setToolTipText("");
         jPasswordField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
 
         jPasswordField3.setBackground(new java.awt.Color(254, 219, 255));
         jPasswordField3.setFont(new java.awt.Font("Verdana", 0, 26)); // NOI18N
-        jPasswordField3.setForeground(new java.awt.Color(1, 66, 59));
+        jPasswordField3.setForeground(new java.awt.Color(91, 98, 89));
         jPasswordField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
 
         jLabel39.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
@@ -3689,11 +3706,44 @@ public class MainJFrame extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
+    private void jTextField3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField3FocusGained
+        // TODO add your handling code here:
+        if(jTextField3.getText().equals("Username")) {
+            jTextField3.setText("");
+            jTextField3.setForeground(new Color(91,98,89));
+        }
+    }//GEN-LAST:event_jTextField3FocusGained
+
+    private void jTextField3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField3FocusLost
+        // TODO add your handling code here:
+        if(jTextField3.getText().equals("Username") ||jTextField3.getText().isEmpty() ) {
+            jTextField3.setText("Username");
+            jTextField3.setForeground(new Color(254,188,255));
+        }
+    }//GEN-LAST:event_jTextField3FocusLost
+
+     public static void playLoop(String filePath) {
+        try {
+            File audioFile = new File(filePath);
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+            AudioFormat format = audioStream.getFormat();
+            DataLine.Info info = new DataLine.Info(Clip.class, format);
+            Clip clip = (Clip) AudioSystem.getLine(info);
+            clip.open(audioStream);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+        } catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
              //</editor-fold>
+             
+        String wavFilePath = "src\\main\\java\\nanuv01\\audio\\ChillSound1.wav";
+        playLoop(wavFilePath);
+        
         
         try(Connection conn = DatabaseConnector.getConnection()){
             System.out.println("Connection established");
