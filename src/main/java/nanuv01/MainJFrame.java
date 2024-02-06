@@ -324,7 +324,7 @@ public class MainJFrame extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1018, Short.MAX_VALUE)
+            .addGap(0, 1059, Short.MAX_VALUE)
         );
 
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2024-01-30 152813.png"))); // NOI18N
@@ -527,14 +527,11 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel24))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 2522, Short.MAX_VALUE))
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 2534, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -597,14 +594,14 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 3135, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 3147, Short.MAX_VALUE)
                 .addContainerGap())
         );
         LoginScreenLayout.setVerticalGroup(
             LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginScreenLayout.createSequentialGroup()
                 .addGroup(LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1059, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -835,7 +832,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(122, 122, 122)
                 .addComponent(jButtonGamelobbyStart, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(345, Short.MAX_VALUE))
+                .addContainerGap(358, Short.MAX_VALUE))
         );
 
         jPanel15.setBackground(new java.awt.Color(225, 247, 231));
@@ -894,7 +891,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(248, 248, 248)
                         .addComponent(jButtonGamelobbyStart1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(2719, Short.MAX_VALUE))
+                .addContainerGap(2731, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -913,7 +910,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPasswordLobbyField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(105, 105, 105)
                 .addComponent(jButtonGamelobbyStart1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(301, Short.MAX_VALUE))
+                .addContainerGap(314, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout GamelobbyScreenLayout = new javax.swing.GroupLayout(GamelobbyScreen);
@@ -1704,7 +1701,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(19, 19, 19)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         MainPanel.add(GameScreen, "card2");
@@ -1764,11 +1761,9 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(164, 164, 164)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(EndScreenScore1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(94, 94, 94))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(37, 37, 37))))
         );
@@ -1831,7 +1826,7 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 332, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59))
         );
@@ -1874,7 +1869,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EndScreenScore4, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(EndScreenScore4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(EndScreenScore3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(EndScreenScore2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -1895,25 +1890,25 @@ public class MainJFrame extends javax.swing.JFrame {
         EndScreenLayout.setHorizontalGroup(
             EndScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EndScreenLayout.createSequentialGroup()
-                .addGroup(EndScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(22, 22, 22)
+                .addGroup(EndScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(EndScreenLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(563, Short.MAX_VALUE))
+                        .addGap(58, 58, 58)
+                        .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 1244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(2652, Short.MAX_VALUE))
         );
         EndScreenLayout.setVerticalGroup(
             EndScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EndScreenLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(37, 37, 37)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addGroup(EndScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         MainPanel.add(EndScreen, "card9");
@@ -2760,13 +2755,13 @@ public class MainJFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1440, Short.MAX_VALUE))
+                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE))
+                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -2848,74 +2843,50 @@ public class MainJFrame extends javax.swing.JFrame {
     }
     
     void setEndscreen(){
-        int[] score = {Integer.parseInt(jLabelPointsOne.getText()), Integer.parseInt(jLabelPointsTwo.getText()),
-            Integer.parseInt(jLabelPointsThree.getText()), Integer.parseInt(jLabelPointsFour.getText())};
-        int[] copyscore= {Integer.parseInt(jLabelPointsOne.getText()), Integer.parseInt(jLabelPointsTwo.getText()),
-            Integer.parseInt(jLabelPointsThree.getText()), Integer.parseInt(jLabelPointsFour.getText())};
-        Arrays.sort(score);
-        EndScreenScore1.setText(Integer.toString(score[3]));
-        EndScreenScore2.setText(Integer.toString(score[2]));
-        EndScreenScore3.setText(Integer.toString(score[1]));
-        EndScreenScore4.setText(Integer.toString(score[0]));
-        if(score[0]==copyscore[0]){
-            EndScreenPlayer4.setText(jLabelPlayerOne.getText());
-        }else if(score[1]==copyscore[0]){
-            EndScreenPlayer3.setText(jLabelPlayerOne.getText());
-        }else if(score[2]==copyscore[0]){
-            EndScreenPlayer2.setText(jLabelPlayerOne.getText());
-        }else if(score[3]==copyscore[0]){
-            EndScreenPlayer1.setText(jLabelPlayerOne.getText());
-        }
-        if(score[0]==copyscore[1]){
-            EndScreenPlayer4.setText(jLabelPlayerTwo.getText());
-        }else if(score[1]==copyscore[1]){
-            EndScreenPlayer3.setText(jLabelPlayerTwo.getText());
-        }else if(score[2]==copyscore[1]){
-            EndScreenPlayer2.setText(jLabelPlayerTwo.getText());
-        }else if(score[3]==copyscore[1]){
-            EndScreenPlayer1.setText(jLabelPlayerTwo.getText());
-        }
-        if(score[0]==copyscore[2]){
-            EndScreenPlayer4.setText(jLabelPlayerThree.getText());
-        }else if(score[1]==copyscore[2]){
-            EndScreenPlayer3.setText(jLabelPlayerThree.getText());
-        }else if(score[2]==copyscore[2]){
-            EndScreenPlayer2.setText(jLabelPlayerThree.getText());
-        }else if(score[3]==copyscore[2]){
-            EndScreenPlayer1.setText(jLabelPlayerThree.getText());
-        }
-        if(score[0]==copyscore[3]){
-            EndScreenPlayer4.setText(jLabelPlayerFour.getText());
-        }else if(score[1]==copyscore[3]){
-            EndScreenPlayer3.setText(jLabelPlayerFour.getText());
-        }else if(score[2]==copyscore[3]){
-            EndScreenPlayer2.setText(jLabelPlayerFour.getText());
-        }else if(score[3]==copyscore[3]){
-            EndScreenPlayer1.setText(jLabelPlayerFour.getText());
+        // Initialize arrays for usernames and scores
+        String[] usernames = {
+            jLabelPlayerOne.getText(),
+            jLabelPlayerTwo.getText(),
+            jLabelPlayerThree.getText(),
+            jLabelPlayerFour.getText(),
+        };
+        
+        int[] scores =  {
+            Integer.parseInt(jLabelPointsOne.getText()),
+            Integer.parseInt(jLabelPointsTwo.getText()),
+            Integer.parseInt(jLabelPointsThree.getText()),
+            Integer.parseInt(jLabelPointsFour.getText()),
+        };
+        
+        
+        // Bubble-Sort Algorithm
+        for(int i = 0; i < scores.length; i++){
+            for(int j = 0; j < scores.length - i - 1; j++){
+                if(scores[j] < scores[j+1]){
+                    // Swap Scores
+                    int tempScore = scores[j];
+                    scores[j] = scores[j+1];
+                    scores[j+1] = tempScore;
+                    
+                    // Swap corresponding usernames to maintain association
+                    String tempUsername = usernames[j];
+                    usernames[j] = usernames[j+1];
+                    usernames[j+1] = tempUsername;
+                }
+            }
         }
         
-        if (userLoggedInCount==1) {
-            EndScreenPlayer2.setVisible(false);
-            EndScreenPlayer3.setVisible(false);
-            EndScreenPlayer4.setVisible(false);
-            
-            EndScreenScore2.setVisible(false);
-            EndScreenScore3.setVisible(false);
-            EndScreenScore4.setVisible(false);
-            
-            jPanel17.setVisible(false);
-        } else if (userLoggedInCount==2) {
-            EndScreenPlayer3.setVisible(false);
-            EndScreenPlayer4.setVisible(false);
-            
-            EndScreenScore3.setVisible(false);
-            EndScreenScore4.setVisible(false);
-        } else if (userLoggedInCount==3) {
-            EndScreenPlayer4.setVisible(false);
-            
-            EndScreenScore4.setVisible(false);
-        }
-        
+        EndScreenPlayer1.setText(usernames[0]);
+        EndScreenScore1.setText(String.valueOf(scores[0]));
+    
+        EndScreenPlayer2.setText(usernames[1]);
+        EndScreenScore2.setText(String.valueOf(scores[1]));
+
+        EndScreenPlayer3.setText(usernames[2]);
+        EndScreenScore3.setText(String.valueOf(scores[2]));
+
+        EndScreenPlayer4.setText(usernames[3]);
+        EndScreenScore4.setText(String.valueOf(scores[3]));
         
     }
     
