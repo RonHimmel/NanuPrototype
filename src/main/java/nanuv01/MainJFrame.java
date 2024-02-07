@@ -31,6 +31,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import org.mindrot.jbcrypt.BCrypt;
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -51,6 +52,7 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
         setResizable(false);
+        setIconImage(new ImageIcon(getClass().getResource("/Logo.png")).getImage());
     }
 
     /**
@@ -660,6 +662,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel21.setForeground(new java.awt.Color(1, 87, 73));
         jLabel21.setText("Both passwords must match");
 
+        jCheckBox1.setBackground(new java.awt.Color(175, 198, 203));
         jCheckBox1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jCheckBox1.setForeground(new java.awt.Color(1, 66, 59));
         jCheckBox1.setText("Show passwords");
