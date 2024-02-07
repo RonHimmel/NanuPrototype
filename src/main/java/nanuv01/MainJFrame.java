@@ -3404,7 +3404,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private void DiceRoll(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiceRoll
         // TODO add your handling code here:
         if(countCoveredCities>=5){
-            /*Random random = new Random();
+            Random random = new Random();
             diceColor = random.nextInt(6);
             if(diceColor==0){
                 cityBPressable=true;      //after rolling the dice the B buttons can be picked (okay is true if they can be picked and else false)
@@ -3436,12 +3436,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 jButtonDice.setBackground(Color.black);
                 jButtonDice.setEnabled(false);
                 jButtonStart.setText("Joker! Pick covered city to guess!");
-            }*/
-            diceColor=5;
-            SetPanel(5);
-                jButtonDice.setBackground(Color.black);
-                jButtonDice.setEnabled(false);
-                jButtonStart.setText("Joker! Pick covered city to guess!");
+            }
             
         }
     }//GEN-LAST:event_DiceRoll
