@@ -3322,7 +3322,6 @@ public class MainJFrame extends javax.swing.JFrame {
           jTextField1.setText("");
           jTextField2.setText("");
           jPasswordField1.setText("");  
-          // D.H
           jBirthdayField.setText("");
         }  
     }//GEN-LAST:event_registerBtnActionPerformed
