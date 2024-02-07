@@ -31,7 +31,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import org.mindrot.jbcrypt.BCrypt;
 import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
 
 /**
  *
@@ -52,7 +51,6 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
         setResizable(false);
-        setIconImage(new ImageIcon(getClass().getResource("/Logo.png")).getImage());
     }
 
     /**
