@@ -607,7 +607,7 @@ public class MainJFrame extends javax.swing.JFrame {
             LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginScreenLayout.createSequentialGroup()
                 .addGroup(LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1073, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1064, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -3419,38 +3419,15 @@ public class MainJFrame extends javax.swing.JFrame {
         if(countCoveredCities>=5){
             Random random = new Random();
             diceColor = random.nextInt(6);
-            if(diceColor==0){
-                cityBPressable=true;      //after rolling the dice the B buttons can be picked (okay is true if they can be picked and else false)
-                SetPanel(0);
-                jButtonDice.setEnabled(false);
-                jButtonStart.setText("Pick city under this color!");
-            }else if(diceColor==1){
-                cityBPressable=true;
-                SetPanel(1);
-                jButtonDice.setEnabled(false);
-                jButtonStart.setText("Pick city under this color!");
-            }else if(diceColor==2){
-                cityBPressable=true;
-                SetPanel(2);
-                jButtonDice.setEnabled(false);
-                jButtonStart.setText("Pick city under this color!");
-            }else if(diceColor==3){
-                SetPanel(3);
-                cityBPressable=true;
-                jButtonDice.setEnabled(false);
-                jButtonStart.setText("Pick city under this color!");
-            }else if(diceColor==4){
-                SetPanel(4);
-                cityBPressable=true;
-                jButtonDice.setEnabled(false);
-                jButtonStart.setText("Pick city under this color!");
-            }else if(diceColor==5){
-                SetPanel(5);
+            if(diceColor==5){
                 jButtonDice.setBackground(Color.black);
-                jButtonDice.setEnabled(false);
                 jButtonStart.setText("Joker! Pick covered city to guess!");
+            }else{
+                cityBPressable=true;
+                jButtonStart.setText("Pick city under this color!");
             }
-            
+            SetPanel(diceColor);
+            jButtonDice.setEnabled(false);
         }
     }//GEN-LAST:event_DiceRoll
 
