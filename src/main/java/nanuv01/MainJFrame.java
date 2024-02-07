@@ -27,6 +27,7 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import org.mindrot.jbcrypt.BCrypt;
@@ -2915,6 +2916,13 @@ public class MainJFrame extends javax.swing.JFrame {
         
     }
     
+    void switchPanel(JPanel panel){
+        MainPanel.removeAll();
+        MainPanel.add(panel);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }
+    
     int CityPressed(JButton button,int city){
         if(countCoveredCities<5&&city==10){  //if the game is in the beginning state(choosing which city is which color) AND the city was not chosen already
             SetColor(countCoveredCities,button); //sets the button this color
@@ -2938,22 +2946,16 @@ public class MainJFrame extends javax.swing.JFrame {
                 jButtonStart.setText("Game finished, Score is saved!");  //game over
                 JLabel[] score = {jLabelPointsOne, jLabelPointsTwo, jLabelPointsThree, jLabelPointsFour};
                 boolean updatedUserScore;
-                
                 for(int i = 0; i < userArray.size(); i++){
-                    
                     updatedUserScore = user.updateScore(
                             Integer.valueOf(score[i].getText()),
                             userArray.get(i));
-                    
                    if(!updatedUserScore){
                        JOptionPane.showMessageDialog(null, "Couldn't Update Score");
                    }
                 }
                 setEndscreen();
-                MainPanel.removeAll();
-                MainPanel.add(EndScreen);
-                MainPanel.repaint();
-                MainPanel.revalidate();
+                switchPanel(EndScreen);
                 System.out.println("Game is over!");
             }
             prevcolor = diceColor;           //the previous set color is saved so it cannot be picked by the joker
