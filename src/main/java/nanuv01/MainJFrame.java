@@ -540,7 +540,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel24)
                             .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 2549, Short.MAX_VALUE))
+                        .addGap(0, 2568, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -603,14 +603,14 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 3162, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 3165, Short.MAX_VALUE)
                 .addContainerGap())
         );
         LoginScreenLayout.setVerticalGroup(
             LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginScreenLayout.createSequentialGroup()
                 .addGroup(LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1059, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1055, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -2956,8 +2956,11 @@ public class MainJFrame extends javax.swing.JFrame {
             cityBPressable=true;
             jButtonStart.setText("Pick city under this color!");
             return city;
+        }else if(diceColor==5&&city==prevcolor){
+            jButtonStart.setText("Unfair!City was latest covered!");
+            return city;
         };
-        return 10;//does not occur
+        return 11;//does not occur at any state (if detected we can debug)
     }
     
     
@@ -3401,7 +3404,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private void DiceRoll(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiceRoll
         // TODO add your handling code here:
         if(countCoveredCities>=5){
-            Random random = new Random();
+            /*Random random = new Random();
             diceColor = random.nextInt(6);
             if(diceColor==0){
                 cityBPressable=true;      //after rolling the dice the B buttons can be picked (okay is true if they can be picked and else false)
@@ -3433,7 +3436,12 @@ public class MainJFrame extends javax.swing.JFrame {
                 jButtonDice.setBackground(Color.black);
                 jButtonDice.setEnabled(false);
                 jButtonStart.setText("Joker! Pick covered city to guess!");
-            }
+            }*/
+            diceColor=5;
+            SetPanel(5);
+                jButtonDice.setBackground(Color.black);
+                jButtonDice.setEnabled(false);
+                jButtonStart.setText("Joker! Pick covered city to guess!");
             
         }
     }//GEN-LAST:event_DiceRoll
@@ -3741,7 +3749,7 @@ public class MainJFrame extends javax.swing.JFrame {
     public static void main(String args[]) {
              //</editor-fold>
              
-        String wavFilePath = "src\\main\\java\\nanuv01\\audio\\ChillSound1.wav";
+        String wavFilePath = "src/main/java/nanuv01/audio/ChillSound1.wav";
         playLoop(wavFilePath);
         
         
