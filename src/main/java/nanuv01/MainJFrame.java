@@ -30,7 +30,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import org.mindrot.jbcrypt.BCrypt;
 import javax.swing.BorderFactory;
 
 /**
@@ -39,16 +38,14 @@ import javax.swing.BorderFactory;
  */
 public class MainJFrame extends javax.swing.JFrame {
     
-    private Authentication auth = new Authentication();
-    private User user = new User();
-    private FormValidation formValidator = new FormValidation();
-    private LeaderBoardRetrieving leaderBoard = new LeaderBoardRetrieving();
+    private final Authentication auth = new Authentication();
+    private final User user = new User();
+    private final LeaderBoardRetrieving leaderBoard = new LeaderBoardRetrieving();
     
     private ArrayList<String> userArray = new ArrayList<>();
     private int userLoggedInCount = 0;
-    /**
-     * Creates new form NewJFrame
-     */
+
+    
     public MainJFrame() {
         initComponents();
         setResizable(false);
@@ -608,7 +605,7 @@ public class MainJFrame extends javax.swing.JFrame {
             LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginScreenLayout.createSequentialGroup()
                 .addGroup(LoginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1064, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1073, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -2800,8 +2797,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private int prevcolor = -1;                     //saves the previous color so if joker is active you cant pick the previous color
     private int playercount = 1;                //used to keep track which players turn 
     
-    private void SetColor(int color, JButton button){ //function is called if you want to change the color of the top city buttons
-        if(color==0){                           //0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink
+    private void SetColor(int color, JButton button) { //function is called if you want to change the color of the top city buttons
+        if(color==0) {                           //0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink
             button.setBackground(Color.red);
             button.setText("");     // i had to remove the city name because it was even visible with the identical color
         }else if(color==1){
@@ -2819,47 +2816,38 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }
     
-    private void SetPanel(int state){           // top gate panels get their border enlightened with this function
-        
-        if(state==0){
+    private void SetPanel(int state) {           // top gate panels get their border enlightened with this function
+        if(state==0) {
             jPanelRedBorder.setBorder(BorderFactory.createLineBorder(Color.RED,10));
             jPanelGreenBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelBlueBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelYellowBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelPinkBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
-            
-            
-        }else if(state==1){
-            
+        }else if(state==1) {
             jPanelRedBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelGreenBorder.setBorder(BorderFactory.createLineBorder(Color.GREEN, 10));
             jPanelBlueBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelYellowBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelPinkBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
-        }else if(state==2){
-           
-            
+        }else if(state==2) {
             jPanelRedBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelGreenBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelBlueBorder.setBorder(BorderFactory.createLineBorder(Color.blue,10));
             jPanelYellowBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelPinkBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
-        }else if(state==3){
-            
+        }else if(state==3) {
             jPanelRedBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelGreenBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelBlueBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelYellowBorder.setBorder(BorderFactory.createLineBorder(Color.yellow,10));
             jPanelPinkBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
-        }else if(state==4){
-            
+        }else if(state==4) {
             jPanelRedBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelGreenBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelBlueBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelYellowBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
             jPanelPinkBorder.setBorder(BorderFactory.createLineBorder(new Color(255,0,255),10));
-            
-        }else if(state==5){                                             //joker
+        }else if(state==5) {                                             //joker
             jPanelRedBorder.setBorder(BorderFactory.createLineBorder(Color.RED,10));
             jPanelGreenBorder.setBorder(BorderFactory.createLineBorder(Color.GREEN, 10 ));
             jPanelBlueBorder.setBorder(BorderFactory.createLineBorder(Color.blue,10));
@@ -2868,7 +2856,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }
     
-    private void setEndscreen(){
+    private void setEndscreen() {
         // Initialize arrays for usernames and scores
         String[] usernames = {
             jLabelPlayerOne.getText(),
@@ -2877,7 +2865,7 @@ public class MainJFrame extends javax.swing.JFrame {
             jLabelPlayerFour.getText(),
         };
         
-        int[] scores =  {
+        int[] scores = {
             Integer.parseInt(jLabelPointsOne.getText()),
             Integer.parseInt(jLabelPointsTwo.getText()),
             Integer.parseInt(jLabelPointsThree.getText()),
@@ -2886,7 +2874,7 @@ public class MainJFrame extends javax.swing.JFrame {
         
         
         // Bubble-Sort Algorithm
-        for(int i = 0; i < scores.length; i++){
+        for(int i = 0; i < scores.length; i++) {
             for(int j = 0; j < scores.length - i - 1; j++){
                 if(scores[j] < scores[j+1]){
                     // Swap Scores
@@ -2902,6 +2890,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         }
         
+        // Set each player & username to endscreen
         EndScreenPlayer1.setText(usernames[0]);
         EndScreenScore1.setText(String.valueOf(scores[0]));
     
@@ -2916,41 +2905,40 @@ public class MainJFrame extends javax.swing.JFrame {
         
     }
     
-    private void switchPanel(JPanel panel){
+    private void switchPanel(JPanel panel) {
         MainPanel.removeAll();
         MainPanel.add(panel);
         MainPanel.repaint();
         MainPanel.revalidate();
     }
     
-    private int CityPressed(JButton button,int city){
-        if(countCoveredCities<5&&city==10){  //if the game is in the beginning state(choosing which city is which color) AND the city was not chosen already
+    private int CityPressed(JButton button,int city) {
+        if(countCoveredCities<5&&city==10) {  //if the game is in the beginning state(choosing which city is which color) AND the city was not chosen already
             SetColor(countCoveredCities,button); //sets the button this color
             prevcolor = countCoveredCities;
             countCoveredCities++;                //color value++
             SetPanel(countCoveredCities);        //panel with the next color is on
-            if(countCoveredCities==5){
+            if(countCoveredCities==5) {
                 jButtonStart.setText("Dice!"); //after all cities covered the command is to dice
             }
             return countCoveredCities-1; //the city gets the value of the previous color returned
-        }else if(countCoveredCities>=5&&cityPressable&&city==10){       //if the game is in the dice state and we found a city under that color we can chose the next city
+        }else if(countCoveredCities>=5&&cityPressable&&city==10) {       //if the game is in the dice state and we found a city under that color we can chose the next city
             SetColor(diceColor,button);      //the color is set
             jButtonStart.setText("Perfect! Dice!");  //new city is covered now dice again
             cityPressable=false;                //now picking another city to this color is disabled
-            if(countCoveredCities<14){                   //if the state is lower than 14 the dice is enabled because more than 5 cities are left so you can roll the next color
+            if(countCoveredCities<14) {                   //if the state is lower than 14 the dice is enabled because more than 5 cities are left so you can roll the next color
                 jButtonDice.setEnabled(true);
                 jButtonDice.setBackground(Color.white);
                 setActivePlayer(playercount);   //after picking its the next players turn
-            }else if(countCoveredCities==14){                //here is the end of the game, so the database has to get the points and pull them
-                //TODO: PUSH SCORE TO User DB
+            }else if(countCoveredCities==14) {                //here is the end of the game, so the database has to get the points and pull them
                 jButtonStart.setText("Game finished, Score is saved!");  //game over
                 JLabel[] score = {jLabelPointsOne, jLabelPointsTwo, jLabelPointsThree, jLabelPointsFour};
                 boolean updatedUserScore;
-                for(int i = 0; i < userArray.size(); i++){
+                for(int i = 0; i < userArray.size(); i++) {
                     updatedUserScore = user.updateScore(
                             Integer.valueOf(score[i].getText()),
                             userArray.get(i));
-                   if(!updatedUserScore){
+                   if(!updatedUserScore) {
                        JOptionPane.showMessageDialog(null, "Couldn't Update Score");
                    }
                 }
@@ -2960,13 +2948,13 @@ public class MainJFrame extends javax.swing.JFrame {
             }
             prevcolor = diceColor;           //the previous set color is saved so it cannot be picked by the joker
             return diceColor;                //the set color is returned to the city
-        }else if(diceColor==5&&city!=10&&city!=prevcolor){
-            diceColor=city;
+        }else if(diceColor==5&&city!=10&&city!=prevcolor) {
+            diceColor=city; 
             SetPanel(city);
             cityBPressable=true;
             jButtonStart.setText("Pick city under this color!");
             return city;
-        }else if(diceColor==5&&city==prevcolor){
+        }else if(diceColor==5&&city==prevcolor) {
             jButtonStart.setText("Unfair!City was latest covered!");
             return city;
         };
@@ -2976,7 +2964,7 @@ public class MainJFrame extends javax.swing.JFrame {
     
     private void RioPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RioPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){      //pickcolor means top buttons are clickable       
+        if(cityPressable||countCoveredCities<5||diceColor==5) {      //pickcolor means top buttons are clickable       
             rio = CityPressed(jButtonRio, rio);
         }
     }//GEN-LAST:event_RioPressed
@@ -2985,14 +2973,14 @@ public class MainJFrame extends javax.swing.JFrame {
     
     private void MumbaiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MumbaiPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             mumbai = CityPressed(jButtonMumbai, mumbai);
         }
     }//GEN-LAST:event_MumbaiPressed
 
     private void FrankfurtPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FrankfurtPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             frankfurt = CityPressed(jButtonFrankfurt, frankfurt);
         }
     }//GEN-LAST:event_FrankfurtPressed
@@ -3019,193 +3007,151 @@ public class MainJFrame extends javax.swing.JFrame {
         tokyo=10;
         paris=10;
         
-       // jPanel5.setBackground(new Color(225,247,231));
+       
         
     }//GEN-LAST:event_StartPressed
 
     private void NewyorkPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewyorkPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             newyork = CityPressed(jButtonNewyork, newyork);
         }
     }//GEN-LAST:event_NewyorkPressed
 
     private void OsloPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OsloPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             oslo = CityPressed(jButtonOslo, oslo);
         }
     }//GEN-LAST:event_OsloPressed
 
     private void HanoiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HanoiPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             hanoi = CityPressed(jButtonHanoi, hanoi);
         }
     }//GEN-LAST:event_HanoiPressed
 
     private void BaliPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaliPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             bali = CityPressed(jButtonBali, bali);
         }
     }//GEN-LAST:event_BaliPressed
 
     private void NairobiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NairobiPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             nairobi = CityPressed(jButtonNairobi, nairobi);
         }
     }//GEN-LAST:event_NairobiPressed
 
     private void LisabonPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LisabonPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             lisabon = CityPressed(jButtonLisabon, lisabon);
         }
     }//GEN-LAST:event_LisabonPressed
  
     private void CairoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CairoPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             cairo = CityPressed(jButtonCairo, cairo);
         }
     }//GEN-LAST:event_CairoPressed
 
     private void MilanPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MilanPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             milan = CityPressed(jButtonMilan, milan);
         }
     }//GEN-LAST:event_MilanPressed
 
     private void AthensPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AthensPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             athens = CityPressed(jButtonAthens, athens);
         }
     }//GEN-LAST:event_AthensPressed
 
     private void TokyoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TokyoPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             tokyo = CityPressed(jButtonTokyo,tokyo);
         }
     }//GEN-LAST:event_TokyoPressed
 
     private void ParisPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParisPressed
         // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5){
+        if(cityPressable||countCoveredCities<5||diceColor==5) {
             paris = CityPressed(jButtonParis, paris);
         }
     }//GEN-LAST:event_ParisPressed
 
-    private void setPoints(int number){
-        if(number==1){
+    private void setPoints(int number) {
+        if(number==1) {
             jLabelPointsOne.setText(Integer.toString(Integer.parseInt(jLabelPointsOne.getText())+1)); //sets score +1  
-           
-        }else if(number ==2){
+        }else if(number ==2) {
             jLabelPointsTwo.setText(Integer.toString(Integer.parseInt(jLabelPointsTwo.getText())+1));
             
-        }else if(number ==3){
+        }else if(number ==3) {
             jLabelPointsThree.setText(Integer.toString(Integer.parseInt(jLabelPointsThree.getText())+1));
             
-        }else if(number ==4){
+        }else if(number ==4) {
             jLabelPointsFour.setText(Integer.toString(Integer.parseInt(jLabelPointsFour.getText())+1));
             
         }
     }
     
-    private void setActivePlayer(int number){
-        if(userLoggedInCount==4){
-            if(number==1){
+    private void setActivePlayer(int number) {
+        if(userLoggedInCount==4) {
+            if(number==1) {
                 jLabelPointsOne.setForeground(Color.black);
                 jLabelPointsTwo.setForeground(Color.red);
-                // design adjustment
-            //    jPanel6.setBackground(new Color(225,247,231));
-             //   jPanel5.setBackground(new Color (254,219,255));
-            //    jPanel10.setBackground(new Color (254,219,255));
-             //   jPanel11.setBackground(new Color (254,219,255));
-            }else if(number ==2){
+            }else if(number ==2) {
                 jLabelPointsTwo.setForeground(Color.black);
                 jLabelPointsThree.setForeground(Color.red);
-                
-            //    jPanel10.setBackground(new Color(225,247,231));
-               // jPanel5.setBackground(new Color (254,219,255));
-            //    jPanel6.setBackground(new Color (254,219,255));
-               // jPanel11.setBackground(new Color (254,219,255));
-            }else if(number ==3){
+            }else if(number ==3) {
                 jLabelPointsThree.setForeground(Color.black);
                 jLabelPointsFour.setForeground(Color.red);
-                
-              //  jPanel11.setBackground(new Color(225,247,231));
-              //  jPanel6.setBackground(new Color (254,219,255));
-               // jPanel5.setBackground(new Color (254,219,255));
-             //   jPanel10.setBackground(new Color (254,219,255));
-            }else if(number ==4){
+            }else if(number ==4) {
                 jLabelPointsFour.setForeground(Color.black);
                 jLabelPointsOne.setForeground(Color.red);
-                
-           /*     jPanel5.setBackground(new Color(225,247,231));
-              //  jPanel6.setBackground(new Color (254,219,255));
-              //  jPanel10.setBackground(new Color (254,219,255));
-                jPanel11.setBackground(new Color (254,219,255));
-                */
             }
-        }else if(userLoggedInCount==3){
-            if(number==1){
+        }else if(userLoggedInCount==3) {
+            if(number==1) {
                 jLabelPointsOne.setForeground(Color.black);
                 jLabelPointsTwo.setForeground(Color.red);
-                
-           /*     jPanel6.setBackground(new Color(225,247,231));
-                jPanel5.setBackground(new Color (254,219,255));
-              //  jPanel10.setBackground(new Color (254,219,255));
-                */
-            }else if(number ==2){
+            }else if(number ==2) {
                 jLabelPointsTwo.setForeground(Color.black);
                 jLabelPointsThree.setForeground(Color.red);
-                
-            /*    jPanel10.setBackground(new Color(225,247,231));
-              //  jPanel5.setBackground(new Color (254,219,255));
-              jPanel6.setBackground(new Color (254,219,255));
-                */
-            }else if(number ==3){
+            }else if(number ==3) {
                 jLabelPointsThree.setForeground(Color.black);
                 jLabelPointsOne.setForeground(Color.red);
-            /*   
-                jPanel5.setBackground(new Color(225,247,231));
-             //   jPanel6.setBackground(new Color (254,219,255));
-                jPanel10.setBackground(new Color (254,219,255));
-           */
             }
-        }else if(userLoggedInCount==2){
-            if(number==1){
+        }else if(userLoggedInCount==2) {
+            if(number==1) {
                 jLabelPointsOne.setForeground(Color.black);
                 jLabelPointsTwo.setForeground(Color.red);
                
                 jPanel6.setBackground(new Color(225,247,231));
                 jLabel5.setBackground(new Color (254,219,255));
                 
-            }else if(number ==2){
-                jLabelPointsOne.setForeground(Color.red); // D.H
+            }else if(number ==2) {
+                jLabelPointsOne.setForeground(Color.red); 
                 jLabelPointsTwo.setForeground(Color.black);
-                
-             //   jPanel5.setBackground(new Color(225,247,231));
-              //  jPanel6.setBackground(new Color (254,219,255));
-                
-               
             }
         }
-        if(number<userLoggedInCount){
+        if(number<userLoggedInCount) {
             playercount++;
-        }else{
+        }else {
             playercount=1;
         }
         
     }
     
-    private void CityBPressed(JButton button, int city){                    //function gets the value of the city and NOT the B city but the city
-        if(countCoveredCities>=5 && diceColor==city&&button.isEnabled()&&cityBPressable){   //if game state is dice and color is citycolor and the city is available and its okay to chose
+    private void CityBPressed(JButton button, int city) {                    //function gets the value of the city and NOT the B city but the city
+        if(countCoveredCities>=5 && diceColor==city&&button.isEnabled()&&cityBPressable) {   //if game state is dice and color is citycolor and the city is available and its okay to chose
             button.setEnabled(false);                               //the button is disabled because you chose the right city
             button.setBackground(Color.white);
             countCoveredCities++;                                                //game state ++ 
@@ -3214,7 +3160,7 @@ public class MainJFrame extends javax.swing.JFrame {
             jButtonStart.setText("Right! Cover a new city!");
         }
         cityBPressable=false;                                                 //secures that you cant choose another Bcity
-        if(countCoveredCities<14&&!cityPressable&&diceColor!=5){                                   //if the game has not ended and you can not chose the next city the dice is enabled again
+        if(countCoveredCities<14&&!cityPressable&&diceColor!=5) {                                   //if the game has not ended and you can not chose the next city the dice is enabled again
             jButtonDice.setEnabled(true);
             jButtonDice.setBackground(Color.white);
             setActivePlayer(playercount);
@@ -3228,8 +3174,8 @@ public class MainJFrame extends javax.swing.JFrame {
          
         boolean isLoggedIn = auth.loginUser(username, password);
         
-        if(isLoggedIn){
-            if(!userArray.contains(username)){
+        if(isLoggedIn) {
+            if(!userArray.contains(username)) {
                 userArray.add(username);
                 
                 userLoggedInCount++;
@@ -3241,7 +3187,7 @@ public class MainJFrame extends javax.swing.JFrame {
             MainPanel.revalidate();
             
             GamelobbyPlayer1.setText(username);
-        }else{
+        }else {
              JOptionPane.showMessageDialog(null, "Login failed");
              jUsernameField.setText("");
              jPasswordField.setText("");
@@ -3254,13 +3200,13 @@ public class MainJFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_LoginPressed
 
-    private void ResetCityWhite(JButton button, String name){  //some cities are blue and others white
+    private void ResetCityWhite(JButton button, String name) {  //some cities are blue and others white
         button.setBackground(new Color(242,245,244));
         button.setEnabled(true);
         button.setText(name);       //city name is written
     }
     
-    private void ResetCityBlue(JButton button, String name){
+    private void ResetCityBlue(JButton button, String name) {
         button.setBackground(new Color(208,234,242));
         button.setEnabled(true);
         button.setText(name);       //city name is written
@@ -3288,7 +3234,7 @@ public class MainJFrame extends javax.swing.JFrame {
         
         boolean isRegistered = auth.registerUser(username, email, password, birthday);
         
-        if(isRegistered){
+        if(isRegistered) {
           JOptionPane.showMessageDialog(null, "Sign Up successful");
           jTextField1.setText("");
           jTextField2.setText("");
@@ -3318,7 +3264,6 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_CairoBPressed
 
     private void RioBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RioBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonRio, rio);
     }//GEN-LAST:event_RioBPressed
 
@@ -3369,13 +3314,13 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void DiceRoll(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiceRoll
         // TODO add your handling code here:
-        if(countCoveredCities>=5){
+        if(countCoveredCities>=5) {
             Random random = new Random();
             diceColor = random.nextInt(6);
-            if(diceColor==5){
+            if(diceColor==5) {
                 jButtonDice.setBackground(Color.black);
                 jButtonStart.setText("Joker! Pick covered city to guess!");
-            }else{
+            }else {
                 cityBPressable=true;
                 jButtonStart.setText("Pick city under this color!");
             }
@@ -3389,12 +3334,10 @@ public class MainJFrame extends javax.swing.JFrame {
         MainPanel.add(GameScreen);
         MainPanel.repaint();
         MainPanel.revalidate();
-        
-        /* jPasswordLobbyField.setText("");
-        jUsernameLobbyField.setText("");     // D.H */ 
+
         
         JLabel[] userTextFields = {jLabelPlayerOne, jLabelPlayerTwo, jLabelPlayerThree, jLabelPlayerFour};
-        for(int i = 0; i < userArray.size() && i < userTextFields.length; i++){
+        for(int i = 0; i < userArray.size() && i < userTextFields.length; i++) {
             userTextFields[i].setText(userArray.get(i));
         }
     }//GEN-LAST:event_jButtonGamelobbyStartActionPerformed
@@ -3403,11 +3346,11 @@ public class MainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         String username = jTextField3.getText();
         
-        if(jPasswordField2.getText() == null ? jPasswordField3.getText() == null : jPasswordField2.getText().equals(jPasswordField3.getText())){
+        if(jPasswordField2.getText() == null ? jPasswordField3.getText() == null : jPasswordField2.getText().equals(jPasswordField3.getText())) {
             String newPassword = jPasswordField2.getText();
             boolean isReset = auth.resetPassword(username, newPassword);
         
-            if(isReset){
+            if(isReset) {
                 JOptionPane.showMessageDialog(null, "Password reset successful");
                 // Navigate back to login screen or main screen
                 MainPanel.removeAll();
@@ -3417,7 +3360,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }else {
                 JOptionPane.showMessageDialog(null, "Password reset failed. User not found.");
             }
-        }else{
+        }else {
             JOptionPane.showMessageDialog(null, "Password don't match!");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -3440,8 +3383,8 @@ public class MainJFrame extends javax.swing.JFrame {
          
         boolean isLoggedIn = auth.loginUser(username, password);
         
-        if(isLoggedIn){
-            if(!userArray.contains(username)){
+        if(isLoggedIn) {
+            if(!userArray.contains(username)) {
                 Date userDate = user.getAgeFromUser(username);
             
                 var tempUserList = new ArrayList<SimpleEntry<String, Date>>();
@@ -3462,7 +3405,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 }
             
                 userLoggedInCount++;
-                if(userLoggedInCount > 4){
+                if(userLoggedInCount > 4) {
                    JOptionPane.showMessageDialog(null, "Maximum of 4 users already logged in");
                    jUsernameLobbyField.setText("");
                    jPasswordLobbyField.setText("");
@@ -3474,10 +3417,10 @@ public class MainJFrame extends javax.swing.JFrame {
             jPasswordLobbyField.setText("");
             
             JTextField[] userTextFields = {GamelobbyPlayer1, GamelobbyPlayer2, GamelobbyPlayer3, GamelobbyPlayer4};
-            for(int i = 0; i < userArray.size() && i < userTextFields.length; i++){
+            for(int i = 0; i < userArray.size() && i < userTextFields.length; i++) {
                 userTextFields[i].setText(userArray.get(i));
             } 
-        }else{
+        }else {
              JOptionPane.showMessageDialog(null, "Login failed");
              jUsernameField.setText("");
              jPasswordField.setText("");
@@ -3593,7 +3536,7 @@ public class MainJFrame extends javax.swing.JFrame {
         MainPanel.revalidate();
     }//GEN-LAST:event_jLabel52MouseClicked
 
-    private void resetGame(){
+    private void resetGame() {
         MainPanel.removeAll();
         MainPanel.add(LoginScreen);
         MainPanel.repaint();
@@ -3697,10 +3640,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
-         if(jCheckBox2.isSelected()) {
+        if(jCheckBox2.isSelected()) {
             jPasswordField1.setEchoChar((char)0);
-            
-        } else {
+        }else {
             jPasswordField1.setEchoChar('\u2022');
            
         } 
@@ -3708,12 +3650,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
         // TODO add your handling code here:
-          if(jCheckBox3.isSelected()) {
-            jPasswordField.setEchoChar((char)0);
-            
-        } else {
+         if(jCheckBox3.isSelected()) {
+            jPasswordField.setEchoChar((char)0); 
+        }else {
             jPasswordField.setEchoChar('\u2022');
-           
         } 
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
@@ -3727,7 +3667,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void jTextField3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField3FocusLost
         // TODO add your handling code here:
-        if(jTextField3.getText().equals("Username") ||jTextField3.getText().isEmpty() ) {
+        if(jTextField3.getText().equals("Username") ||jTextField3.getText().isEmpty()) {
             jTextField3.setText("Username");
             jTextField3.setForeground(new Color(254,188,255));
         }
@@ -3750,7 +3690,8 @@ public class MainJFrame extends javax.swing.JFrame {
             Clip clip = (Clip) AudioSystem.getLine(info);
             clip.open(audioStream);
             clip.loop(Clip.LOOP_CONTINUOUSLY);
-        } catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
+        }catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
+            System.out.println(e);
         }
     }
      
@@ -3764,9 +3705,9 @@ public class MainJFrame extends javax.swing.JFrame {
         playLoop(wavFilePath);
         
         
-        try(Connection conn = DatabaseConnector.getConnection()){
+        try(Connection conn = DatabaseConnector.getConnection()) {
             System.out.println("Connection established");
-        }catch(SQLException e){
+        }catch(SQLException e) {
             System.out.println(e);
         }
        

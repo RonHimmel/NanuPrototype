@@ -23,25 +23,25 @@ public class Authentication {
     private boolean checkEmail;
     private boolean checkPassword;
     
-    public boolean loginUser(String username, String password){
+    public boolean loginUser(String username, String password) {
         String sqlquery = "SELECT password FROM users WHERE username = ?";
         
         checkPassword = formValidator.checkPasswordCorrectness(password);
         
-        if(checkPassword){
-            try(Connection conn = DatabaseConnector.getConnection()){
+        if(checkPassword) {
+            try(Connection conn = DatabaseConnector.getConnection()) {
                 PreparedStatement pst = conn.prepareStatement(sqlquery);
          
                 pst.setString(1, username);
                 ResultSet rs = pst.executeQuery();
             
-                if(rs.next()){
+                if(rs.next()) {
                     String storedHash = rs.getString("password");
                     if(BCrypt.checkpw(password, storedHash)){
                         return true;
                     }
                 }
-            }catch(SQLException e){
+            }catch(SQLException e) {
                 e.printStackTrace();
             }
         } else {
@@ -51,7 +51,7 @@ public class Authentication {
         return false;
     }
     
-    public boolean registerUser(String username, String email, String password, Date birthday){
+    public boolean registerUser(String username, String email, String password, Date birthday) {
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());        
         String sqlquery = "INSERT INTO users (username, password, email, birthday, score) VALUES (?, ?, ?, ?, 0)";
         
@@ -59,8 +59,8 @@ public class Authentication {
         checkEmail = formValidator.checkEmailCorrectness(email);
         checkPassword = formValidator.checkPasswordCorrectness(password);
        
-        if(!checkUsername && checkEmail && checkPassword){
-            try(Connection conn = DatabaseConnector.getConnection()){
+        if(!checkUsername && checkEmail && checkPassword) {
+            try(Connection conn = DatabaseConnector.getConnection()) {
                 PreparedStatement pst = conn.prepareStatement(sqlquery);
             
                 pst.setString(1, username);
@@ -70,27 +70,27 @@ public class Authentication {
             
                 int affectedRows = pst.executeUpdate();
             
-                if(affectedRows > 0){
+                if(affectedRows > 0) {
                     return true;
                 }else {
                     return false;
                 }
             
-            }catch(SQLException e){
+            }catch(SQLException e) {
                 e.printStackTrace();
             }
         }else {
             StringBuilder message = new StringBuilder();
             
-            if (checkUsername) {
+            if(checkUsername) {
                 message.append("Username exists.\n");
             }
             
-            if (!checkEmail) {
+            if(!checkEmail) {
                 message.append("The Email is not valid.\n");
             }
             
-            if (!checkPassword) {
+            if(!checkPassword) {
                 message.append("Password should have at least 6 characters and should consist of a Number and Text.\n");
             }
 
@@ -101,13 +101,13 @@ public class Authentication {
     }
     
     
-    public boolean resetPassword(String username, String newPassword){
+    public boolean resetPassword(String username, String newPassword) {
         String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
         String sqlquery = "UPDATE users SET password = ? WHERE username = ?";
         
         checkPassword = formValidator.checkPasswordCorrectness(newPassword);
  
-        if(checkPassword){
+        if(checkPassword) {
         try(Connection conn = DatabaseConnector.getConnection()){
           PreparedStatement pst = conn.prepareStatement(sqlquery);
             
@@ -123,7 +123,7 @@ public class Authentication {
           }
           
             
-        }catch (SQLException e){
+        }catch (SQLException e) {
             e.printStackTrace();
         }
         }else {

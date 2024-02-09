@@ -20,8 +20,9 @@ public class User {
     
     
     // Update Users Score
-    public boolean updateScore(int score, String username){
+    public boolean updateScore(int score, String username) {
         String sqlquery = "UPDATE users SET score=score + ? WHERE username=?";
+        
         try(Connection conn = DatabaseConnector.getConnection()){
             PreparedStatement pst = conn.prepareStatement(sqlquery);
             
@@ -30,13 +31,13 @@ public class User {
             
             int affectedRows = pst.executeUpdate();
             
-            if(affectedRows > 0){
+            if(affectedRows > 0) {
                 return true;
             }else {
                 return false;
             }
     
-        }catch(SQLException e){ 
+        }catch(SQLException e) { 
             e.printStackTrace();
         }
         
@@ -44,22 +45,22 @@ public class User {
     }
     
     // Get Age from User
-    public Date getAgeFromUser(String username){
+    public Date getAgeFromUser(String username) {
         String sqlquery = "SELECT birthday FROM users WHERE username=?";
         Date userDate = null;
         
-        try(Connection conn = DatabaseConnector.getConnection()){
+        try(Connection conn = DatabaseConnector.getConnection()) {
             PreparedStatement pst = conn.prepareStatement(sqlquery);
             pst.setString(1, username);
             
             
             ResultSet rs = pst.executeQuery();
             
-            if(rs.next()){
+            if(rs.next()) {
                 userDate = rs.getDate("birthday");
             }
             
-        }catch(SQLException e){
+        }catch(SQLException e) {
             e.printStackTrace();
         }
         

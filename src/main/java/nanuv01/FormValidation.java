@@ -18,30 +18,30 @@ import javax.swing.JOptionPane;
  */
 public class FormValidation {
    
-    public boolean checkUsernameExistence(String username){
+    public boolean checkUsernameExistence(String username) {
     
         String sqlquery = "SELECT username FROM users WHERE username = ?";
         
-        try(Connection conn = DatabaseConnector.getConnection()){
+        try(Connection conn = DatabaseConnector.getConnection()) {
             PreparedStatement pst = conn.prepareStatement(sqlquery);
            
             pst.setString(1, username);
             ResultSet rs = pst.executeQuery();
             
-            if(rs.next()){
+            if(rs.next()) {
                return true; // Username Exists
             }else {
                 return false; // Username dosen't exist
             }
             
-        }catch(SQLException e){
+        }catch(SQLException e) {
             e.printStackTrace();
         }
         
         return false;
     }
     
-    public boolean checkEmailCorrectness(String email){
+    public boolean checkEmailCorrectness(String email) {
         
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
         
@@ -57,7 +57,7 @@ public class FormValidation {
     }
     
     
-    public boolean checkPasswordCorrectness(String password){
+    public boolean checkPasswordCorrectness(String password) {
          if(password != null && password.length() >= 6){
              String passwordRegex = "^(?=.*[0-9])(?=.*[a-zA-Z]).{6,}$";
              

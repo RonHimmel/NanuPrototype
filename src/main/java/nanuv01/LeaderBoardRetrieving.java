@@ -19,23 +19,23 @@ import java.util.Map;
  */
 public class LeaderBoardRetrieving {
    
-    public List<Map<String, Object>> retrieveUsersScore(){
+    public List<Map<String, Object>> retrieveUsersScore() {
         String sqlquery = "SELECT username, score FROM users ORDER BY score DESC";
         List<Map<String, Object>> userScores = new ArrayList<>();
         
-        try(Connection conn = DatabaseConnector.getConnection()){
+        try(Connection conn = DatabaseConnector.getConnection()) {
            PreparedStatement pst = conn.prepareStatement(sqlquery);
            
            ResultSet rs = pst.executeQuery();
            
-           while(rs.next()){
+           while(rs.next()) {
                Map<String,Object> userScore = new HashMap<>();
                userScore.put("username", rs.getString("username"));
                userScore.put("score", rs.getInt("score"));
                userScores.add(userScore);
            }
            
-        }catch(SQLException e){
+        }catch(SQLException e) {
             e.printStackTrace();
         }
        
