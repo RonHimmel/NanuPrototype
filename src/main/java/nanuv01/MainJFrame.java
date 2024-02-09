@@ -3029,9 +3029,6 @@ public class MainJFrame extends javax.swing.JFrame {
         milan=10;
         tokyo=10;
         paris=10;
-        
-       
-        
     }//GEN-LAST:event_StartPressed
 
     private void NewyorkPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewyorkPressed
@@ -3112,7 +3109,6 @@ public class MainJFrame extends javax.swing.JFrame {
             
         }else if(number ==4) {
             jLabelPointsFour.setText(Integer.toString(Integer.parseInt(jLabelPointsFour.getText())+1));
-            
         }
     }
     
@@ -3200,7 +3196,6 @@ public class MainJFrame extends javax.swing.JFrame {
             // adds the user to the userarray
             if(!userArray.contains(username)) {
                 userArray.add(username);
-                
                 userLoggedInCount++;
             }
             
@@ -3614,6 +3609,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabelPointsThree.setText("0");
         jLabelPlayerFour.setText("");
         jLabelPointsFour.setText("0");
+        userArray.clear();
     }
     
     private void jButtonExitEndScreen(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitEndScreen
