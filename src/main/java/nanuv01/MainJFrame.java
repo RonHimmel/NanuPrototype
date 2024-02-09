@@ -108,10 +108,10 @@ public class MainJFrame extends javax.swing.JFrame {
         GamelobbyScreen = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        GamelobbyPlayer1 = new javax.swing.JTextField();
+        GamelobbyPlayer2 = new javax.swing.JTextField();
+        GamelobbyPlayer3 = new javax.swing.JTextField();
+        GamelobbyPlayer4 = new javax.swing.JTextField();
         jButtonGamelobbyStart = new javax.swing.JButton();
         jButtonExit2 = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
@@ -779,21 +779,21 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel31.setForeground(new java.awt.Color(1, 60, 58));
         jLabel31.setText("In the room:");
 
-        jTextField7.setBackground(new java.awt.Color(254, 219, 255));
-        jTextField7.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
-        jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
+        GamelobbyPlayer1.setBackground(new java.awt.Color(254, 219, 255));
+        GamelobbyPlayer1.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
+        GamelobbyPlayer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
 
-        jTextField8.setBackground(new java.awt.Color(254, 219, 255));
-        jTextField8.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
-        jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
+        GamelobbyPlayer2.setBackground(new java.awt.Color(254, 219, 255));
+        GamelobbyPlayer2.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
+        GamelobbyPlayer2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
 
-        jTextField9.setBackground(new java.awt.Color(254, 219, 255));
-        jTextField9.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
-        jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
+        GamelobbyPlayer3.setBackground(new java.awt.Color(254, 219, 255));
+        GamelobbyPlayer3.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
+        GamelobbyPlayer3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
 
-        jTextField10.setBackground(new java.awt.Color(254, 219, 255));
-        jTextField10.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
-        jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
+        GamelobbyPlayer4.setBackground(new java.awt.Color(254, 219, 255));
+        GamelobbyPlayer4.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
+        GamelobbyPlayer4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
 
         jButtonGamelobbyStart.setBackground(new java.awt.Color(1, 60, 58));
         jButtonGamelobbyStart.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
@@ -832,10 +832,10 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addGroup(jPanel14Layout.createSequentialGroup()
                                 .addGap(78, 78, 78)
                                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(GamelobbyPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(GamelobbyPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(GamelobbyPlayer3, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(GamelobbyPlayer4, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel14Layout.createSequentialGroup()
                                 .addGap(142, 142, 142)
                                 .addComponent(jButtonGamelobbyStart, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -853,13 +853,13 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jButtonExit2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(45, 45, 45)
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GamelobbyPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GamelobbyPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GamelobbyPlayer3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GamelobbyPlayer4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(122, 122, 122)
                 .addComponent(jButtonGamelobbyStart, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(372, Short.MAX_VALUE))
@@ -3240,17 +3240,17 @@ public class MainJFrame extends javax.swing.JFrame {
             MainPanel.repaint();
             MainPanel.revalidate();
             
-            jTextField7.setText(username);
+            GamelobbyPlayer1.setText(username);
         }else{
              JOptionPane.showMessageDialog(null, "Login failed");
              jUsernameField.setText("");
              jPasswordField.setText("");
         }
         
-        jTextField7.setEditable(false);
-        jTextField8.setEditable(false);
-        jTextField9.setEditable(false);
-        jTextField10.setEditable(false);
+        GamelobbyPlayer1.setEditable(false);
+        GamelobbyPlayer2.setEditable(false);
+        GamelobbyPlayer3.setEditable(false);
+        GamelobbyPlayer4.setEditable(false);
         
     }//GEN-LAST:event_LoginPressed
 
@@ -3268,56 +3268,7 @@ public class MainJFrame extends javax.swing.JFrame {
     
     private void ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitPressed
         // TODO add your handling code here:
-        MainPanel.removeAll();
-        MainPanel.add(LoginScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
-        //set the game into the beginning state
-        jButtonStart.setEnabled(true);
-        jButtonStart.setVisible(true);
-        jButtonStart.setText("Start"); //sets the start button as start again
-        diceColor=-1;
-        countCoveredCities=-1;
-        cityBPressable=false;
-        cityPressable = false;
-        ResetCityBlue(jButtonMumbai, "Mumbai");
-        ResetCityBlue(jButtonFrankfurt, "Frankfurt");
-        ResetCityWhite(jButtonHanoi, "Hanoi");
-        ResetCityBlue(jButtonNewyork, "New York");
-        ResetCityBlue(jButtonRio, "Rio");
-        ResetCityWhite(jButtonOslo, "Oslo");
-        ResetCityBlue(jButtonBali, "Bali");
-        ResetCityWhite(jButtonNairobi, "Nairobi");
-        ResetCityBlue(jButtonLisabon, "Lisabon");
-        ResetCityWhite(jButtonCairo, "Cairo");
-        ResetCityBlue(jButtonAthens, "Athens");
-        ResetCityWhite(jButtonMilan, "Milan");
-        ResetCityWhite(jButtonTokyo, "Tokyo");
-        ResetCityBlue(jButtonParis, "Paris");
-        //setting city !=10 that would be ready state
-        mumbai=0;
-        frankfurt=0;
-        hanoi = 0;
-        newyork=0;
-        rio=0;
-        oslo=0;
-        bali=0;
-        nairobi=0;
-        lisabon =0;
-        cairo=0;
-        athens=0;
-        milan=0;
-        tokyo=0;
-        paris=0;
-        jPanelRedBorder.setBackground(new Color(255,153,153));
-        jPanelGreenBorder.setBackground(new Color(153,255,153));
-        jPanelBlueBorder.setBackground(new Color(153,153,255));
-        jPanelYellowBorder.setBackground(new Color(255,255,153));
-        jPanelPinkBorder.setBackground(new Color(255,153,255));
-        jButtonDice.setEnabled(true);
-        jButtonDice.setBackground(new Color(254,219,255));
-        jUsernameField.setText("");
-        jPasswordField.setText("");
+        resetGame();
     }//GEN-LAST:event_ExitPressed
 
     private void jLabelForgotPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelForgotPasswordMouseClicked
@@ -3522,7 +3473,7 @@ public class MainJFrame extends javax.swing.JFrame {
             jUsernameLobbyField.setText("");
             jPasswordLobbyField.setText("");
             
-            JTextField[] userTextFields = {jTextField7, jTextField8, jTextField9, jTextField10};
+            JTextField[] userTextFields = {GamelobbyPlayer1, GamelobbyPlayer2, GamelobbyPlayer3, GamelobbyPlayer4};
             for(int i = 0; i < userArray.size() && i < userTextFields.length; i++){
                 userTextFields[i].setText(userArray.get(i));
             } 
@@ -3642,8 +3593,7 @@ public class MainJFrame extends javax.swing.JFrame {
         MainPanel.revalidate();
     }//GEN-LAST:event_jLabel52MouseClicked
 
-    private void jButtonExitEndScreen(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitEndScreen
-        // TODO add your handling code here:
+    private void resetGame(){
         MainPanel.removeAll();
         MainPanel.add(LoginScreen);
         MainPanel.repaint();
@@ -3685,15 +3635,32 @@ public class MainJFrame extends javax.swing.JFrame {
         milan=0;
         tokyo=0;
         paris=0;
-        jPanelRedBorder.setBackground(new Color(255,153,153));
-        jPanelGreenBorder.setBackground(new Color(153,255,153));
-        jPanelBlueBorder.setBackground(new Color(153,153,255));
-        jPanelYellowBorder.setBackground(new Color(255,255,153));
-        jPanelPinkBorder.setBackground(new Color(255,153,255));
+        jPanelRedBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
+        jPanelGreenBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
+        jPanelBlueBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
+        jPanelYellowBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
+        jPanelPinkBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
         jButtonDice.setEnabled(true);
         jButtonDice.setBackground(new Color(254,219,255));
         jUsernameField.setText("");
         jPasswordField.setText("");
+        GamelobbyPlayer1.setText("");
+        GamelobbyPlayer2.setText("");
+        GamelobbyPlayer3.setText("");
+        GamelobbyPlayer4.setText("");
+        jLabelPlayerOne.setText("");
+        jLabelPointsOne.setText("0");
+        jLabelPlayerTwo.setText("");
+        jLabelPointsTwo.setText("0");
+        jLabelPlayerThree.setText("");
+        jLabelPointsThree.setText("0");
+        jLabelPlayerFour.setText("");
+        jLabelPointsFour.setText("0");
+    }
+    
+    private void jButtonExitEndScreen(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitEndScreen
+        // TODO add your handling code here:
+        resetGame();
     }//GEN-LAST:event_jButtonExitEndScreen
 
     private void jTextField2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField2FocusGained
@@ -3824,6 +3791,10 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel EndScreenScore4;
     private javax.swing.JPanel ForgotPasswordScreen;
     private javax.swing.JPanel GameScreen;
+    private javax.swing.JTextField GamelobbyPlayer1;
+    private javax.swing.JTextField GamelobbyPlayer2;
+    private javax.swing.JTextField GamelobbyPlayer3;
+    private javax.swing.JTextField GamelobbyPlayer4;
     private javax.swing.JPanel GamelobbyScreen;
     private javax.swing.JPanel LeaderBoard;
     private javax.swing.JPanel LoginScreen;
@@ -4009,12 +3980,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField3;
     private javax.swing.JPasswordField jPasswordLobbyField;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jUsernameField;
     private javax.swing.JTextField jUsernameLobbyField;
     private javax.swing.JButton leaderButtonPressed;

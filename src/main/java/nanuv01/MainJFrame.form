@@ -1028,10 +1028,10 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTextField8" min="-2" pref="382" max="-2" attributes="0"/>
-                                              <Component id="jTextField7" min="-2" pref="382" max="-2" attributes="0"/>
-                                              <Component id="jTextField9" alignment="0" min="-2" pref="382" max="-2" attributes="0"/>
-                                              <Component id="jTextField10" alignment="0" min="-2" pref="382" max="-2" attributes="0"/>
+                                              <Component id="GamelobbyPlayer2" min="-2" pref="382" max="-2" attributes="0"/>
+                                              <Component id="GamelobbyPlayer1" min="-2" pref="382" max="-2" attributes="0"/>
+                                              <Component id="GamelobbyPlayer3" alignment="0" min="-2" pref="382" max="-2" attributes="0"/>
+                                              <Component id="GamelobbyPlayer4" alignment="0" min="-2" pref="382" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -1060,13 +1060,13 @@
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                          <Component id="jTextField7" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="GamelobbyPlayer1" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          <Component id="jTextField8" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="GamelobbyPlayer2" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          <Component id="jTextField9" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="GamelobbyPlayer3" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jTextField10" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="GamelobbyPlayer4" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
                           <Component id="jButtonGamelobbyStart" min="-2" pref="82" max="-2" attributes="0"/>
                           <EmptySpace pref="372" max="32767" attributes="0"/>
@@ -1086,7 +1086,7 @@
                     <Property name="text" type="java.lang.String" value="In the room:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField7">
+                <Component class="javax.swing.JTextField" name="GamelobbyPlayer1">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -1103,7 +1103,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField8">
+                <Component class="javax.swing.JTextField" name="GamelobbyPlayer2">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -1120,7 +1120,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField9">
+                <Component class="javax.swing.JTextField" name="GamelobbyPlayer3">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -1137,7 +1137,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField10">
+                <Component class="javax.swing.JTextField" name="GamelobbyPlayer4">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
