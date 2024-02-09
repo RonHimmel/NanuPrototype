@@ -19,6 +19,7 @@ import java.util.Map;
  */
 public class LeaderBoardRetrieving {
    
+    // retireve the Users score from DB
     public List<Map<String, Object>> retrieveUsersScore() {
         String sqlquery = "SELECT username, score FROM users ORDER BY score DESC";
         List<Map<String, Object>> userScores = new ArrayList<>();

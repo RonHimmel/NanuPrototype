@@ -121,7 +121,7 @@
                                               <Group type="102" attributes="0">
                                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                                  <Component id="jLabelForgotPassword" min="-2" pref="126" max="-2" attributes="0"/>
+                                                  <Component id="jforgotPassworBtn" min="-2" pref="126" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
                                                   <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
                                               </Group>
@@ -164,7 +164,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabelForgotPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jforgotPassworBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jCheckBox3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
@@ -254,7 +254,7 @@
                     <Property name="text" type="java.lang.String" value="Forgot Password?"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabelForgotPassword">
+                <Component class="javax.swing.JLabel" name="jforgotPassworBtn">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Verdana" size="18" style="1"/>
@@ -265,7 +265,7 @@
                     <Property name="text" type="java.lang.String" value="Click Here"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelForgotPasswordMouseClicked"/>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jforgotPassworBtnMouseClicked"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel10">
@@ -391,15 +391,15 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel45" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jCheckBox2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jShowPasswordRegisterCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="jPasswordField1" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jPasswordRegisterField" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel43" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jUsernameRegisterField" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="jTextField2" alignment="0" pref="464" max="32767" attributes="0"/>
-                                                  <Component id="jBirthdayField" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jBirthdayRegisterField" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -424,7 +424,7 @@
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jTextField1" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="jUsernameRegisterField" min="-2" pref="70" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -432,15 +432,15 @@
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jBirthdayField" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="jBirthdayRegisterField" min="-2" pref="70" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jPasswordField1" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="jPasswordRegisterField" min="-2" pref="70" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jShowPasswordRegisterCheckBox" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="registerBtn" min="-2" pref="70" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
@@ -461,7 +461,7 @@
                     <Property name="text" type="java.lang.String" value="Don&apos;t have an account yet?"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField1">
+                <Component class="javax.swing.JTextField" name="jUsernameRegisterField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -506,7 +506,7 @@
                     <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextField2FocusLost"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+                <Component class="javax.swing.JPasswordField" name="jPasswordRegisterField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -581,7 +581,7 @@
                     <Property name="text" type="java.lang.String" value="Sign Up"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jBirthdayField">
+                <Component class="javax.swing.JTextField" name="jBirthdayRegisterField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -602,8 +602,8 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jBirthdayFieldFocusGained"/>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jBirthdayFieldFocusLost"/>
+                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jBirthdayRegisterFieldFocusGained"/>
+                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jBirthdayRegisterFieldFocusLost"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel9">
@@ -661,7 +661,7 @@
                     <Property name="text" type="java.lang.String" value="Must be at least 6 characters including at least one number "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+                <Component class="javax.swing.JCheckBox" name="jShowPasswordRegisterCheckBox">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e7" green="f7" red="e1" type="rgb"/>
@@ -675,7 +675,7 @@
                     <Property name="text" type="java.lang.String" value="Show password"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jShowPasswordRegisterCheckBoxActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -716,12 +716,12 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="553" max="-2" attributes="0"/>
-                              <Component id="jButton2" min="-2" pref="275" max="-2" attributes="0"/>
+                              <Component id="passwordResetBtn" min="-2" pref="275" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="338" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jShowPasswordForgotPasswordCheckBox" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -769,16 +769,16 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jShowPasswordForgotPasswordCheckBox" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" pref="73" max="-2" attributes="0"/>
+                      <Component id="passwordResetBtn" min="-2" pref="73" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="passwordResetBtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="3a" green="3c" red="1" type="rgb"/>
@@ -799,7 +799,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordResetBtnActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField3">
@@ -873,7 +873,7 @@
                 <Property name="text" type="java.lang.String" value="Both passwords must match"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+            <Component class="javax.swing.JCheckBox" name="jShowPasswordForgotPasswordCheckBox">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cb" green="c6" red="af" type="rgb"/>
@@ -887,7 +887,7 @@
                 <Property name="text" type="java.lang.String" value="Show passwords"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jShowPasswordForgotPasswordCheckBoxActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JPasswordField" name="jPasswordField2">
@@ -1028,15 +1028,15 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="GamelobbyPlayer2" min="-2" pref="382" max="-2" attributes="0"/>
-                                              <Component id="GamelobbyPlayer1" min="-2" pref="382" max="-2" attributes="0"/>
-                                              <Component id="GamelobbyPlayer3" alignment="0" min="-2" pref="382" max="-2" attributes="0"/>
-                                              <Component id="GamelobbyPlayer4" alignment="0" min="-2" pref="382" max="-2" attributes="0"/>
+                                              <Component id="gamelobbyPlayer2" min="-2" pref="382" max="-2" attributes="0"/>
+                                              <Component id="gamelobbyPlayer1" min="-2" pref="382" max="-2" attributes="0"/>
+                                              <Component id="gamelobbyPlayer3" alignment="0" min="-2" pref="382" max="-2" attributes="0"/>
+                                              <Component id="gamelobbyPlayer4" alignment="0" min="-2" pref="382" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="jButtonGamelobbyStart" min="-2" pref="253" max="-2" attributes="0"/>
+                                          <Component id="gamelobbyStartBtn" min="-2" pref="253" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="0" pref="87" max="32767" attributes="0"/>
@@ -1060,15 +1060,15 @@
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                          <Component id="GamelobbyPlayer1" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="gamelobbyPlayer1" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          <Component id="GamelobbyPlayer2" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="gamelobbyPlayer2" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          <Component id="GamelobbyPlayer3" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="gamelobbyPlayer3" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="GamelobbyPlayer4" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="gamelobbyPlayer4" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
-                          <Component id="jButtonGamelobbyStart" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="gamelobbyStartBtn" min="-2" pref="82" max="-2" attributes="0"/>
                           <EmptySpace pref="372" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1086,7 +1086,7 @@
                     <Property name="text" type="java.lang.String" value="In the room:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="GamelobbyPlayer1">
+                <Component class="javax.swing.JTextField" name="gamelobbyPlayer1">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -1103,7 +1103,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="GamelobbyPlayer2">
+                <Component class="javax.swing.JTextField" name="gamelobbyPlayer2">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -1120,7 +1120,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="GamelobbyPlayer3">
+                <Component class="javax.swing.JTextField" name="gamelobbyPlayer3">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -1137,7 +1137,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="GamelobbyPlayer4">
+                <Component class="javax.swing.JTextField" name="gamelobbyPlayer4">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -1154,7 +1154,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButtonGamelobbyStart">
+                <Component class="javax.swing.JButton" name="gamelobbyStartBtn">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="3a" green="3c" red="1" type="rgb"/>
@@ -1168,7 +1168,7 @@
                     <Property name="text" type="java.lang.String" value="Start"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGamelobbyStartActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gamelobbyStartBtnActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButtonExit2">
@@ -1226,7 +1226,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="248" max="-2" attributes="0"/>
-                                  <Component id="jButtonGamelobbyStart1" min="-2" pref="253" max="-2" attributes="0"/>
+                                  <Component id="addPlayerToGameBtn" min="-2" pref="253" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="2731" max="32767" attributes="0"/>
@@ -1249,7 +1249,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jPasswordLobbyField" min="-2" pref="70" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
-                          <Component id="jButtonGamelobbyStart1" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="addPlayerToGameBtn" min="-2" pref="82" max="-2" attributes="0"/>
                           <EmptySpace pref="328" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1312,7 +1312,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButtonGamelobbyStart1">
+                <Component class="javax.swing.JButton" name="addPlayerToGameBtn">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="b9" green="b2" red="90" type="rgb"/>
@@ -1333,7 +1333,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGamelobbyStart1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPlayerToGameBtnActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel6">
@@ -1873,7 +1873,7 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButtonStart" min="-2" pref="408" max="-2" attributes="0"/>
+                                  <Component id="startGameBtn" min="-2" pref="408" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jButtonExit" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
@@ -1899,14 +1899,14 @@
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="jPanel11" min="-2" pref="50" max="-2" attributes="0"/>
                           <EmptySpace pref="164" max="32767" attributes="0"/>
-                          <Component id="jButtonStart" min="-2" pref="61" max="-2" attributes="0"/>
+                          <Component id="startGameBtn" min="-2" pref="61" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButtonStart">
+                <Component class="javax.swing.JButton" name="startGameBtn">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="db" red="fe" type="rgb"/>
@@ -2987,9 +2987,9 @@
                       <Component id="EndScreenPlayer3" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                          <Component id="jButton3" min="-2" pref="253" max="-2" attributes="0"/>
+                          <Component id="leaveBtn" min="-2" pref="253" max="-2" attributes="0"/>
                           <EmptySpace pref="176" max="32767" attributes="0"/>
-                          <Component id="jButton4" min="-2" pref="253" max="-2" attributes="0"/>
+                          <Component id="replayGameBtn" min="-2" pref="253" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -3004,8 +3004,8 @@
                           <Component id="EndScreenPlayer4" min="-2" pref="136" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton3" min="-2" pref="94" max="-2" attributes="0"/>
-                              <Component id="jButton4" min="-2" pref="94" max="-2" attributes="0"/>
+                              <Component id="leaveBtn" min="-2" pref="94" max="-2" attributes="0"/>
+                              <Component id="replayGameBtn" min="-2" pref="94" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="80" max="32767" attributes="0"/>
                       </Group>
@@ -3052,7 +3052,7 @@
                     <Property name="text" type="java.lang.String" value="Username"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton3">
+                <Component class="javax.swing.JButton" name="leaveBtn">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="29" green="31" red="1" type="rgb"/>
@@ -3072,7 +3072,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonExitEndScreen"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton4">
+                <Component class="javax.swing.JButton" name="replayGameBtn">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="b9" green="b2" red="90" type="rgb"/>
@@ -3222,7 +3222,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jLabel52" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="backLeaderboardBtn" min="-2" pref="52" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel53" min="-2" pref="487" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -3260,7 +3260,7 @@
                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel53" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel52" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="backLeaderboardBtn" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -3289,7 +3289,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel52">
+                <Component class="javax.swing.JLabel" name="backLeaderboardBtn">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="48" style="1"/>
@@ -3301,7 +3301,7 @@
                     <Property name="text" type="java.lang.String" value="&lt;"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel52MouseClicked"/>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="backLeaderboardBtnMouseClicked"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel53">
@@ -3927,9 +3927,9 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
-                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                              <Component id="tutExitBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="942" max="-2" attributes="0"/>
-                              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                              <Component id="tutForwardBtn1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -3941,8 +3941,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutExitBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutForwardBtn1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -4063,7 +4063,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel17">
+            <Component class="javax.swing.JLabel" name="tutForwardBtn1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="30" style="1"/>
@@ -4077,7 +4077,7 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelNextTut0MC"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel18">
+            <Component class="javax.swing.JLabel" name="tutExitBtn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="30" style="1"/>
@@ -4128,9 +4128,9 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
-                              <Component id="jLabel63" min="-2" max="-2" attributes="0"/>
+                              <Component id="tutBackBtn1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="942" max="-2" attributes="0"/>
-                              <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
+                              <Component id="tutForwardBtn2" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="2469" max="-2" attributes="0"/>
@@ -4142,8 +4142,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel63" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel62" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutBackBtn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutForwardBtn2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -4280,7 +4280,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel62">
+            <Component class="javax.swing.JLabel" name="tutForwardBtn2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="30" style="1"/>
@@ -4294,7 +4294,7 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelNextTut1MC"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel63">
+            <Component class="javax.swing.JLabel" name="tutBackBtn1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="30" style="1"/>
@@ -4345,9 +4345,9 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
-                              <Component id="jLabel71" min="-2" max="-2" attributes="0"/>
+                              <Component id="tutBackBtn2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="942" max="-2" attributes="0"/>
-                              <Component id="jLabel70" min="-2" max="-2" attributes="0"/>
+                              <Component id="tutForwardBtn3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -4359,8 +4359,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel71" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel70" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutBackBtn2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutForwardBtn3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -4505,7 +4505,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel70">
+            <Component class="javax.swing.JLabel" name="tutForwardBtn3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="30" style="1"/>
@@ -4519,7 +4519,7 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelNextTut2MC"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel71">
+            <Component class="javax.swing.JLabel" name="tutBackBtn2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="30" style="1"/>
@@ -4570,7 +4570,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
-                              <Component id="jLabel79" min="-2" max="-2" attributes="0"/>
+                              <Component id="tutBackBtn3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -4581,7 +4581,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                      <Component id="jLabel79" min="-2" max="-2" attributes="0"/>
+                      <Component id="tutBackBtn3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel74" alignment="1" min="-2" pref="181" max="-2" attributes="0"/>
@@ -4681,7 +4681,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel79">
+            <Component class="javax.swing.JLabel" name="tutBackBtn3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Verdana" size="30" style="1"/>

@@ -20,17 +20,19 @@ public class DatabaseConnector {
     private static String user;
     private static String password;
     
-    
+    // abstract function to connect to the specific DB
     static {
         try {
             Properties props = new Properties(); 
             InputStream is = DatabaseConnector.class.getClassLoader().getResourceAsStream("db.properties");
             props.load(is);
             
+            // specifices to connect to DB by using Java Property File
             url = props.getProperty("db.url");
             user = props.getProperty("db.user");
             password = props.getProperty("db.password");
             
+            // use Driver which acts as a Interface for the Project and Driver
             Class.forName("org.postgresql.Driver");
             
         } catch (Exception e) {

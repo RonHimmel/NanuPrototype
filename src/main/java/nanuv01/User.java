@@ -44,7 +44,7 @@ public class User {
         return false;
     }
     
-    // Get Age from User
+    // Get Age from User - Format (YYYY-MM-DD)
     public Date getAgeFromUser(String username) {
         String sqlquery = "SELECT birthday FROM users WHERE username=?";
         Date userDate = null;

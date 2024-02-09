@@ -23,9 +23,11 @@ public class Authentication {
     private boolean checkEmail;
     private boolean checkPassword;
     
+    // login user retreiving from DB
     public boolean loginUser(String username, String password) {
         String sqlquery = "SELECT password FROM users WHERE username = ?";
         
+        // checking password if in right format
         checkPassword = formValidator.checkPasswordCorrectness(password);
         
         if(checkPassword) {
@@ -37,6 +39,7 @@ public class Authentication {
             
                 if(rs.next()) {
                     String storedHash = rs.getString("password");
+                    // Hash Algorithm to check password correctness
                     if(BCrypt.checkpw(password, storedHash)){
                         return true;
                     }
@@ -51,10 +54,12 @@ public class Authentication {
         return false;
     }
     
+    // Register a new User by inserting it into DB
     public boolean registerUser(String username, String email, String password, Date birthday) {
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());        
         String sqlquery = "INSERT INTO users (username, password, email, birthday, score) VALUES (?, ?, ?, ?, 0)";
         
+        // formvalidation for each input
         checkUsername = formValidator.checkUsernameExistence(username);
         checkEmail = formValidator.checkEmailCorrectness(email);
         checkPassword = formValidator.checkPasswordCorrectness(password);
@@ -82,6 +87,7 @@ public class Authentication {
         }else {
             StringBuilder message = new StringBuilder();
             
+            //Error Handeling
             if(checkUsername) {
                 message.append("Username exists.\n");
             }
@@ -100,7 +106,7 @@ public class Authentication {
         return false;
     }
     
-    
+    // reset password of User and update in DB
     public boolean resetPassword(String username, String newPassword) {
         String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
         String sqlquery = "UPDATE users SET password = ? WHERE username = ?";

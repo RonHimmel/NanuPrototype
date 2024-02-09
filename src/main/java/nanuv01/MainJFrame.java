@@ -67,7 +67,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jUsernameField = new javax.swing.JTextField();
         jPasswordField = new javax.swing.JPasswordField();
         jLabel7 = new javax.swing.JLabel();
-        jLabelForgotPassword = new javax.swing.JLabel();
+        jforgotPassworBtn = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
@@ -76,27 +76,27 @@ public class MainJFrame extends javax.swing.JFrame {
         jCheckBox3 = new javax.swing.JCheckBox();
         jPanel2 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jUsernameRegisterField = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jPasswordRegisterField = new javax.swing.JPasswordField();
         jPanel4 = new javax.swing.JPanel();
         registerBtn = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
-        jBirthdayField = new javax.swing.JTextField();
+        jBirthdayRegisterField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        jShowPasswordRegisterCheckBox = new javax.swing.JCheckBox();
         ForgotPasswordScreen = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        passwordResetBtn = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        jShowPasswordForgotPasswordCheckBox = new javax.swing.JCheckBox();
         jPasswordField2 = new javax.swing.JPasswordField();
         jPasswordField3 = new javax.swing.JPasswordField();
         jLabel39 = new javax.swing.JLabel();
@@ -105,18 +105,18 @@ public class MainJFrame extends javax.swing.JFrame {
         GamelobbyScreen = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
-        GamelobbyPlayer1 = new javax.swing.JTextField();
-        GamelobbyPlayer2 = new javax.swing.JTextField();
-        GamelobbyPlayer3 = new javax.swing.JTextField();
-        GamelobbyPlayer4 = new javax.swing.JTextField();
-        jButtonGamelobbyStart = new javax.swing.JButton();
+        gamelobbyPlayer1 = new javax.swing.JTextField();
+        gamelobbyPlayer2 = new javax.swing.JTextField();
+        gamelobbyPlayer3 = new javax.swing.JTextField();
+        gamelobbyPlayer4 = new javax.swing.JTextField();
+        gamelobbyStartBtn = new javax.swing.JButton();
         jButtonExit2 = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jUsernameLobbyField = new javax.swing.JTextField();
         jPasswordLobbyField = new javax.swing.JPasswordField();
-        jButtonGamelobbyStart1 = new javax.swing.JButton();
+        addPlayerToGameBtn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         GameScreen = new javax.swing.JPanel();
@@ -136,7 +136,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jButtonTokyo = new javax.swing.JButton();
         jButtonParis = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
-        jButtonStart = new javax.swing.JButton();
+        startGameBtn = new javax.swing.JButton();
         jButtonExit = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabelPlayerOne = new javax.swing.JLabel();
@@ -189,15 +189,15 @@ public class MainJFrame extends javax.swing.JFrame {
         EndScreenPlayer2 = new java.awt.Label();
         EndScreenPlayer4 = new java.awt.Label();
         EndScreenPlayer3 = new java.awt.Label();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        leaveBtn = new javax.swing.JButton();
+        replayGameBtn = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         EndScreenScore3 = new javax.swing.JLabel();
         EndScreenScore4 = new javax.swing.JLabel();
         EndScreenScore2 = new javax.swing.JLabel();
         LeaderBoard = new javax.swing.JPanel();
         jPanel24 = new javax.swing.JPanel();
-        jLabel52 = new javax.swing.JLabel();
+        backLeaderboardBtn = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jPanel26 = new javax.swing.JPanel();
         jLeaderboardScore1 = new javax.swing.JLabel();
@@ -235,8 +235,8 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel33 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        tutForwardBtn1 = new javax.swing.JLabel();
+        tutExitBtn = new javax.swing.JLabel();
         TutorialScreen1 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
@@ -246,8 +246,8 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel50 = new javax.swing.JLabel();
         jLabel78 = new javax.swing.JLabel();
         jLabel80 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
+        tutForwardBtn2 = new javax.swing.JLabel();
+        tutBackBtn1 = new javax.swing.JLabel();
         TutorialScreen2 = new javax.swing.JPanel();
         jLabel64 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
@@ -257,8 +257,8 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel49 = new javax.swing.JLabel();
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
-        jLabel70 = new javax.swing.JLabel();
-        jLabel71 = new javax.swing.JLabel();
+        tutForwardBtn3 = new javax.swing.JLabel();
+        tutBackBtn2 = new javax.swing.JLabel();
         TutorialScreen3 = new javax.swing.JPanel();
         jLabel72 = new javax.swing.JLabel();
         jLabel73 = new javax.swing.JLabel();
@@ -266,7 +266,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel22 = new javax.swing.JPanel();
         jLabel75 = new javax.swing.JLabel();
         jLabel76 = new javax.swing.JLabel();
-        jLabel79 = new javax.swing.JLabel();
+        tutBackBtn3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1440, 1051));
@@ -305,12 +305,12 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(1, 87, 73));
         jLabel7.setText("Forgot Password?");
 
-        jLabelForgotPassword.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabelForgotPassword.setForeground(new java.awt.Color(1, 87, 73));
-        jLabelForgotPassword.setText("Click Here");
-        jLabelForgotPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+        jforgotPassworBtn.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jforgotPassworBtn.setForeground(new java.awt.Color(1, 87, 73));
+        jforgotPassworBtn.setText("Click Here");
+        jforgotPassworBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelForgotPasswordMouseClicked(evt);
+                jforgotPassworBtnMouseClicked(evt);
             }
         });
 
@@ -377,7 +377,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel7)
                                         .addGap(21, 21, 21)
-                                        .addComponent(jLabelForgotPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jforgotPassworBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jCheckBox3))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -410,7 +410,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jLabelForgotPassword)
+                    .addComponent(jforgotPassworBtn)
                     .addComponent(jCheckBox3))
                 .addGap(110, 110, 110)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -427,10 +427,10 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(1, 87, 73));
         jLabel12.setText("Don't have an account yet?");
 
-        jTextField1.setBackground(new java.awt.Color(254, 219, 255));
-        jTextField1.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(91, 98, 89));
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
+        jUsernameRegisterField.setBackground(new java.awt.Color(254, 219, 255));
+        jUsernameRegisterField.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
+        jUsernameRegisterField.setForeground(new java.awt.Color(91, 98, 89));
+        jUsernameRegisterField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
 
         jTextField2.setBackground(new java.awt.Color(254, 219, 255));
         jTextField2.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
@@ -446,10 +446,10 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        jPasswordField1.setBackground(new java.awt.Color(254, 219, 255));
-        jPasswordField1.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(91, 98, 89));
-        jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
+        jPasswordRegisterField.setBackground(new java.awt.Color(254, 219, 255));
+        jPasswordRegisterField.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
+        jPasswordRegisterField.setForeground(new java.awt.Color(91, 98, 89));
+        jPasswordRegisterField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
 
         jPanel4.setBackground(new java.awt.Color(1, 87, 73));
 
@@ -479,17 +479,17 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(1, 60, 58));
         jLabel13.setText("Sign Up");
 
-        jBirthdayField.setBackground(new java.awt.Color(254, 219, 255));
-        jBirthdayField.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
-        jBirthdayField.setForeground(new java.awt.Color(254, 188, 255));
-        jBirthdayField.setText("1990-01-30");
-        jBirthdayField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
-        jBirthdayField.addFocusListener(new java.awt.event.FocusAdapter() {
+        jBirthdayRegisterField.setBackground(new java.awt.Color(254, 219, 255));
+        jBirthdayRegisterField.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
+        jBirthdayRegisterField.setForeground(new java.awt.Color(254, 188, 255));
+        jBirthdayRegisterField.setText("1990-01-30");
+        jBirthdayRegisterField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
+        jBirthdayRegisterField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jBirthdayFieldFocusGained(evt);
+                jBirthdayRegisterFieldFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                jBirthdayFieldFocusLost(evt);
+                jBirthdayRegisterFieldFocusLost(evt);
             }
         });
 
@@ -513,13 +513,13 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel24.setForeground(new java.awt.Color(1, 87, 73));
         jLabel24.setText("Must be at least 6 characters including at least one number ");
 
-        jCheckBox2.setBackground(new java.awt.Color(225, 247, 231));
-        jCheckBox2.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        jCheckBox2.setForeground(new java.awt.Color(1, 66, 59));
-        jCheckBox2.setText("Show password");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        jShowPasswordRegisterCheckBox.setBackground(new java.awt.Color(225, 247, 231));
+        jShowPasswordRegisterCheckBox.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jShowPasswordRegisterCheckBox.setForeground(new java.awt.Color(1, 66, 59));
+        jShowPasswordRegisterCheckBox.setText("Show password");
+        jShowPasswordRegisterCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                jShowPasswordRegisterCheckBoxActionPerformed(evt);
             }
         });
 
@@ -543,15 +543,15 @@ public class MainJFrame extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel44)
                                     .addComponent(jLabel45)
-                                    .addComponent(jCheckBox2)
+                                    .addComponent(jShowPasswordRegisterCheckBox)
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jPasswordRegisterField, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel43, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jUsernameRegisterField, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)
-                                        .addComponent(jBirthdayField, javax.swing.GroupLayout.Alignment.LEADING))))
+                                        .addComponent(jBirthdayRegisterField, javax.swing.GroupLayout.Alignment.LEADING))))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(237, 237, 237)
                                 .addComponent(registerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -567,7 +567,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jUsernameRegisterField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(jLabel45)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -575,15 +575,15 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addComponent(jLabel43)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBirthdayField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBirthdayRegisterField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(jLabel44)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPasswordRegisterField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel24)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox2)
+                .addComponent(jShowPasswordRegisterCheckBox)
                 .addGap(18, 18, 18)
                 .addComponent(registerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -615,14 +615,14 @@ public class MainJFrame extends javax.swing.JFrame {
         ForgotPasswordScreen.setBackground(new java.awt.Color(175, 198, 203));
         ForgotPasswordScreen.setPreferredSize(new java.awt.Dimension(1440, 1024));
 
-        jButton2.setBackground(new java.awt.Color(1, 60, 58));
-        jButton2.setFont(new java.awt.Font("Verdana", 1, 25)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(254, 219, 255));
-        jButton2.setText("Reset password");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 219, 255), 3));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        passwordResetBtn.setBackground(new java.awt.Color(1, 60, 58));
+        passwordResetBtn.setFont(new java.awt.Font("Verdana", 1, 25)); // NOI18N
+        passwordResetBtn.setForeground(new java.awt.Color(254, 219, 255));
+        passwordResetBtn.setText("Reset password");
+        passwordResetBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 219, 255), 3));
+        passwordResetBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                passwordResetBtnActionPerformed(evt);
             }
         });
 
@@ -658,13 +658,13 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel21.setForeground(new java.awt.Color(1, 87, 73));
         jLabel21.setText("Both passwords must match");
 
-        jCheckBox1.setBackground(new java.awt.Color(175, 198, 203));
-        jCheckBox1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        jCheckBox1.setForeground(new java.awt.Color(1, 66, 59));
-        jCheckBox1.setText("Show passwords");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        jShowPasswordForgotPasswordCheckBox.setBackground(new java.awt.Color(175, 198, 203));
+        jShowPasswordForgotPasswordCheckBox.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jShowPasswordForgotPasswordCheckBox.setForeground(new java.awt.Color(1, 66, 59));
+        jShowPasswordForgotPasswordCheckBox.setText("Show passwords");
+        jShowPasswordForgotPasswordCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                jShowPasswordForgotPasswordCheckBoxActionPerformed(evt);
             }
         });
 
@@ -716,11 +716,11 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(jLabel20))
                     .addGroup(ForgotPasswordScreenLayout.createSequentialGroup()
                         .addGap(553, 553, 553)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(passwordResetBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ForgotPasswordScreenLayout.createSequentialGroup()
                         .addGap(338, 338, 338)
                         .addGroup(ForgotPasswordScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jCheckBox1)
+                            .addComponent(jShowPasswordForgotPasswordCheckBox)
                             .addGroup(ForgotPasswordScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel40)
                                 .addComponent(jLabel21)
@@ -759,9 +759,9 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
                 .addGap(29, 29, 29)
-                .addComponent(jCheckBox1)
+                .addComponent(jShowPasswordForgotPasswordCheckBox)
                 .addGap(24, 24, 24)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passwordResetBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(188, 188, 188))
         );
 
@@ -776,29 +776,29 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel31.setForeground(new java.awt.Color(1, 60, 58));
         jLabel31.setText("In the room:");
 
-        GamelobbyPlayer1.setBackground(new java.awt.Color(254, 219, 255));
-        GamelobbyPlayer1.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
-        GamelobbyPlayer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
+        gamelobbyPlayer1.setBackground(new java.awt.Color(254, 219, 255));
+        gamelobbyPlayer1.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
+        gamelobbyPlayer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
 
-        GamelobbyPlayer2.setBackground(new java.awt.Color(254, 219, 255));
-        GamelobbyPlayer2.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
-        GamelobbyPlayer2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
+        gamelobbyPlayer2.setBackground(new java.awt.Color(254, 219, 255));
+        gamelobbyPlayer2.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
+        gamelobbyPlayer2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
 
-        GamelobbyPlayer3.setBackground(new java.awt.Color(254, 219, 255));
-        GamelobbyPlayer3.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
-        GamelobbyPlayer3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
+        gamelobbyPlayer3.setBackground(new java.awt.Color(254, 219, 255));
+        gamelobbyPlayer3.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
+        gamelobbyPlayer3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
 
-        GamelobbyPlayer4.setBackground(new java.awt.Color(254, 219, 255));
-        GamelobbyPlayer4.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
-        GamelobbyPlayer4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
+        gamelobbyPlayer4.setBackground(new java.awt.Color(254, 219, 255));
+        gamelobbyPlayer4.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
+        gamelobbyPlayer4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 7));
 
-        jButtonGamelobbyStart.setBackground(new java.awt.Color(1, 60, 58));
-        jButtonGamelobbyStart.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
-        jButtonGamelobbyStart.setForeground(new java.awt.Color(225, 247, 231));
-        jButtonGamelobbyStart.setText("Start");
-        jButtonGamelobbyStart.addActionListener(new java.awt.event.ActionListener() {
+        gamelobbyStartBtn.setBackground(new java.awt.Color(1, 60, 58));
+        gamelobbyStartBtn.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
+        gamelobbyStartBtn.setForeground(new java.awt.Color(225, 247, 231));
+        gamelobbyStartBtn.setText("Start");
+        gamelobbyStartBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGamelobbyStartActionPerformed(evt);
+                gamelobbyStartBtnActionPerformed(evt);
             }
         });
 
@@ -829,13 +829,13 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addGroup(jPanel14Layout.createSequentialGroup()
                                 .addGap(78, 78, 78)
                                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(GamelobbyPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(GamelobbyPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(GamelobbyPlayer3, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(GamelobbyPlayer4, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(gamelobbyPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(gamelobbyPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(gamelobbyPlayer3, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(gamelobbyPlayer4, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel14Layout.createSequentialGroup()
                                 .addGap(142, 142, 142)
-                                .addComponent(jButtonGamelobbyStart, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(gamelobbyStartBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 87, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -850,15 +850,15 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jButtonExit2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(45, 45, 45)
-                .addComponent(GamelobbyPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(gamelobbyPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(GamelobbyPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(gamelobbyPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(GamelobbyPlayer3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(gamelobbyPlayer3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(GamelobbyPlayer4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(gamelobbyPlayer4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(122, 122, 122)
-                .addComponent(jButtonGamelobbyStart, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(gamelobbyStartBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(372, Short.MAX_VALUE))
         );
 
@@ -880,14 +880,14 @@ public class MainJFrame extends javax.swing.JFrame {
         jPasswordLobbyField.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
         jPasswordLobbyField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(5, 98, 82), 3));
 
-        jButtonGamelobbyStart1.setBackground(new java.awt.Color(144, 178, 185));
-        jButtonGamelobbyStart1.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
-        jButtonGamelobbyStart1.setForeground(new java.awt.Color(1, 69, 58));
-        jButtonGamelobbyStart1.setText("Add");
-        jButtonGamelobbyStart1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 69, 58), 3));
-        jButtonGamelobbyStart1.addActionListener(new java.awt.event.ActionListener() {
+        addPlayerToGameBtn.setBackground(new java.awt.Color(144, 178, 185));
+        addPlayerToGameBtn.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
+        addPlayerToGameBtn.setForeground(new java.awt.Color(1, 69, 58));
+        addPlayerToGameBtn.setText("Add");
+        addPlayerToGameBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 69, 58), 3));
+        addPlayerToGameBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGamelobbyStart1ActionPerformed(evt);
+                addPlayerToGameBtnActionPerformed(evt);
             }
         });
 
@@ -917,7 +917,7 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addComponent(jLabel16)))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(248, 248, 248)
-                        .addComponent(jButtonGamelobbyStart1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(addPlayerToGameBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(2731, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
@@ -936,7 +936,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordLobbyField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(105, 105, 105)
-                .addComponent(jButtonGamelobbyStart1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addPlayerToGameBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(328, Short.MAX_VALUE))
         );
 
@@ -1174,12 +1174,12 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(1, 87, 73), 5, true));
         jPanel8.setForeground(new java.awt.Color(1, 87, 73));
 
-        jButtonStart.setBackground(new java.awt.Color(254, 219, 255));
-        jButtonStart.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jButtonStart.setForeground(new java.awt.Color(1, 87, 73));
-        jButtonStart.setText("Start");
-        jButtonStart.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
-        jButtonStart.addActionListener(new java.awt.event.ActionListener() {
+        startGameBtn.setBackground(new java.awt.Color(254, 219, 255));
+        startGameBtn.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        startGameBtn.setForeground(new java.awt.Color(1, 87, 73));
+        startGameBtn.setText("Start");
+        startGameBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 188, 255), 10));
+        startGameBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 StartPressed(evt);
             }
@@ -1339,7 +1339,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addComponent(jButtonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(startGameBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19))
                     .addComponent(jButtonExit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
@@ -1360,7 +1360,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
-                .addComponent(jButtonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(startGameBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
 
@@ -1826,18 +1826,18 @@ public class MainJFrame extends javax.swing.JFrame {
         EndScreenPlayer3.setForeground(new java.awt.Color(1, 49, 41));
         EndScreenPlayer3.setText("Username");
 
-        jButton3.setBackground(new java.awt.Color(1, 49, 41));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ausloggen (3).png"))); // NOI18N
-        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 49, 41), 3));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        leaveBtn.setBackground(new java.awt.Color(1, 49, 41));
+        leaveBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ausloggen (3).png"))); // NOI18N
+        leaveBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 49, 41), 3));
+        leaveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonExitEndScreen(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(144, 178, 185));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wiederholen (2).png"))); // NOI18N
-        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 49, 41), 3));
+        replayGameBtn.setBackground(new java.awt.Color(144, 178, 185));
+        replayGameBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wiederholen (2).png"))); // NOI18N
+        replayGameBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 49, 41), 3));
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -1848,9 +1848,9 @@ public class MainJFrame extends javax.swing.JFrame {
             .addComponent(EndScreenPlayer3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGap(58, 58, 58)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(leaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(replayGameBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59))
         );
         jPanel16Layout.setVerticalGroup(
@@ -1863,8 +1863,8 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(EndScreenPlayer4, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(leaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(replayGameBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
 
@@ -1942,13 +1942,13 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel24.setBackground(new java.awt.Color(254, 219, 255));
         jPanel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(142, 161, 144), 5));
 
-        jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        jLabel52.setForeground(new java.awt.Color(254, 117, 228));
-        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel52.setText("<");
-        jLabel52.addMouseListener(new java.awt.event.MouseAdapter() {
+        backLeaderboardBtn.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        backLeaderboardBtn.setForeground(new java.awt.Color(254, 117, 228));
+        backLeaderboardBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        backLeaderboardBtn.setText("<");
+        backLeaderboardBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel52MouseClicked(evt);
+                backLeaderboardBtnMouseClicked(evt);
             }
         });
 
@@ -2052,7 +2052,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(backLeaderboardBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -2081,7 +2081,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel53)
-                    .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(backLeaderboardBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel24Layout.createSequentialGroup()
@@ -2373,19 +2373,19 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGap(258, 258, 258)))
         );
 
-        jLabel17.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(252, 121, 255));
-        jLabel17.setText("Next >");
-        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+        tutForwardBtn1.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
+        tutForwardBtn1.setForeground(new java.awt.Color(252, 121, 255));
+        tutForwardBtn1.setText("Next >");
+        tutForwardBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelNextTut0MC(evt);
             }
         });
 
-        jLabel18.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(252, 121, 255));
-        jLabel18.setText("< Exit");
-        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+        tutExitBtn.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
+        tutExitBtn.setForeground(new java.awt.Color(252, 121, 255));
+        tutExitBtn.setText("< Exit");
+        tutExitBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelExitTutMC(evt);
             }
@@ -2409,9 +2409,9 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(TutorialScreenLayout.createSequentialGroup()
                         .addGap(225, 225, 225)
-                        .addComponent(jLabel18)
+                        .addComponent(tutExitBtn)
                         .addGap(942, 942, 942)
-                        .addComponent(jLabel17)))
+                        .addComponent(tutForwardBtn1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         TutorialScreenLayout.setVerticalGroup(
@@ -2419,8 +2419,8 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(TutorialScreenLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(TutorialScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel17))
+                    .addComponent(tutExitBtn)
+                    .addComponent(tutForwardBtn1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(TutorialScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2495,19 +2495,19 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap(164, Short.MAX_VALUE))
         );
 
-        jLabel62.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
-        jLabel62.setForeground(new java.awt.Color(252, 121, 255));
-        jLabel62.setText("Next >");
-        jLabel62.addMouseListener(new java.awt.event.MouseAdapter() {
+        tutForwardBtn2.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
+        tutForwardBtn2.setForeground(new java.awt.Color(252, 121, 255));
+        tutForwardBtn2.setText("Next >");
+        tutForwardBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelNextTut1MC(evt);
             }
         });
 
-        jLabel63.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
-        jLabel63.setForeground(new java.awt.Color(252, 121, 255));
-        jLabel63.setText("< Back");
-        jLabel63.addMouseListener(new java.awt.event.MouseAdapter() {
+        tutBackBtn1.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
+        tutBackBtn1.setForeground(new java.awt.Color(252, 121, 255));
+        tutBackBtn1.setText("< Back");
+        tutBackBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelBackTut1MC(evt);
             }
@@ -2531,9 +2531,9 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(TutorialScreen1Layout.createSequentialGroup()
                         .addGap(225, 225, 225)
-                        .addComponent(jLabel63)
+                        .addComponent(tutBackBtn1)
                         .addGap(942, 942, 942)
-                        .addComponent(jLabel62)))
+                        .addComponent(tutForwardBtn2)))
                 .addGap(2469, 2469, 2469))
         );
         TutorialScreen1Layout.setVerticalGroup(
@@ -2541,8 +2541,8 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(TutorialScreen1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(TutorialScreen1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel63)
-                    .addComponent(jLabel62))
+                    .addComponent(tutBackBtn1)
+                    .addComponent(tutForwardBtn2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(TutorialScreen1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2622,19 +2622,19 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addContainerGap(518, Short.MAX_VALUE)))
         );
 
-        jLabel70.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
-        jLabel70.setForeground(new java.awt.Color(252, 121, 255));
-        jLabel70.setText("Next >");
-        jLabel70.addMouseListener(new java.awt.event.MouseAdapter() {
+        tutForwardBtn3.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
+        tutForwardBtn3.setForeground(new java.awt.Color(252, 121, 255));
+        tutForwardBtn3.setText("Next >");
+        tutForwardBtn3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelNextTut2MC(evt);
             }
         });
 
-        jLabel71.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
-        jLabel71.setForeground(new java.awt.Color(252, 121, 255));
-        jLabel71.setText("< Back");
-        jLabel71.addMouseListener(new java.awt.event.MouseAdapter() {
+        tutBackBtn2.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
+        tutBackBtn2.setForeground(new java.awt.Color(252, 121, 255));
+        tutBackBtn2.setText("< Back");
+        tutBackBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelBackTut2MC(evt);
             }
@@ -2658,9 +2658,9 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(TutorialScreen2Layout.createSequentialGroup()
                         .addGap(225, 225, 225)
-                        .addComponent(jLabel71)
+                        .addComponent(tutBackBtn2)
                         .addGap(942, 942, 942)
-                        .addComponent(jLabel70)))
+                        .addComponent(tutForwardBtn3)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         TutorialScreen2Layout.setVerticalGroup(
@@ -2668,8 +2668,8 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(TutorialScreen2Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(TutorialScreen2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel71)
-                    .addComponent(jLabel70))
+                    .addComponent(tutBackBtn2)
+                    .addComponent(tutForwardBtn3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(TutorialScreen2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel66, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2724,10 +2724,10 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap(193, Short.MAX_VALUE))
         );
 
-        jLabel79.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
-        jLabel79.setForeground(new java.awt.Color(252, 121, 255));
-        jLabel79.setText("< Back");
-        jLabel79.addMouseListener(new java.awt.event.MouseAdapter() {
+        tutBackBtn3.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
+        tutBackBtn3.setForeground(new java.awt.Color(252, 121, 255));
+        tutBackBtn3.setText("< Back");
+        tutBackBtn3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelBackTut3(evt);
             }
@@ -2751,14 +2751,14 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(TutorialScreen3Layout.createSequentialGroup()
                         .addGap(225, 225, 225)
-                        .addComponent(jLabel79)))
+                        .addComponent(tutBackBtn3)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         TutorialScreen3Layout.setVerticalGroup(
             TutorialScreen3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TutorialScreen3Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jLabel79)
+                .addComponent(tutBackBtn3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(TutorialScreen3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel74, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2789,18 +2789,28 @@ public class MainJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    private int frankfurt, mumbai, paris, nairobi, bali, lisabon, newyork, tokyo, oslo, milan, cairo, athens, hanoi, rio;
-    private int diceColor=-1;                   //stores the color that has been rolled 0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink, 5 is joker
-    private int countCoveredCities=-1;          //counts how many cities have been covered. When all have been covered once
-    private boolean cityBPressable=false;          //protects that there is only input from the bottom cities if allowed
-    private boolean cityPressable = false;         //protects that there is only input from the top cities if allowed
-    private int prevcolor = -1;                     //saves the previous color so if joker is active you cant pick the previous color
-    private int playercount = 1;                //used to keep track which players turn 
     
-    private void SetColor(int color, JButton button) { //function is called if you want to change the color of the top city buttons
-        if(color==0) {                           //0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink
+    private int frankfurt, mumbai, paris, nairobi, bali, lisabon, newyork, tokyo, oslo, milan, cairo, athens, hanoi, rio;
+    //stores the color that has been rolled 0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink, 5 is joker
+    private int diceColor=-1;                  
+     //counts how many cities have been covered. When all have been covered once
+    private int countCoveredCities=-1;         
+     //protects that there is only input from the bottom cities if allowed
+    private boolean cityBPressable=false;         
+     //protects that there is only input from the top cities if allowed
+    private boolean cityPressable = false;        
+    //saves the previous color so if joker is active you cant pick the previous color
+    private int prevcolor = -1;                 
+    //used to keep track which players turn    
+    private int playercount = 1;                 
+    
+    //function is called if you want to change the color of the top city buttons
+    private void SetColor(int color, JButton button) { 
+         //0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink
+        if(color==0) {                          
             button.setBackground(Color.red);
-            button.setText("");     // i had to remove the city name because it was even visible with the identical color
+            // i had to remove the city name because it was even visible with the identical color
+            button.setText("");     
         }else if(color==1){
             button.setBackground(Color.green);
             button.setText("");
@@ -2816,7 +2826,8 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }
     
-    private void SetPanel(int state) {           // top gate panels get their border enlightened with this function
+    // top gate panels get their border enlightened with this function
+    private void SetPanel(int state) {           
         if(state==0) {
             jPanelRedBorder.setBorder(BorderFactory.createLineBorder(Color.RED,10));
             jPanelGreenBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
@@ -2913,25 +2924,39 @@ public class MainJFrame extends javax.swing.JFrame {
     }
     
     private int CityPressed(JButton button,int city) {
-        if(countCoveredCities<5&&city==10) {  //if the game is in the beginning state(choosing which city is which color) AND the city was not chosen already
-            SetColor(countCoveredCities,button); //sets the button this color
+        // if the game is in the beginning state(choosing which city is which color) AND the city was not chosen already
+        if(countCoveredCities<5&&city==10) {  
+            // sets the button this color
+            SetColor(countCoveredCities,button); 
             prevcolor = countCoveredCities;
-            countCoveredCities++;                //color value++
-            SetPanel(countCoveredCities);        //panel with the next color is on
+             // color value++
+            countCoveredCities++;               
+             // panel with the next color is on
+            SetPanel(countCoveredCities);       
             if(countCoveredCities==5) {
-                jButtonStart.setText("Dice!"); //after all cities covered the command is to dice
+                // after all cities covered the command is to dice
+                startGameBtn.setText("Dice!"); 
             }
-            return countCoveredCities-1; //the city gets the value of the previous color returned
-        }else if(countCoveredCities>=5&&cityPressable&&city==10) {       //if the game is in the dice state and we found a city under that color we can chose the next city
-            SetColor(diceColor,button);      //the color is set
-            jButtonStart.setText("Perfect! Dice!");  //new city is covered now dice again
-            cityPressable=false;                //now picking another city to this color is disabled
-            if(countCoveredCities<14) {                   //if the state is lower than 14 the dice is enabled because more than 5 cities are left so you can roll the next color
+            // the city gets the value of the previous color returned
+            return countCoveredCities-1; 
+             // if the game is in the dice state and we found a city under that color we can chose the next city
+        }else if(countCoveredCities>=5&&cityPressable&&city==10) { 
+            // the color is set
+            SetColor(diceColor,button);     
+            // new city is covered now dice again
+            startGameBtn.setText("Perfect! Dice!");
+            // now picking another city to this color is disabled
+            cityPressable=false;                
+             // if the state is lower than 14 the dice is enabled because more than 5 cities are left so you can roll the next color
+            if(countCoveredCities<14) {                  
                 jButtonDice.setEnabled(true);
                 jButtonDice.setBackground(Color.white);
-                setActivePlayer(playercount);   //after picking its the next players turn
-            }else if(countCoveredCities==14) {                //here is the end of the game, so the database has to get the points and pull them
-                jButtonStart.setText("Game finished, Score is saved!");  //game over
+                // after picking its the next players turn
+                setActivePlayer(playercount);   
+                // here is the end of the game, so the database has to get the points and pull them
+            }else if(countCoveredCities==14) {                
+                // game over
+                startGameBtn.setText("Game finished, Score is saved!");  
                 JLabel[] score = {jLabelPointsOne, jLabelPointsTwo, jLabelPointsThree, jLabelPointsFour};
                 boolean updatedUserScore;
                 for(int i = 0; i < userArray.size(); i++) {
@@ -2952,19 +2977,20 @@ public class MainJFrame extends javax.swing.JFrame {
             diceColor=city; 
             SetPanel(city);
             cityBPressable=true;
-            jButtonStart.setText("Pick city under this color!");
+            startGameBtn.setText("Pick city under this color!");
             return city;
         }else if(diceColor==5&&city==prevcolor) {
-            jButtonStart.setText("Unfair!City was latest covered!");
+            startGameBtn.setText("Unfair!City was latest covered!");
             return city;
         };
-        return 11;//does not occur at any state (if detected we can debug)
+        //does not occur at any state (if detected we can debug)
+        return 11;
     }
     
     
     private void RioPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RioPressed
-        // TODO add your handling code here:
-        if(cityPressable||countCoveredCities<5||diceColor==5) {      //pickcolor means top buttons are clickable       
+        //pickcolor means top buttons are clickable
+        if(cityPressable||countCoveredCities<5||diceColor==5) {             
             rio = CityPressed(jButtonRio, rio);
         }
     }//GEN-LAST:event_RioPressed
@@ -2972,25 +2998,22 @@ public class MainJFrame extends javax.swing.JFrame {
     
     
     private void MumbaiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MumbaiPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             mumbai = CityPressed(jButtonMumbai, mumbai);
         }
     }//GEN-LAST:event_MumbaiPressed
 
     private void FrankfurtPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FrankfurtPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             frankfurt = CityPressed(jButtonFrankfurt, frankfurt);
         }
     }//GEN-LAST:event_FrankfurtPressed
 
     private void StartPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartPressed
-        // TODO add your handling code here:
-        jButtonStart.setEnabled(false);
+        startGameBtn.setEnabled(false);
         jPanelRedBorder.setBorder(BorderFactory.createLineBorder(Color.RED,10));
         jLabelPointsOne.setForeground(Color.red);
-        jButtonStart.setText("Cover 5 cities!");
+        startGameBtn.setText("Cover 5 cities!");
         countCoveredCities=0;
         mumbai=10;
         frankfurt=10;
@@ -3012,77 +3035,66 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_StartPressed
 
     private void NewyorkPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewyorkPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             newyork = CityPressed(jButtonNewyork, newyork);
         }
     }//GEN-LAST:event_NewyorkPressed
 
     private void OsloPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OsloPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             oslo = CityPressed(jButtonOslo, oslo);
         }
     }//GEN-LAST:event_OsloPressed
 
     private void HanoiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HanoiPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             hanoi = CityPressed(jButtonHanoi, hanoi);
         }
     }//GEN-LAST:event_HanoiPressed
 
     private void BaliPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaliPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             bali = CityPressed(jButtonBali, bali);
         }
     }//GEN-LAST:event_BaliPressed
 
     private void NairobiPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NairobiPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             nairobi = CityPressed(jButtonNairobi, nairobi);
         }
     }//GEN-LAST:event_NairobiPressed
 
     private void LisabonPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LisabonPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             lisabon = CityPressed(jButtonLisabon, lisabon);
         }
     }//GEN-LAST:event_LisabonPressed
  
     private void CairoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CairoPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             cairo = CityPressed(jButtonCairo, cairo);
         }
     }//GEN-LAST:event_CairoPressed
 
     private void MilanPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MilanPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             milan = CityPressed(jButtonMilan, milan);
         }
     }//GEN-LAST:event_MilanPressed
 
     private void AthensPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AthensPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             athens = CityPressed(jButtonAthens, athens);
         }
     }//GEN-LAST:event_AthensPressed
 
     private void TokyoPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TokyoPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             tokyo = CityPressed(jButtonTokyo,tokyo);
         }
     }//GEN-LAST:event_TokyoPressed
 
     private void ParisPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParisPressed
-        // TODO add your handling code here:
         if(cityPressable||countCoveredCities<5||diceColor==5) {
             paris = CityPressed(jButtonParis, paris);
         }
@@ -3090,7 +3102,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void setPoints(int number) {
         if(number==1) {
-            jLabelPointsOne.setText(Integer.toString(Integer.parseInt(jLabelPointsOne.getText())+1)); //sets score +1  
+            //sets score +1
+            jLabelPointsOne.setText(Integer.toString(Integer.parseInt(jLabelPointsOne.getText())+1));   
         }else if(number ==2) {
             jLabelPointsTwo.setText(Integer.toString(Integer.parseInt(jLabelPointsTwo.getText())+1));
             
@@ -3150,31 +3163,41 @@ public class MainJFrame extends javax.swing.JFrame {
         
     }
     
-    private void CityBPressed(JButton button, int city) {                    //function gets the value of the city and NOT the B city but the city
-        if(countCoveredCities>=5 && diceColor==city&&button.isEnabled()&&cityBPressable) {   //if game state is dice and color is citycolor and the city is available and its okay to chose
-            button.setEnabled(false);                               //the button is disabled because you chose the right city
+     // function gets the value of the city and NOT the B city but the city
+    private void CityBPressed(JButton button, int city) {      
+        // if game state is dice and color is citycolor and the city is available and its okay to chose
+        if(countCoveredCities>=5 && diceColor==city&&button.isEnabled()&&cityBPressable) {
+            // the button is disabled because you chose the right city
+            button.setEnabled(false);                               
             button.setBackground(Color.white);
-            countCoveredCities++;                                                //game state ++ 
+            // game state ++
+            countCoveredCities++;                                                 
             setPoints(playercount);
-            cityPressable=true;                                         //now you can choose the next city for that color
-            jButtonStart.setText("Right! Cover a new city!");
+            // now you can choose the next city for that color
+            cityPressable=true;                                         
+            startGameBtn.setText("Right! Cover a new city!");
         }
-        cityBPressable=false;                                                 //secures that you cant choose another Bcity
-        if(countCoveredCities<14&&!cityPressable&&diceColor!=5) {                                   //if the game has not ended and you can not chose the next city the dice is enabled again
+        // secures that you cant choose another Bcity
+        cityBPressable=false;   
+        // if the game has not ended and you can not chose the next city the dice is enabled again
+        if(countCoveredCities<14&&!cityPressable&&diceColor!=5) {                                  
             jButtonDice.setEnabled(true);
             jButtonDice.setBackground(Color.white);
             setActivePlayer(playercount);
-            jButtonStart.setText("Wrong! Dice!");
+            startGameBtn.setText("Wrong! Dice!");
         }
     }
+    
+    // login a user
     private void LoginPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginPressed
-        // TODO add your handling code here:
         String username = jUsernameField.getText();
         String password = jPasswordField.getText();
          
+        // login method
         boolean isLoggedIn = auth.loginUser(username, password);
         
         if(isLoggedIn) {
+            // adds the user to the userarray
             if(!userArray.contains(username)) {
                 userArray.add(username);
                 
@@ -3186,80 +3209,80 @@ public class MainJFrame extends javax.swing.JFrame {
             MainPanel.repaint();
             MainPanel.revalidate();
             
-            GamelobbyPlayer1.setText(username);
+            // display the username in gamelobby screen
+            gamelobbyPlayer1.setText(username);
         }else {
              JOptionPane.showMessageDialog(null, "Login failed");
              jUsernameField.setText("");
              jPasswordField.setText("");
         }
         
-        GamelobbyPlayer1.setEditable(false);
-        GamelobbyPlayer2.setEditable(false);
-        GamelobbyPlayer3.setEditable(false);
-        GamelobbyPlayer4.setEditable(false);
+        // set all input fields in gamelobbyscreen to ineditable
+        gamelobbyPlayer1.setEditable(false);
+        gamelobbyPlayer2.setEditable(false);
+        gamelobbyPlayer3.setEditable(false);
+        gamelobbyPlayer4.setEditable(false);
         
     }//GEN-LAST:event_LoginPressed
 
-    private void ResetCityWhite(JButton button, String name) {  //some cities are blue and others white
+    //some cities are blue and others white
+    private void ResetCityWhite(JButton button, String name) {  
         button.setBackground(new Color(242,245,244));
         button.setEnabled(true);
-        button.setText(name);       //city name is written
+        //city name is written
+        button.setText(name);       
     }
     
     private void ResetCityBlue(JButton button, String name) {
         button.setBackground(new Color(208,234,242));
         button.setEnabled(true);
-        button.setText(name);       //city name is written
+        //city name is written
+        button.setText(name);      
     }
     
     private void ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitPressed
-        // TODO add your handling code here:
         resetGame();
     }//GEN-LAST:event_ExitPressed
 
-    private void jLabelForgotPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelForgotPasswordMouseClicked
-        // TODO add your handling code here:
+    private void jforgotPassworBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jforgotPassworBtnMouseClicked
         MainPanel.removeAll();
         MainPanel.add(ForgotPasswordScreen);
         MainPanel.repaint();
         MainPanel.revalidate();
-    }//GEN-LAST:event_jLabelForgotPasswordMouseClicked
+    }//GEN-LAST:event_jforgotPassworBtnMouseClicked
 
+    // register function to register a new User
     private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
-        // TODO add your handling code here:
-        String username = jTextField1.getText();
+        String username = jUsernameRegisterField.getText();
         String email = jTextField2.getText();
-        String password = jPasswordField1.getText();
-        Date birthday = Date.valueOf(jBirthdayField.getText());
+        String password = jPasswordRegisterField.getText();
+        Date birthday = Date.valueOf(jBirthdayRegisterField.getText());
         
+        // register method
         boolean isRegistered = auth.registerUser(username, email, password, birthday);
         
         if(isRegistered) {
           JOptionPane.showMessageDialog(null, "Sign Up successful");
-          jTextField1.setText("");
+          jUsernameRegisterField.setText("");
           jTextField2.setText("");
-          jPasswordField1.setText("");  
-          jBirthdayField.setText("");
+          jPasswordRegisterField.setText("");  
+          jBirthdayRegisterField.setText("");
         }  
     }//GEN-LAST:event_registerBtnActionPerformed
 
     private void AthensBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AthensBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonAthens, athens);
     }//GEN-LAST:event_AthensBPressed
 
     private void LisabonBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LisabonBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonLisabon, lisabon);
     }//GEN-LAST:event_LisabonBPressed
 
     private void MumbaiBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MumbaiBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonMumbai, mumbai);
     }//GEN-LAST:event_MumbaiBPressed
 
     private void CairoBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CairoBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonCairo, cairo);
     }//GEN-LAST:event_CairoBPressed
 
@@ -3268,86 +3291,79 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_RioBPressed
 
     private void NewyorkBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewyorkBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonNewyork, newyork);
     }//GEN-LAST:event_NewyorkBPressed
 
     private void TokyoBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TokyoBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonTokyo, tokyo);
     }//GEN-LAST:event_TokyoBPressed
 
     private void BaliBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaliBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonBali, bali);
     }//GEN-LAST:event_BaliBPressed
 
     private void ParisBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParisBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonParis, paris);
     }//GEN-LAST:event_ParisBPressed
 
     private void HanoiBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HanoiBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonHanoi, hanoi);
     }//GEN-LAST:event_HanoiBPressed
 
     private void OsloBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OsloBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonOslo, oslo);
     }//GEN-LAST:event_OsloBPressed
 
     private void NairobiBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NairobiBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonNairobi, nairobi);
     }//GEN-LAST:event_NairobiBPressed
 
     private void MilanBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MilanBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonMilan, milan);
     }//GEN-LAST:event_MilanBPressed
 
     private void FrankfurtBPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FrankfurtBPressed
-        // TODO add your handling code here:
         CityBPressed(jButtonFrankfurt, frankfurt);
     }//GEN-LAST:event_FrankfurtBPressed
 
+    // random dice roll
     private void DiceRoll(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiceRoll
-        // TODO add your handling code here:
         if(countCoveredCities>=5) {
             Random random = new Random();
             diceColor = random.nextInt(6);
             if(diceColor==5) {
                 jButtonDice.setBackground(Color.black);
-                jButtonStart.setText("Joker! Pick covered city to guess!");
+                startGameBtn.setText("Joker! Pick covered city to guess!");
             }else {
                 cityBPressable=true;
-                jButtonStart.setText("Pick city under this color!");
+                startGameBtn.setText("Pick city under this color!");
             }
             SetPanel(diceColor);
             jButtonDice.setEnabled(false);
         }
     }//GEN-LAST:event_DiceRoll
-
-    private void jButtonGamelobbyStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGamelobbyStartActionPerformed
+    
+    private void gamelobbyStartBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gamelobbyStartBtnActionPerformed
         MainPanel.removeAll();
         MainPanel.add(GameScreen);
         MainPanel.repaint();
         MainPanel.revalidate();
 
-        
+        // display all users in game 
         JLabel[] userTextFields = {jLabelPlayerOne, jLabelPlayerTwo, jLabelPlayerThree, jLabelPlayerFour};
         for(int i = 0; i < userArray.size() && i < userTextFields.length; i++) {
             userTextFields[i].setText(userArray.get(i));
         }
-    }//GEN-LAST:event_jButtonGamelobbyStartActionPerformed
+    }//GEN-LAST:event_gamelobbyStartBtnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+    // password reset function
+    private void passwordResetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordResetBtnActionPerformed
         String username = jTextField3.getText();
         
+        // checks if first typed in password is equal to second typed in password
         if(jPasswordField2.getText() == null ? jPasswordField3.getText() == null : jPasswordField2.getText().equals(jPasswordField3.getText())) {
             String newPassword = jPasswordField2.getText();
+            //password reset method
             boolean isReset = auth.resetPassword(username, newPassword);
         
             if(isReset) {
@@ -3363,27 +3379,30 @@ public class MainJFrame extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(null, "Password don't match!");
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_passwordResetBtnActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-        if(jCheckBox1.isSelected()) {
+    // showing password input function
+    private void jShowPasswordForgotPasswordCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jShowPasswordForgotPasswordCheckBoxActionPerformed
+        if(jShowPasswordForgotPasswordCheckBox.isSelected()) {
             jPasswordField2.setEchoChar((char)0);
             jPasswordField3.setEchoChar((char)0);
         } else {
             jPasswordField2.setEchoChar('\u2022');
             jPasswordField3.setEchoChar('\u2022');
         }
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_jShowPasswordForgotPasswordCheckBoxActionPerformed
 
-    private void jButtonGamelobbyStart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGamelobbyStart1ActionPerformed
-        // TODO add your handling code here:
+    // In Gamelobby Screen add another Player to Game by login in
+    // Dynamic Sorting for all players so oldest Player starts (on top)
+    private void addPlayerToGameBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlayerToGameBtnActionPerformed
         String username = jUsernameLobbyField.getText();
         String password = jPasswordLobbyField.getText();
          
+        // login user
         boolean isLoggedIn = auth.loginUser(username, password);
         
         if(isLoggedIn) {
+            // sorting the User and prepare Array for the Game
             if(!userArray.contains(username)) {
                 Date userDate = user.getAgeFromUser(username);
             
@@ -3396,10 +3415,12 @@ public class MainJFrame extends javax.swing.JFrame {
             
                 tempUserList.add(new AbstractMap.SimpleEntry<>(username, userDate));
             
+                // Compares Entry from AbstractMap (Age+Username with others)
                 tempUserList.sort(Comparator.comparing(SimpleEntry::getValue));
             
                 userArray.clear();
             
+                // adds sorted Usernames to array for Game
                 for (var entry : tempUserList) {
                     userArray.add(entry.getKey());
                 }
@@ -3416,7 +3437,8 @@ public class MainJFrame extends javax.swing.JFrame {
             jUsernameLobbyField.setText("");
             jPasswordLobbyField.setText("");
             
-            JTextField[] userTextFields = {GamelobbyPlayer1, GamelobbyPlayer2, GamelobbyPlayer3, GamelobbyPlayer4};
+            // display players
+            JTextField[] userTextFields = {gamelobbyPlayer1, gamelobbyPlayer2, gamelobbyPlayer3, gamelobbyPlayer4};
             for(int i = 0; i < userArray.size() && i < userTextFields.length; i++) {
                 userTextFields[i].setText(userArray.get(i));
             } 
@@ -3425,10 +3447,9 @@ public class MainJFrame extends javax.swing.JFrame {
              jUsernameField.setText("");
              jPasswordField.setText("");
         }
-    }//GEN-LAST:event_jButtonGamelobbyStart1ActionPerformed
+    }//GEN-LAST:event_addPlayerToGameBtnActionPerformed
 
     private void jButtonExit2ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExit2ExitPressed
-        // TODO add your handling code here:
         MainPanel.removeAll();
         MainPanel.add(TutorialScreen);
         MainPanel.repaint();
@@ -3436,7 +3457,6 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonExit2ExitPressed
 
     private void jLabelBackTut3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTut3
-        // TODO add your handling code here:
         MainPanel.removeAll();
         MainPanel.add(TutorialScreen2);
         MainPanel.repaint();
@@ -3444,7 +3464,6 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelBackTut3
 
     private void jLabelNextTut2MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextTut2MC
-        // TODO add your handling code here:
         MainPanel.removeAll();
         MainPanel.add(TutorialScreen3);
         MainPanel.repaint();
@@ -3452,7 +3471,6 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelNextTut2MC
 
     private void jLabelBackTut2MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTut2MC
-        // TODO add your handling code here:
         MainPanel.removeAll();
         MainPanel.add(TutorialScreen1);
         MainPanel.repaint();
@@ -3460,7 +3478,6 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelBackTut2MC
 
     private void jLabelBackTut1MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTut1MC
-        // TODO add your handling code here:
         MainPanel.removeAll();
         MainPanel.add(TutorialScreen);
         MainPanel.repaint();
@@ -3468,15 +3485,13 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelBackTut1MC
 
     private void jLabelExitTutMC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelExitTutMC
-        // TODO add your handling code here:
         MainPanel.removeAll();
-        MainPanel.add(GameScreen);
+        MainPanel.add(GamelobbyScreen);
         MainPanel.repaint();
         MainPanel.revalidate();
     }//GEN-LAST:event_jLabelExitTutMC
 
     private void jLabelNextTut0MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextTut0MC
-        // TODO add your handling code here:
         MainPanel.removeAll();
         MainPanel.add(TutorialScreen1);
         MainPanel.repaint();
@@ -3484,16 +3499,14 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelNextTut0MC
 
     private void jLabelNextTut1MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextTut1MC
-        // TODO add your handling code here:
         MainPanel.removeAll();
         MainPanel.add(TutorialScreen2);
         MainPanel.repaint();
         MainPanel.revalidate();
     }//GEN-LAST:event_jLabelNextTut1MC
 
+    // Opens Leaderboard View and sorts the User with the Highest Score DESC
     private void leaderButtonPressedLoginPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leaderButtonPressedLoginPressed
-        // TODO add your handling code here:
-        
         List<Map<String, Object>> userScores = leaderBoard.retrieveUsersScore();
         int i = 0;
         JLabel[] labelUsername = {jLeaderboardUsername1, 
@@ -3512,6 +3525,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                jLeaderboardScore6,
                                jLeaderboardScore7};
         
+        // Displaying the sorted HashMap
         for(Map<String, Object> userScore : userScores) {
             if(i < 7){
                 labelUsername[i].setText((String) userScore.get("username"));
@@ -3522,19 +3536,19 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         }
         
+        // Change PanelView
         MainPanel.removeAll();
         MainPanel.add(LeaderBoard);
         MainPanel.repaint();
         MainPanel.revalidate();
     }//GEN-LAST:event_leaderButtonPressedLoginPressed
 
-    private void jLabel52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel52MouseClicked
-        // TODO add your handling code here:
+    private void backLeaderboardBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLeaderboardBtnMouseClicked
         MainPanel.removeAll();
         MainPanel.add(LoginScreen);
         MainPanel.repaint();
         MainPanel.revalidate();
-    }//GEN-LAST:event_jLabel52MouseClicked
+    }//GEN-LAST:event_backLeaderboardBtnMouseClicked
 
     private void resetGame() {
         MainPanel.removeAll();
@@ -3542,9 +3556,10 @@ public class MainJFrame extends javax.swing.JFrame {
         MainPanel.repaint();
         MainPanel.revalidate();
         //set the game into the beginning state
-        jButtonStart.setEnabled(true);
-        jButtonStart.setVisible(true);
-        jButtonStart.setText("Start"); //sets the start button as start again
+        startGameBtn.setEnabled(true);
+        startGameBtn.setVisible(true);
+        //sets the start button as start again
+        startGameBtn.setText("Start");
         diceColor=-1;
         countCoveredCities=-1;
         cityBPressable=false;
@@ -3587,10 +3602,10 @@ public class MainJFrame extends javax.swing.JFrame {
         jButtonDice.setBackground(new Color(254,219,255));
         jUsernameField.setText("");
         jPasswordField.setText("");
-        GamelobbyPlayer1.setText("");
-        GamelobbyPlayer2.setText("");
-        GamelobbyPlayer3.setText("");
-        GamelobbyPlayer4.setText("");
+        gamelobbyPlayer1.setText("");
+        gamelobbyPlayer2.setText("");
+        gamelobbyPlayer3.setText("");
+        gamelobbyPlayer4.setText("");
         jLabelPlayerOne.setText("");
         jLabelPointsOne.setText("0");
         jLabelPlayerTwo.setText("");
@@ -3602,10 +3617,10 @@ public class MainJFrame extends javax.swing.JFrame {
     }
     
     private void jButtonExitEndScreen(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitEndScreen
-        // TODO add your handling code here:
         resetGame();
     }//GEN-LAST:event_jButtonExitEndScreen
 
+    /* Handeling Input Styles */
     private void jTextField2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField2FocusGained
         // Integrating placeholders - removing
         if(jTextField2.getText().equals("email@example.com")) {
@@ -3616,41 +3631,37 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void jTextField2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField2FocusLost
         // Integrating placeholders - adding
-         if(jTextField2.getText().equals("email@example.com") || jTextField2.getText().isEmpty()) {
+        if(jTextField2.getText().equals("email@example.com") || jTextField2.getText().isEmpty()) {
             jTextField2.setText("email@example.com");
             jTextField2.setForeground(new Color(254,188,255));
         } 
     }//GEN-LAST:event_jTextField2FocusLost
 
-    private void jBirthdayFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jBirthdayFieldFocusGained
-        // TODO add your handling code here:
-           if(jBirthdayField.getText().equals("1990-01-30")) {
-            jBirthdayField.setText("");
-            jBirthdayField.setForeground(new Color(91,98,89));
+    private void jBirthdayRegisterFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jBirthdayRegisterFieldFocusGained
+        if(jBirthdayRegisterField.getText().equals("1990-01-30")) {
+            jBirthdayRegisterField.setText("");
+            jBirthdayRegisterField.setForeground(new Color(91,98,89));
         } 
-    }//GEN-LAST:event_jBirthdayFieldFocusGained
+    }//GEN-LAST:event_jBirthdayRegisterFieldFocusGained
 
-    private void jBirthdayFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jBirthdayFieldFocusLost
-        // TODO add your handling code here:
-            if(jBirthdayField.getText().equals("1990-01-30")|| jBirthdayField.getText().isEmpty()) {
-            jBirthdayField.setText("1990-01-30");
-            jBirthdayField.setForeground(new Color(254,188,255));
+    private void jBirthdayRegisterFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jBirthdayRegisterFieldFocusLost
+        if(jBirthdayRegisterField.getText().equals("1990-01-30")|| jBirthdayRegisterField.getText().isEmpty()) {
+            jBirthdayRegisterField.setText("1990-01-30");
+            jBirthdayRegisterField.setForeground(new Color(254,188,255));
         } 
-    }//GEN-LAST:event_jBirthdayFieldFocusLost
+    }//GEN-LAST:event_jBirthdayRegisterFieldFocusLost
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-        if(jCheckBox2.isSelected()) {
-            jPasswordField1.setEchoChar((char)0);
+    private void jShowPasswordRegisterCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jShowPasswordRegisterCheckBoxActionPerformed
+        if(jShowPasswordRegisterCheckBox.isSelected()) {
+            jPasswordRegisterField.setEchoChar((char)0);
         }else {
-            jPasswordField1.setEchoChar('\u2022');
+            jPasswordRegisterField.setEchoChar('\u2022');
            
         } 
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_jShowPasswordRegisterCheckBoxActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-        // TODO add your handling code here:
-         if(jCheckBox3.isSelected()) {
+        if(jCheckBox3.isSelected()) {
             jPasswordField.setEchoChar((char)0); 
         }else {
             jPasswordField.setEchoChar('\u2022');
@@ -3658,7 +3669,6 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jTextField3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField3FocusGained
-        // TODO add your handling code here:
         if(jTextField3.getText().equals("Username")) {
             jTextField3.setText("");
             jTextField3.setForeground(new Color(91,98,89));
@@ -3666,7 +3676,6 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3FocusGained
 
     private void jTextField3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField3FocusLost
-        // TODO add your handling code here:
         if(jTextField3.getText().equals("Username") ||jTextField3.getText().isEmpty()) {
             jTextField3.setText("Username");
             jTextField3.setForeground(new Color(254,188,255));
@@ -3674,13 +3683,13 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3FocusLost
 
     private void backBtnForgotPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBtnForgotPasswordMouseClicked
-        // TODO add your handling code here
         MainPanel.removeAll();
         MainPanel.add(LoginScreen);
         MainPanel.repaint();
         MainPanel.revalidate();
     }//GEN-LAST:event_backBtnForgotPasswordMouseClicked
 
+     // Aallow to play Music in infinite loop
      public static void playLoop(String filePath) {
         try {
             File audioFile = new File(filePath);
@@ -3699,8 +3708,6 @@ public class MainJFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-             //</editor-fold>
-             
         String wavFilePath = "src/main/java/nanuv01/audio/ChillSound1.wav";
         playLoop(wavFilePath);
         
@@ -3732,10 +3739,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel EndScreenScore4;
     private javax.swing.JPanel ForgotPasswordScreen;
     private javax.swing.JPanel GameScreen;
-    private javax.swing.JTextField GamelobbyPlayer1;
-    private javax.swing.JTextField GamelobbyPlayer2;
-    private javax.swing.JTextField GamelobbyPlayer3;
-    private javax.swing.JTextField GamelobbyPlayer4;
     private javax.swing.JPanel GamelobbyScreen;
     private javax.swing.JPanel LeaderBoard;
     private javax.swing.JPanel LoginScreen;
@@ -3744,11 +3747,15 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel TutorialScreen1;
     private javax.swing.JPanel TutorialScreen2;
     private javax.swing.JPanel TutorialScreen3;
+    private javax.swing.JButton addPlayerToGameBtn;
     private javax.swing.JLabel backBtnForgotPassword;
-    private javax.swing.JTextField jBirthdayField;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel backLeaderboardBtn;
+    private javax.swing.JTextField gamelobbyPlayer1;
+    private javax.swing.JTextField gamelobbyPlayer2;
+    private javax.swing.JTextField gamelobbyPlayer3;
+    private javax.swing.JTextField gamelobbyPlayer4;
+    private javax.swing.JButton gamelobbyStartBtn;
+    private javax.swing.JTextField jBirthdayRegisterField;
     private javax.swing.JButton jButtonAthens;
     private javax.swing.JButton jButtonAthensB;
     private javax.swing.JButton jButtonBali;
@@ -3760,8 +3767,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonExit2;
     private javax.swing.JButton jButtonFrankfurt;
     private javax.swing.JButton jButtonFrankfurtB;
-    private javax.swing.JButton jButtonGamelobbyStart;
-    private javax.swing.JButton jButtonGamelobbyStart1;
     private javax.swing.JButton jButtonHanoi;
     private javax.swing.JButton jButtonHanoiB;
     private javax.swing.JButton jButtonLisabon;
@@ -3780,11 +3785,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonParisB;
     private javax.swing.JButton jButtonRio;
     private javax.swing.JButton jButtonRioB;
-    private javax.swing.JButton jButtonStart;
     private javax.swing.JButton jButtonTokyo;
     private javax.swing.JButton jButtonTokyoB;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -3792,8 +3794,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -3828,32 +3828,25 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabelForgotPassword;
     private javax.swing.JLabel jLabelPlayerFour;
     private javax.swing.JLabel jLabelPlayerOne;
     private javax.swing.JLabel jLabelPlayerThree;
@@ -3916,17 +3909,31 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelRedBorder;
     private javax.swing.JPanel jPanelYellowBorder;
     private javax.swing.JPasswordField jPasswordField;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JPasswordField jPasswordField3;
     private javax.swing.JPasswordField jPasswordLobbyField;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField jPasswordRegisterField;
+    private javax.swing.JCheckBox jShowPasswordForgotPasswordCheckBox;
+    private javax.swing.JCheckBox jShowPasswordRegisterCheckBox;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jUsernameField;
     private javax.swing.JTextField jUsernameLobbyField;
+    private javax.swing.JTextField jUsernameRegisterField;
+    private javax.swing.JLabel jforgotPassworBtn;
     private javax.swing.JButton leaderButtonPressed;
+    private javax.swing.JButton leaveBtn;
     private javax.swing.JButton loginBtn;
+    private javax.swing.JButton passwordResetBtn;
     private javax.swing.JButton registerBtn;
+    private javax.swing.JButton replayGameBtn;
+    private javax.swing.JButton startGameBtn;
+    private javax.swing.JLabel tutBackBtn1;
+    private javax.swing.JLabel tutBackBtn2;
+    private javax.swing.JLabel tutBackBtn3;
+    private javax.swing.JLabel tutExitBtn;
+    private javax.swing.JLabel tutForwardBtn1;
+    private javax.swing.JLabel tutForwardBtn2;
+    private javax.swing.JLabel tutForwardBtn3;
     // End of variables declaration//GEN-END:variables
 }
