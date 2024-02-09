@@ -2792,15 +2792,15 @@ public class MainJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    int frankfurt, mumbai, paris, nairobi, bali, lisabon, newyork, tokyo, oslo, milan, cairo, athens, hanoi, rio;
-    int diceColor=-1;                   //stores the color that has been rolled 0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink, 5 is joker
-    int countCoveredCities=-1;          //counts how many cities have been covered. When all have been covered once
-    boolean cityBPressable=false;          //protects that there is only input from the bottom cities if allowed
-    boolean cityPressable = false;         //protects that there is only input from the top cities if allowed
-    int prevcolor = -1;                     //saves the previous color so if joker is active you cant pick the previous color
-    int playercount = 1;                //used to keep track which players turn 
+    private int frankfurt, mumbai, paris, nairobi, bali, lisabon, newyork, tokyo, oslo, milan, cairo, athens, hanoi, rio;
+    private int diceColor=-1;                   //stores the color that has been rolled 0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink, 5 is joker
+    private int countCoveredCities=-1;          //counts how many cities have been covered. When all have been covered once
+    private boolean cityBPressable=false;          //protects that there is only input from the bottom cities if allowed
+    private boolean cityPressable = false;         //protects that there is only input from the top cities if allowed
+    private int prevcolor = -1;                     //saves the previous color so if joker is active you cant pick the previous color
+    private int playercount = 1;                //used to keep track which players turn 
     
-    void SetColor(int color, JButton button){ //function is called if you want to change the color of the top city buttons
+    private void SetColor(int color, JButton button){ //function is called if you want to change the color of the top city buttons
         if(color==0){                           //0 is red, 1 is green, 2 is blue, 3 yellow, 4 is pink
             button.setBackground(Color.red);
             button.setText("");     // i had to remove the city name because it was even visible with the identical color
@@ -2819,7 +2819,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }
     
-    void SetPanel(int state){           // top gate panels get their border enlightened with this function
+    private void SetPanel(int state){           // top gate panels get their border enlightened with this function
         
         if(state==0){
             jPanelRedBorder.setBorder(BorderFactory.createLineBorder(Color.RED,10));
@@ -2868,7 +2868,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }
     
-    void setEndscreen(){
+    private void setEndscreen(){
         // Initialize arrays for usernames and scores
         String[] usernames = {
             jLabelPlayerOne.getText(),
@@ -2916,14 +2916,14 @@ public class MainJFrame extends javax.swing.JFrame {
         
     }
     
-    void switchPanel(JPanel panel){
+    private void switchPanel(JPanel panel){
         MainPanel.removeAll();
         MainPanel.add(panel);
         MainPanel.repaint();
         MainPanel.revalidate();
     }
     
-    int CityPressed(JButton button,int city){
+    private int CityPressed(JButton button,int city){
         if(countCoveredCities<5&&city==10){  //if the game is in the beginning state(choosing which city is which color) AND the city was not chosen already
             SetColor(countCoveredCities,button); //sets the button this color
             prevcolor = countCoveredCities;
@@ -3100,7 +3100,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ParisPressed
 
-    void setPoints(int number){
+    private void setPoints(int number){
         if(number==1){
             jLabelPointsOne.setText(Integer.toString(Integer.parseInt(jLabelPointsOne.getText())+1)); //sets score +1  
            
@@ -3116,7 +3116,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }
     
-    void setActivePlayer(int number){
+    private void setActivePlayer(int number){
         if(userLoggedInCount==4){
             if(number==1){
                 jLabelPointsOne.setForeground(Color.black);
@@ -3204,7 +3204,7 @@ public class MainJFrame extends javax.swing.JFrame {
         
     }
     
-    void CityBPressed(JButton button, int city){                    //function gets the value of the city and NOT the B city but the city
+    private void CityBPressed(JButton button, int city){                    //function gets the value of the city and NOT the B city but the city
         if(countCoveredCities>=5 && diceColor==city&&button.isEnabled()&&cityBPressable){   //if game state is dice and color is citycolor and the city is available and its okay to chose
             button.setEnabled(false);                               //the button is disabled because you chose the right city
             button.setBackground(Color.white);
@@ -3254,13 +3254,13 @@ public class MainJFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_LoginPressed
 
-    void ResetCityWhite(JButton button, String name){  //some cities are blue and others white
+    private void ResetCityWhite(JButton button, String name){  //some cities are blue and others white
         button.setBackground(new Color(242,245,244));
         button.setEnabled(true);
         button.setText(name);       //city name is written
     }
     
-    void ResetCityBlue(JButton button, String name){
+    private void ResetCityBlue(JButton button, String name){
         button.setBackground(new Color(208,234,242));
         button.setEnabled(true);
         button.setText(name);       //city name is written
@@ -3648,6 +3648,52 @@ public class MainJFrame extends javax.swing.JFrame {
         MainPanel.add(LoginScreen);
         MainPanel.repaint();
         MainPanel.revalidate();
+        //set the game into the beginning state
+        jButtonStart.setEnabled(true);
+        jButtonStart.setVisible(true);
+        jButtonStart.setText("Start"); //sets the start button as start again
+        diceColor=-1;
+        countCoveredCities=-1;
+        cityBPressable=false;
+        cityPressable = false;
+        ResetCityBlue(jButtonMumbai, "Mumbai");
+        ResetCityBlue(jButtonFrankfurt, "Frankfurt");
+        ResetCityWhite(jButtonHanoi, "Hanoi");
+        ResetCityBlue(jButtonNewyork, "New York");
+        ResetCityBlue(jButtonRio, "Rio");
+        ResetCityWhite(jButtonOslo, "Oslo");
+        ResetCityBlue(jButtonBali, "Bali");
+        ResetCityWhite(jButtonNairobi, "Nairobi");
+        ResetCityBlue(jButtonLisabon, "Lisabon");
+        ResetCityWhite(jButtonCairo, "Cairo");
+        ResetCityBlue(jButtonAthens, "Athens");
+        ResetCityWhite(jButtonMilan, "Milan");
+        ResetCityWhite(jButtonTokyo, "Tokyo");
+        ResetCityBlue(jButtonParis, "Paris");
+        //setting city !=10 that would be ready state
+        mumbai=0;
+        frankfurt=0;
+        hanoi = 0;
+        newyork=0;
+        rio=0;
+        oslo=0;
+        bali=0;
+        nairobi=0;
+        lisabon =0;
+        cairo=0;
+        athens=0;
+        milan=0;
+        tokyo=0;
+        paris=0;
+        jPanelRedBorder.setBackground(new Color(255,153,153));
+        jPanelGreenBorder.setBackground(new Color(153,255,153));
+        jPanelBlueBorder.setBackground(new Color(153,153,255));
+        jPanelYellowBorder.setBackground(new Color(255,255,153));
+        jPanelPinkBorder.setBackground(new Color(255,153,255));
+        jButtonDice.setEnabled(true);
+        jButtonDice.setBackground(new Color(254,219,255));
+        jUsernameField.setText("");
+        jPasswordField.setText("");
     }//GEN-LAST:event_jButtonExitEndScreen
 
     private void jTextField2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField2FocusGained
