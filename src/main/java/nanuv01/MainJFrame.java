@@ -1838,6 +1838,11 @@ public class MainJFrame extends javax.swing.JFrame {
         replayGameBtn.setBackground(new java.awt.Color(144, 178, 185));
         replayGameBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wiederholen (2).png"))); // NOI18N
         replayGameBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(1, 49, 41), 3));
+        replayGameBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                replayGameBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -3142,9 +3147,6 @@ public class MainJFrame extends javax.swing.JFrame {
             if(number==1) {
                 jLabelPointsOne.setForeground(Color.black);
                 jLabelPointsTwo.setForeground(Color.red);
-               
-                jPanel6.setBackground(new Color(225,247,231));
-                jLabel5.setBackground(new Color (254,219,255));
                 
             }else if(number ==2) {
                 jLabelPointsOne.setForeground(Color.red); 
@@ -3547,7 +3549,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void resetGame() {
         MainPanel.removeAll();
-        MainPanel.add(LoginScreen);
+        MainPanel.add(GamelobbyScreen);
         MainPanel.repaint();
         MainPanel.revalidate();
         //set the game into the beginning state
@@ -3684,6 +3686,64 @@ public class MainJFrame extends javax.swing.JFrame {
         MainPanel.repaint();
         MainPanel.revalidate();
     }//GEN-LAST:event_backBtnForgotPasswordMouseClicked
+
+    private void replayGameBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_replayGameBtnActionPerformed
+        MainPanel.removeAll();
+        MainPanel.add(GamelobbyScreen);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+        //set the game into the beginning state
+        startGameBtn.setEnabled(true);
+        startGameBtn.setVisible(true);
+        //sets the start button as start again
+        startGameBtn.setText("Start");
+        diceColor=-1;
+        countCoveredCities=-1;
+        cityBPressable=false;
+        cityPressable = false;
+        ResetCityBlue(jButtonMumbai, "Mumbai");
+        ResetCityBlue(jButtonFrankfurt, "Frankfurt");
+        ResetCityWhite(jButtonHanoi, "Hanoi");
+        ResetCityBlue(jButtonNewyork, "New York");
+        ResetCityBlue(jButtonRio, "Rio");
+        ResetCityWhite(jButtonOslo, "Oslo");
+        ResetCityBlue(jButtonBali, "Bali");
+        ResetCityWhite(jButtonNairobi, "Nairobi");
+        ResetCityBlue(jButtonLisabon, "Lisabon");
+        ResetCityWhite(jButtonCairo, "Cairo");
+        ResetCityBlue(jButtonAthens, "Athens");
+        ResetCityWhite(jButtonMilan, "Milan");
+        ResetCityWhite(jButtonTokyo, "Tokyo");
+        ResetCityBlue(jButtonParis, "Paris");
+        //setting city !=10 that would be ready state
+        mumbai=0;
+        frankfurt=0;
+        hanoi = 0;
+        newyork=0;
+        rio=0;
+        oslo=0;
+        bali=0;
+        nairobi=0;
+        lisabon =0;
+        cairo=0;
+        athens=0;
+        milan=0;
+        tokyo=0;
+        paris=0;
+        jPanelRedBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
+        jPanelGreenBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
+        jPanelBlueBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
+        jPanelYellowBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
+        jPanelPinkBorder.setBorder(BorderFactory.createLineBorder(new Color(1,87,73)));
+        jButtonDice.setEnabled(true);
+        jButtonDice.setBackground(new Color(254,219,255));
+        jUsernameField.setText("");
+        jPasswordField.setText("");
+        jLabelPointsOne.setText("0");
+        jLabelPointsTwo.setText("0");
+        jLabelPointsThree.setText("0");
+        jLabelPointsFour.setText("0");
+    }//GEN-LAST:event_replayGameBtnActionPerformed
 
      // Aallow to play Music in infinite loop
      public static void playLoop(String filePath) {
