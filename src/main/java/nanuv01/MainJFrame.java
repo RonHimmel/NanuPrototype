@@ -6,8 +6,10 @@ package nanuv01;
 
 
 import java.awt.Color;
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.sql.Connection;
 import java.sql.Date;
@@ -3201,10 +3203,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 userLoggedInCount++;
             }
             
-            MainPanel.removeAll();
-            MainPanel.add(GamelobbyScreen);
-            MainPanel.repaint();
-            MainPanel.revalidate();
+            switchPanel(GamelobbyScreen);
             
             // display the username in gamelobby screen
             gamelobbyPlayer1.setText(username);
@@ -3242,10 +3241,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_ExitPressed
 
     private void jforgotPassworBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jforgotPassworBtnMouseClicked
-        MainPanel.removeAll();
-        MainPanel.add(ForgotPasswordScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(ForgotPasswordScreen);
     }//GEN-LAST:event_jforgotPassworBtnMouseClicked
 
     // register function to register a new User
@@ -3341,11 +3337,8 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_DiceRoll
     
     private void gamelobbyStartBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gamelobbyStartBtnActionPerformed
-        MainPanel.removeAll();
-        MainPanel.add(GameScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
-
+        switchPanel(GameScreen);
+        
         // display all users in game 
         JLabel[] userTextFields = {jLabelPlayerOne, jLabelPlayerTwo, jLabelPlayerThree, jLabelPlayerFour};
         for(int i = 0; i < userArray.size() && i < userTextFields.length; i++) {
@@ -3366,10 +3359,7 @@ public class MainJFrame extends javax.swing.JFrame {
             if(isReset) {
                 JOptionPane.showMessageDialog(null, "Password reset successful");
                 // Navigate back to login screen or main screen
-                MainPanel.removeAll();
-                MainPanel.add(LoginScreen);
-                MainPanel.repaint();
-                MainPanel.revalidate();
+                switchPanel(LoginScreen);
             }else {
                 JOptionPane.showMessageDialog(null, "Password reset failed. User not found.");
             }
@@ -3447,59 +3437,35 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_addPlayerToGameBtnActionPerformed
 
     private void jButtonExit2ExitPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExit2ExitPressed
-        MainPanel.removeAll();
-        MainPanel.add(TutorialScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(TutorialScreen);
     }//GEN-LAST:event_jButtonExit2ExitPressed
 
     private void jLabelBackTut3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTut3
-        MainPanel.removeAll();
-        MainPanel.add(TutorialScreen2);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(TutorialScreen2);
     }//GEN-LAST:event_jLabelBackTut3
 
     private void jLabelNextTut2MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextTut2MC
-        MainPanel.removeAll();
-        MainPanel.add(TutorialScreen3);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(TutorialScreen3);
     }//GEN-LAST:event_jLabelNextTut2MC
 
     private void jLabelBackTut2MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTut2MC
-        MainPanel.removeAll();
-        MainPanel.add(TutorialScreen1);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(TutorialScreen1);
     }//GEN-LAST:event_jLabelBackTut2MC
 
     private void jLabelBackTut1MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTut1MC
-        MainPanel.removeAll();
-        MainPanel.add(TutorialScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(TutorialScreen);
     }//GEN-LAST:event_jLabelBackTut1MC
 
     private void jLabelExitTutMC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelExitTutMC
-        MainPanel.removeAll();
-        MainPanel.add(GamelobbyScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(GamelobbyScreen);
     }//GEN-LAST:event_jLabelExitTutMC
 
     private void jLabelNextTut0MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextTut0MC
-        MainPanel.removeAll();
-        MainPanel.add(TutorialScreen1);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(TutorialScreen1);
     }//GEN-LAST:event_jLabelNextTut0MC
 
     private void jLabelNextTut1MC(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextTut1MC
-        MainPanel.removeAll();
-        MainPanel.add(TutorialScreen2);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(TutorialScreen2);
     }//GEN-LAST:event_jLabelNextTut1MC
 
     // Opens Leaderboard View and sorts the User with the Highest Score DESC
@@ -3534,24 +3500,15 @@ public class MainJFrame extends javax.swing.JFrame {
         }
         
         // Change PanelView
-        MainPanel.removeAll();
-        MainPanel.add(LeaderBoard);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(LeaderBoard);
     }//GEN-LAST:event_leaderButtonPressedLoginPressed
 
     private void backLeaderboardBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLeaderboardBtnMouseClicked
-        MainPanel.removeAll();
-        MainPanel.add(LoginScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(LoginScreen);
     }//GEN-LAST:event_backLeaderboardBtnMouseClicked
 
     private void resetGame() {
-        MainPanel.removeAll();
-        MainPanel.add(GamelobbyScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(LoginScreen);
         //set the game into the beginning state
         startGameBtn.setEnabled(true);
         startGameBtn.setVisible(true);
@@ -3681,17 +3638,11 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3FocusLost
 
     private void backBtnForgotPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBtnForgotPasswordMouseClicked
-        MainPanel.removeAll();
-        MainPanel.add(LoginScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(LoginScreen);
     }//GEN-LAST:event_backBtnForgotPasswordMouseClicked
 
     private void replayGameBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_replayGameBtnActionPerformed
-        MainPanel.removeAll();
-        MainPanel.add(GamelobbyScreen);
-        MainPanel.repaint();
-        MainPanel.revalidate();
+        switchPanel(GamelobbyScreen);
         //set the game into the beginning state
         startGameBtn.setEnabled(true);
         startGameBtn.setVisible(true);
@@ -3748,13 +3699,18 @@ public class MainJFrame extends javax.swing.JFrame {
      // Aallow to play Music in infinite loop
      public static void playLoop(String filePath) {
         try {
-            File audioFile = new File(filePath);
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
-            AudioFormat format = audioStream.getFormat();
-            DataLine.Info info = new DataLine.Info(Clip.class, format);
-            Clip clip = (Clip) AudioSystem.getLine(info);
-            clip.open(audioStream);
-            clip.loop(Clip.LOOP_CONTINUOUSLY);
+            
+            InputStream audioSrc = MainJFrame.class.getResourceAsStream(filePath);
+            
+            if(audioSrc != null) {
+                BufferedInputStream bufferedIn = new BufferedInputStream(audioSrc);
+                AudioInputStream audioStream = AudioSystem.getAudioInputStream(bufferedIn);
+                AudioFormat format = audioStream.getFormat();
+                DataLine.Info info = new DataLine.Info(Clip.class, format);
+                Clip clip = (Clip) AudioSystem.getLine(info);
+                clip.open(audioStream);
+                clip.loop(Clip.LOOP_CONTINUOUSLY);
+            }
         }catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
             System.out.println(e);
         }
@@ -3764,10 +3720,10 @@ public class MainJFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        String wavFilePath = "src/main/java/nanuv01/audio/ChillSound1.wav";
+        String wavFilePath = "/ChillSound1.wav";
         playLoop(wavFilePath);
         
-        
+      
         try(Connection conn = DatabaseConnector.getConnection()) {
             System.out.println("Connection established");
         }catch(SQLException e) {
